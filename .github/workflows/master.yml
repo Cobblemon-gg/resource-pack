@@ -1,0 +1,28 @@
+name: Zip Resources
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  zip-resources:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Zip files
+      uses: montudor/action-zip@v1
+      with:
+        args: zip -qq -r resource-pack.zip .
+
+    - name: Upload zip as release asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }} 
+        asset_path: ./resource-pack.zip
+        asset_name: resource-pack.zip
+        asset_content_type: application/zip
