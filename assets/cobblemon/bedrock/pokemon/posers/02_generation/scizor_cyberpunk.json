@@ -1,0 +1,76 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [
+    -0.19,
+    2.21,
+    0
+  ],
+  "profileScale": 0.52,
+  "profileTranslation": [
+    0.03,
+    0.96,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('scizor_cyberpunk', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('scizor_cyberpunk', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scizor_cyberpunk', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('scizor_cyberpunk', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scizor_cyberpunk', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('scizor_cyberpunk', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scizor_cyberpunk', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseTypes": [
+        "FLY",
+        "FLOAT",
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('scizor_cyberpunk', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scizor_cyberpunk', 'blink')"
+      ]
+    }
+  }
+}

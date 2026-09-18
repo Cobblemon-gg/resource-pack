@@ -1,0 +1,27 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [-0.3, 2.6, 0],
+    "profileScale": 0.4,
+    "profileTranslation": [0, 1.2, 0],
+    "rootBone": "barbaracle_mega",
+    "animations": {
+      "faint": "q.bedrock_primary('barbaracle_mega', 'faint')",
+      "recoil": "q.bedrock_stateful('barbaracle_mega', 'recoil')",
+      "cry": "q.bedrock_stateful('barbaracle_mega', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('barbaracle_mega', 'ground_idle')"
+        ]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.look('head')", "q.bedrock('barbaracle_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('barbaracle_mega', 'blink')"]
+    }
+    }
+   }

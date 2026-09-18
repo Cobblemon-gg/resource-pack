@@ -1,0 +1,48 @@
+{
+  "species": "cobblemon:garganacl",
+  "order": 101,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_hotfix18_garganacl",
+      "model": "cobblemon:atlas_hotfix18_garganacl.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0934_garganacl/garganacl.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0934_garganacl/garganacl_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('ice') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0934_garganacl/garganacl_shiny.png",
+      "condition": "!q.has_aspect('ice') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0934_garganacl/garganacl_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('ice') && !q.has_aspect('plushie')"
+    }
+  ]
+}

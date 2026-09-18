@@ -1,0 +1,45 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [ -0.03, 2.15, 0.0],
+  "profileScale": 0.49,
+  "profileTranslation": [0.09, 1.05, 0.0],
+  "animations": {
+        "cry": "q.bedrock_stateful('darkrai', 'cry')",
+    "recoil": "q.bedrock_stateful('darkrai', 'recoil')",
+    "physical": "q.bedrock_primary('darkrai', 'physical', q.curve('symmetrical_wide'))"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('darkrai', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('darkrai', 'blink')",
+        "q.bedrock_quirk('darkrai', 'leg_quirk')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('darkrai', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('darkrai', 'blink')",
+        "q.bedrock_quirk('darkrai', 'leg_quirk')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.bedrock('darkrai', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('darkrai', 'sleep')"]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-0.5, 2.3, 0],
+    "profileScale": 0.4,
+    "profileTranslation": [0, 1.2, 0],
+    "rootBone": "dragalge_mega",
+  "animations": {
+    "cry": "q.bedrock_stateful('dragalge_mega', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": ["bedrock(dragalge_mega, ground_idle)"],
+      "quirks": ["q.bedrock_quirk('dragalge_mega', 'blink')"]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": ["WALK"],
+      "animations": ["bedrock(dragalge_mega, ground_walk)"],
+      "quirks": ["q.bedrock_quirk('dragalge_mega', 'blink')"]
+    }
+  }
+   }

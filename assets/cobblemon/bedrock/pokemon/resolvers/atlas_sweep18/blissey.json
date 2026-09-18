@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:blissey",
+  "order": 101,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_blissey",
+      "model": "cobblemon:atlas_sweep18_blissey.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0242_blissey/blissey.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0242_blissey/blissey_shiny.png",
+      "condition": "!q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0242_blissey/blissey_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('valentines')"
+    }
+  ]
+}

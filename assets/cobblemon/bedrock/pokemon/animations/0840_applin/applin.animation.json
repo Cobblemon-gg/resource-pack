@@ -1,0 +1,113 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.applin.ground_idle": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["0+math.sin(q.anim_time*90*12/6-0)*1", "math.sin(q.anim_time*90*2+90)*1", "0+math.sin(q.anim_time*90*2-90)*0.5"]
+				},
+				"eye1": {
+					"rotation": ["math.sin(q.anim_time*90*2+90)*2", 0, "0+math.sin(q.anim_time*90*4)*0.5"]
+				},
+				"tail": {
+					"rotation": ["-15+math.sin(q.anim_time*90*4)*2", "math.sin(q.anim_time*90*2+90)*4", 0],
+					"position": [0, 0.5, -0.5]
+				},
+				"tail2": {
+					"rotation": [17.5, 0, 0],
+					"position": [0, 0.5, 0]
+				},
+				"eye2": {
+					"rotation": ["math.sin(q.anim_time*90*2+90)*2", 0, "0-math.sin(q.anim_time*90*4)*0.5"]
+				}
+			}
+		},
+		"animation.applin.ground_walk": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"body": {
+					"position": [0, 0, "-1-math.sin(q.anim_time*90*4+90)*0.5"]
+				},
+				"head": {
+					"rotation": ["0+math.sin(q.anim_time*90*4)*4", "0+math.sin(q.anim_time*90*4+90)*6", 0]
+				},
+				"eye1": {
+					"rotation": ["0+math.sin(q.anim_time*90*4)*6 ", 0, 0]
+				},
+				"tail": {
+					"rotation": ["-15-math.sin(q.anim_time*90*4+90)*4", "0+math.sin(q.anim_time*90*4)*8", 0],
+					"position": [0, 0.5, -0.5]
+				},
+				"tail2": {
+					"rotation": [17.5, 0, 0],
+					"position": [0, 0.5, 0]
+				},
+				"eye2": {
+					"rotation": ["0+math.sin(q.anim_time*90*4)*6 ", 0, 0]
+				}
+			}
+		},
+		"animation.applin.blink": {
+			"animation_length": 0.2083,
+			"bones": {
+				"eye_pupiled1": {
+					"scale": {
+						"0.0": [1, 0, 1],
+						"0.2083": {
+							"pre": [1, 0, 1],
+							"post": [1, 1, 1]
+						}
+					}
+				},
+				"eye_pupiled2": {
+					"scale": {
+						"0.0": [1, 0, 1],
+						"0.2083": {
+							"pre": [1, 0, 1],
+							"post": [1, 1, 1]
+						}
+					}
+				}
+			}
+		},
+		"animation.applin.ground_run": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["0+q.anim_time*90*6", 0, 0],
+					"position": [0, 0, 0]
+				},
+				"eyes": {
+					"rotation": [52.5, 0, 0],
+					"position": [0, 3, 8]
+				},
+				"tail": {
+					"rotation": [-25, 0, 0],
+					"position": [0, 1, -6]
+				},
+				"tail2": {
+					"rotation": [17.5, 0, 0],
+					"position": [0, 0.5, 0]
+				}
+			}
+		},
+		"animation.applin.walkspeed": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, 0, "22-q.anim_time*90*0.5"]
+				}
+			}
+		},
+		"animation.applin.runspeed": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, 0, "22-q.anim_time*90*0.8"]
+				}
+			}
+		}
+	}
+}

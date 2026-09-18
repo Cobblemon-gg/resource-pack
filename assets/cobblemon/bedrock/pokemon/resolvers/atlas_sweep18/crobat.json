@@ -1,0 +1,57 @@
+{
+  "species": "cobblemon:crobat",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_crobat",
+      "model": "cobblemon:atlas_sweep18_crobat.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0169_crobat/crobat.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0169_crobat/crobat_emissive.png",
+          "translucent": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0169_crobat/crobat_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0169_crobat/crobat_emissive_shiny.png",
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0169_crobat/crobat_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

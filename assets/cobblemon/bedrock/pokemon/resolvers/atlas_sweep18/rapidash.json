@@ -1,0 +1,126 @@
+{
+  "species": "cobblemon:rapidash",
+  "order": 121,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rapidash",
+      "model": "cobblemon:atlas_sweep18_rapidash.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/normal/1.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/normal/2.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/normal/3.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/normal/4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/shiny/1.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/shiny/2.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/shiny/3.png",
+              "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/fire/shiny/4.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    },
+    {
+      "aspects": [
+        "galarian"
+      ],
+      "poser": "cobblemon:rapidash_galarian",
+      "model": "cobblemon:atlas_sweep18_rapidash_galar.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_galar.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_galar_emissive.png",
+          "emissive": "true"
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "galarian"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_galar_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_galar_emissive_shiny.png",
+          "emissive": "true"
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    },
+    {
+      "aspects": [
+        "galarian",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0078_rapidash/rapidash_galar_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('shadow')"
+    }
+  ]
+}

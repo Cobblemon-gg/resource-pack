@@ -1,0 +1,67 @@
+{
+  "portraitScale": 2.3,
+  "portraitTranslation": [ -0.07, -0.8, 0],
+  "profileScale": 0.8,
+  "profileTranslation": [ 0.02, 0.55, 0],
+  "rootBone": "noibat",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_noibat', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noibat', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noibat', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noibat', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noibat', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noibat', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noibat', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noibat', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('riolu', 'blink')"
+      ]
+    }
+  }
+}

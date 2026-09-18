@@ -1,0 +1,48 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [ -1.39, 1.08, 0.0],
+  "profileScale": 0.65,
+  "profileTranslation": [0, 0.85, 0.0],
+  "animations": {
+    "faint": "q.bedrock('raikou', 'faint')",
+    "cry": "q.bedrock_stateful('raikou', 'cry')",
+    "recoil": "q.bedrock_stateful('raikou', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raikou', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('raikou', 'blink')"
+      ] 
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raikou', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('raikou', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raikou', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('raikou', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('raikou', 'sleep')"],
+      "quirks": ["q.bedrock_quirk('raikou', 'sleep_quirk')", "q.bedrock_quirk('raikou', 'sleep_quirk2')"]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "species": "cobblemon:goodra",
+  "order": 102,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_goodra",
+      "model": "cobblemon:atlas_sweep18_goodra.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('molten')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra_shiny.png",
+      "condition": "!q.has_aspect('molten')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('molten')"
+    },
+    {
+      "aspects": [
+        "hisuian"
+      ],
+      "poser": "cobblemon:atlas_sweep18_goodra_hisuian",
+      "model": "cobblemon:atlas_sweep18_goodra_hisuian.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra_hisuian.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('molten')"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "hisuian"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra_hisuian_shiny.png",
+      "layers": [],
+      "condition": "!q.has_aspect('molten')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes",
+        "hisuian"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0706_goodra/goodra_hisuian_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('molten')"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:luvdisc",
+  "order": 101,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_luvdisc",
+      "model": "cobblemon:atlas_sweep18_luvdisc.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0370_luvdisc/luvdisc.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0370_luvdisc/luvdisc_shiny.png",
+      "condition": "!q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0370_luvdisc/luvdisc_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    }
+  ]
+}

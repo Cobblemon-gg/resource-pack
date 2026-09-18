@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:darumaka",
+  "order": 102,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_darumaka",
+      "model": "cobblemon:atlas_sweep18_darumaka.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0554_darumaka/darumaka.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('galarian')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0554_darumaka/darumaka_shiny.png",
+      "condition": "!q.has_aspect('galarian')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0554_darumaka/darumaka_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('galarian')"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+    "portraitScale": 1.32,
+    "portraitTranslation": [ 0, 0.9, 0 ],
+    "profileScale": 0.6,
+    "profileTranslation": [ 0, 0.9, 0 ],
+    "animations": {
+      "faint": "q.bedrock_primary('pangoro', 'ground_idle', q.curve('one'))"
+    },
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('pangoro', 'ground_idle')"
+        ]
+      },
+      "battle": {
+        "poseName": "battle_idle",
+        "transformTicks": 10,
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('pangoro', 'battle_idle')"
+        ]
+      },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.bedrock('pangoro', 'ground_walk')"
+        ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('pangoro', 'ground_idle')"
+        ]
+      }
+    }
+  }

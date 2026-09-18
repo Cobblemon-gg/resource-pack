@@ -1,0 +1,55 @@
+{
+    "portraitScale": 2,
+    "portraitTranslation": [ -0.2, 0.7, 0 ],
+    "profileScale": 0.6,
+    "profileTranslation": [ 0, 0.8, 0 ],
+    "animations": {
+      "faint": "q.bedrock_primary('applin', 'faint', q.curve('one'))",
+      "cry": "q.bedrock_stateful('applin', 'cry')",
+      "physical": "q.bedrock_stateful('applin', 'physical')",
+      "special": "q.bedrock_stateful('applin', 'special')",
+      "status": "q.bedrock_stateful('applin', 'status')",
+      "recoil": "q.bedrock_stateful('applin', 'recoil')"
+    },
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('applin', 'ground_idle')"
+       ]
+      },
+      "battle": {
+        "poseName": "battle_idle",
+        "transformTicks": 10,
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('applin', 'ground_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('applin', 'blink')"
+       ]
+      },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.bedrock('applin', 'ground_walk')"
+       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('applin', 'ground_idle')"
+        ]
+      }
+    }
+  }

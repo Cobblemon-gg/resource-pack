@@ -1,0 +1,31 @@
+{
+  "species": "cobblemon:hoopa",
+  "order": 100,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_hoopa_confined",
+      "model": "cobblemon:atlas_msd18_hoopa_confined.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "spectrum",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2') && !q.has_aspect('unbound')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa_shiny.png",
+      "layers": [],
+      "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2') && !q.has_aspect('unbound')"
+    }
+  ]
+}

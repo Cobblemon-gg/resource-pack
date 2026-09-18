@@ -1,5 +1,4 @@
 TEXT_EFFECT(240, 240, 0) {
-    apply_shaking_movement();
     override_text_color(rgb(255, 82, 82));
     override_shadow_color(rgb(100, 20, 80));
 }
@@ -26,11 +25,6 @@ TEXT_EFFECT(240, 240, 16) {
     apply_skewing_movement();
     override_text_color(rgb(122, 80, 251));
     override_shadow_color(rgb(40, 40, 140));
-}
-
-TEXT_EFFECT(240, 240, 20) {
-    override_text_color(rgb(255, 82, 82));
-    apply_outline(rgb(100, 20, 80));
 }
 
 TEXT_EFFECT(240, 240, 24) {
@@ -68,6 +62,7 @@ TEXT_EFFECT(240, 240, 48) {
     override_shadow_color(rgb(100, 20, 80));
 }
 
+// Transition from A -> B
 TEXT_EFFECT(240, 240, 52) {
     override_text_color(rgb(255, 235, 60));
     override_shadow_color(rgb(150, 60, 30));
@@ -81,8 +76,8 @@ TEXT_EFFECT(240, 240, 56) {
 }
 
 TEXT_EFFECT(240, 240, 60) {
-    override_text_color(rgb(74, 222, 209));
-    override_shadow_color(rgb(37, 71, 150));
+    override_text_color(rgb(255, 170, 0));
+    // override_shadow_color(rgb(37, 71, 150));
     apply_glowing();
 }
 
@@ -122,14 +117,6 @@ TEXT_EFFECT(240, 240, 96) {
     apply_non_binary_pride();
 }
 
-TEXT_EFFECT(94, 171, 136) {
-    apply_waving_movement(1.0, 1.5);
-    apply_gradient(rgb(189, 221, 100), rgb(50, 117, 132));
-    override_shadow_color(rgb(70, 70, 100));
-}
-
-TEXT_EFFECT(255, 255, 248) {
-    apply_vertical_shadow();
-    apply_metalic(rgb(255, 255, 255), rgb(150, 163, 177) * 0.95);
-    override_shadow_color(rgb(70, 70, 100));
-}
+// Outline effects (20, 100-120) are handled client-side in DrawContextTextEffectMixin.
+// The mixin intercepts these colors before they reach the shader, replaces them,
+// and renders multi-pass outlines using SEE_THROUGH layer type (vanilla shader).

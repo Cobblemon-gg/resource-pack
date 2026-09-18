@@ -1,0 +1,41 @@
+{
+    "portraitScale": 1.8,
+    "portraitTranslation": [-0.3, 4, 0],
+    "profileScale": 0.35,
+    "profileTranslation": [0, 1.2, 0],
+    "animations": {
+    "cry": "q.bedrock_stateful('garchomp_mega_z', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "isTouchingWater": false,
+        "animations": [
+          
+          "q.bedrock('garchomp_mega_z', 'ground_idle')"
+        ]
+      },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "isTouchingWater": false,
+      "animations": [ "q.bedrock('garchomp_mega_z', 'battle_idle')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": [ "q.bedrock('garchomp_mega_z', 'air_idle')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": [ "q.bedrock('garchomp_mega_z', 'ground_idle')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": [ "q.bedrock('garchomp_mega_z', 'air_idle')"]
+    }
+    }
+   }

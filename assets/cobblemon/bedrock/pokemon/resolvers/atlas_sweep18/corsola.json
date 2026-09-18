@@ -1,0 +1,120 @@
+{
+  "species": "cobblemon:corsola",
+  "order": 102,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_corsola",
+      "model": "cobblemon:atlas_sweep18_corsola.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "ectoplasm",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_shiny.png",
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "galarian"
+      ],
+      "poser": "cobblemon:atlas_sweep18_corsola_galarian",
+      "model": "cobblemon:atlas_sweep18_corsola_galarian.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_emissive.png",
+          "translucent": true
+        },
+        {
+          "name": "ectoplasm",
+          "emissive": false,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_ectoplasm.png",
+          "translucent": true,
+          "translucent_cull": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "galarian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_emissive_shiny.png",
+          "translucent": true
+        },
+        {
+          "name": "ectoplasm",
+          "emissive": false,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_ectoplasm_shiny.png",
+          "translucent": true,
+          "translucent_cull": true
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "galarian",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0222_corsola/corsola_galarian_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    }
+  ]
+}

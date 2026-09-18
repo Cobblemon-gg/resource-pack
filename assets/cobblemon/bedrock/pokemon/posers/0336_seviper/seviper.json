@@ -1,0 +1,68 @@
+{
+  "head": "head_ai",
+  "portraitScale": 2,
+  "portraitTranslation": [ -0.8, -0.2, 0],
+  "profileScale": 0.75,
+  "profileTranslation": [ 0, 0.55, 0],
+  "animations": {
+  "cry": "q.bedrock_stateful('seviper', 'cry')"
+  },
+  "poses": {
+	 "battle-idle":{
+	 "poseName": "battle-idle",
+     "transformTicks": 10,
+     "poseTypes": [
+		"STAND"
+	 ],
+	 "isBattle": true,
+	 "animations": 
+    [
+    "bedrock(seviper, battle_idle)"
+    ],
+	  "quirks":[
+	  {
+		  "name": "blink",
+          "animations": ["bedrock(seviper, blink)"]
+	  }
+	  ]
+	},
+    "standing": {
+      "poseName": "standing",
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "PORTRAIT",
+		"PROFILE",
+		"NONE"
+      ],
+	  "isBattle": false,
+      "animations": [
+		"look",
+        "bedrock(seviper, ground_idle)"
+      ],  
+	  "quirks": [
+          {
+            "name": "blink",
+            "animations": ["bedrock(seviper, blink)"]
+          }
+	  ]
+  },
+  	 "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+	  	"look",
+        "bedrock(seviper, ground_walk)"
+      ],  
+	  "quirks": [
+          {
+            "name": "blink",
+            "animations": ["bedrock(seviper, blink)"]
+          }
+	  ]
+    }
+}
+}

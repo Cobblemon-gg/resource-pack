@@ -1,0 +1,57 @@
+{
+  "portraitScale": 1.27,
+  "portraitTranslation": [-0.7, 1.35, 0],
+  "profileScale": 0.6,
+  "profileTranslation": [0, 0.8, 0],
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.25, 0.15]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('wochien', 'faint', q.curve('one'))",
+    "physical": "q.bedrock_primary('wochien', 'physical', q.curve('symmetrical'))",
+    "special": "q.bedrock_primary('wochien', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('wochien', 'special', q.curve('symmetrical'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["PORTRAIT", "PROFILE", "STAND", "NONE"],
+      "animations": [
+        "q.bedrock('wochien', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('wochien', 'blink', 2, 5, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('wochien', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('wochien', 'blink', 2, 5, 1)"
+      ]
+    },
+    "running": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.bedrock('wochien', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('wochien', 'ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('wochien', 'blink', 2, 5, 1)"
+      ]
+    },
+
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('wochien', 'sleep')"
+      ]
+    }
+  }
+}

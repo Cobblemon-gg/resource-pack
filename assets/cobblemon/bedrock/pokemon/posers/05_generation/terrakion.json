@@ -1,0 +1,56 @@
+{
+  "head": "head",
+  "portraitScale": 2,
+  "portraitTranslation": [-1.7, 0.3, 0],
+  "profileScale": 0.6,
+  "profileTranslation": [0, 0.8, 0],
+  "animations": {
+    "cry": "bedrock('terrakion', 'cry')",
+    "recoil": "q.bedrock_stateful('terrakion', 'recoil')",
+    "status": "q.bedrock_stateful('terrakion', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('terrakion', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('terrakion', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('terrakion', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('terrakion', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('terrakion', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.bedrock('terrakion', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('terrakion', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('terrakion', 'sleep')"]
+    }
+  }
+}

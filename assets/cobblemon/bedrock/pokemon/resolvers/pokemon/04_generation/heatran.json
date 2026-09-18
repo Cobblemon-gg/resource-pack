@@ -1,0 +1,62 @@
+{
+  "species": "cobblemon:heatran",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:heatran",
+      "model": "cobblemon:heatran.geo",
+      "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_shiny_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "poser": "cobblemon:atlas_msd18_heatran",
+      "model": "cobblemon:atlas_msd18_heatran.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0485_heatran/heatran.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        },
+        {
+          "name": "glow",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')",
+      "aspects": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0485_heatran/heatran_shiny.png",
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    }
+  ]
+}

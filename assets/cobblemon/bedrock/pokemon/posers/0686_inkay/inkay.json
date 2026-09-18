@@ -1,0 +1,67 @@
+{
+  "portraitScale": 2.17,
+  "portraitTranslation": [ -0.25, -1.0, 0],
+  "profileScale": 0.72,
+  "profileTranslation": [ 0, 0.68, 0],
+  "rootBone": "inkay",
+    "animations": {
+      "faint": "q.bedrock_primary('inkay', 'faint', q.curve('one'))",
+      "cry": "q.bedrock_stateful('inkay', 'cry')",
+      "physical": "q.bedrock_primary('inkay', 'physical')",
+      "special": "q.bedrock_primary('inkay', 'special')",
+      "status": "q.bedrock_primary('inkay', 'status')",
+      "recoil": "q.bedrock_stateful('inkay', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('inkay', 'ground_idle')"
+      ],
+	  "namedAnimations": {
+			"cry": "q.bedrock_primary('inkay', 'battle_cry', q.curve('symmetrical_wide'))"
+          },
+      "quirks": [
+        "q.bedrock_quirk('inkay', 'blink')"
+      ]
+    },"standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('inkay', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('inkay', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK","SWIM"
+      ],
+      "animations": [
+        "q.bedrock('inkay', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('inkay', 'blink')"
+       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('inkay', 'ground_idle')"
+        ]
+      }
+    }
+  }

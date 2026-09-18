@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:zarude",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_zarude",
+      "model": "cobblemon:atlas_sweep18_zarude.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0893_zarude/zarude.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('world-cup') && !q.has_aspect('world-cup-aura1') && !q.has_aspect('world-cup-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0893_zarude/zarude_shiny.png",
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('world-cup') && !q.has_aspect('world-cup-aura1') && !q.has_aspect('world-cup-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0893_zarude/zarude_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('halloween') && !q.has_aspect('world-cup') && !q.has_aspect('world-cup-aura1') && !q.has_aspect('world-cup-aura2')"
+    }
+  ]
+}

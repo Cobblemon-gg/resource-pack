@@ -1,0 +1,127 @@
+{
+  "head": "head",
+  "portraitScale": 1.2,
+  "portraitTranslation": [
+    -0.3,
+    1.9,
+    0
+  ],
+  "profileScale": 0.37,
+  "profileTranslation": [
+    0,
+    1.14,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_msd18_megakangaskhan', 'cry')"
+  },
+  "poses": {
+    "portrait": {
+      "poseName": "portrait",
+      "poseTypes": [
+        "PORTRAIT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_megakangaskhan', 'pose')"
+      ]
+    },
+    "battle_standing": {
+      "poseName": "battle_standing",
+      "isBattle": true,
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "NONE"
+      ],
+      "animations": [
+        "look",
+        "q.bedrock('atlas_msd18_megakangaskhan', 'battle_idle')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink')"
+          ]
+        },
+        {
+          "name": "blink2",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink2')"
+          ]
+        }
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PROFILE"
+      ],
+      "animations": [
+        "look",
+        "q.bedrock('atlas_msd18_megakangaskhan', 'ground_idle')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink')"
+          ]
+        },
+        {
+          "name": "blink2",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink2')"
+          ]
+        }
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": [
+        "WALK"
+      ],
+      "isTouchingWater": false,
+      "animations": [
+        "q.bedrock('atlas_msd18_megakangaskhan', 'ground_walk')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink')"
+          ]
+        },
+        {
+          "name": "blink2",
+          "loopTimes": 1,
+          "minSecondsBetweenOccurrences": 8,
+          "maxSecondsBetweenOccurrences": 20,
+          "animations": [
+            "q.bedrock('atlas_msd18_megakangaskhan', 'blink2')"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "portraitScale": 1.58,
+  "portraitTranslation": [-0.73, 3.37, 0],
+  "profileScale": 0.41,
+  "profileTranslation": [0.02, 1.13, 0],
+  "rootBone": "goodra",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_goodra', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_sweep18_goodra', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [ "STAND", "NONE", "PORTRAIT", "PROFILE" ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_goodra', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk1'), 5, 15, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk2'), 5, 15, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk3'), 5, 15, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', q.array('idle_quirk1', 'idle_quirk2'), 30, 60, 1)"
+      ],
+      "transformTicks": 6,
+      "transformToTicks": 6
+    },
+    "battle-standing": {
+      "poseTypes": [ "STAND" ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_goodra', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk1'), 5, 15, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk2'), 5, 15, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk3'), 5, 15, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": [ "WALK", "SWIM" ],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_goodra', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_sweep18_goodra', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_goodra', 'blink')"],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseTypes": [ "WALK" ],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_goodra', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_sweep18_goodra', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'blink')"
+      ]
+    },
+    "ride_jump": {
+      "poseTypes": ["WALK", "STAND", "FLOAT"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden && q.has_entity",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_goodra','ride_jump')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_sweep18_goodra', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'blink')"
+      ],
+      "transformTicks": 6,
+      "transformToTicks": 6
+    },
+    "sleep": {
+      "poseTypes": [ "SLEEP" ],
+      "animations": [
+        "q.bedrock('atlas_sweep18_goodra', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk1'), 10, 20, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk2'), 10, 20, 1)",
+        "q.bedrock_quirk('atlas_sweep18_goodra', 'slime_quirk3'), 10, 20, 1)"
+      ]
+    }
+  }
+}

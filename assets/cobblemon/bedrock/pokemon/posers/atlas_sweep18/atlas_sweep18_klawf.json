@@ -1,0 +1,33 @@
+{
+  "portraitScale": 1.02,
+  "portraitTranslation": [-0.54, 0.26, 0],
+  "profileScale": 0.43,
+  "profileTranslation": [-0.02, 0.99, 0],
+  "rootBone": "klawf",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_klawf', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "battle-standing": {
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_klawf', 'battle_idle')"],
+        "quirks": ["q.bedrock_quirk('atlas_sweep18_klawf', 'blink')"]
+      },
+      "poseTypes": ["STAND", "NONE", "FLOAT", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.bedrock('atlas_sweep18_klawf', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_klawf', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_klawf', 'ground_idle')",
+        "q.quadruped_walk(1, 1, 'leg_front_left', 'leg_front_right', 'leg_middle_left', 'leg_middle_right')",
+        "q.biped_walk(1, 1, 'leg_back_left', 'leg_back_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_klawf', 'blink')"]
+    }
+  }
+}

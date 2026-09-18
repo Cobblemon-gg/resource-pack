@@ -1,0 +1,104 @@
+{
+  "portraitScale": 1.55,
+  "portraitTranslation": [-0.06,0.07,0],
+  "profileScale": 0.7,
+  "profileTranslation": [0,0.7,0],
+  "rootBone": "golbat",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_golbat', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('torso', 1, 1, 70, -45, 10, -10)",
+        "q.bedrock('atlas_sweep18_golbat', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('torso', 1, 1, 70, -45, 10, -10)",
+        "q.bedrock('atlas_sweep18_golbat', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "battle-standing-air": {
+      "poseTypes": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('torso', 1, 1, 70, -45, 10, -10)",
+        "q.bedrock('atlas_sweep18_golbat', 'battle_idle_air')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('torso', 1, 1, 70, -45, 10, -10)",
+        "q.bedrock('atlas_sweep18_golbat', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_sweep18_golbat', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "SWIM",
+        "FLY"
+      ],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('atlas_sweep18_golbat', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_golbat', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_golbat', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

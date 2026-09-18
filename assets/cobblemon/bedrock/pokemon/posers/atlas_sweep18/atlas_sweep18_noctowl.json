@@ -1,0 +1,223 @@
+{
+  "portraitScale": 1.83,
+  "portraitTranslation": [ -0.35, 1.05, 0],
+  "profileScale": 0.62,
+  "profileTranslation": [ 0, 0.81, 0],
+  "rootBone": "noctowl",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_noctowl', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_sweep18_noctowl', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'ground_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": false
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": true
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'idle_quirk')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_sweep18_noctowl', 'battle_cry')"
+      },
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'ground_walk')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": false
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": true
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "run": {
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'ground_run')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'air_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "battle-hover": {
+      "poseTypes": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'air_battle_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseTypes": [
+        "FLY",
+        "SWIM"
+      ],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_noctowl', 'air_fly')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_noctowl', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "condition": "!q.is_flying",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_sweep18_noctowl', 'sleep')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": false
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": true
+        }
+      ]
+    },
+    "air-sleep": {
+      "poseTypes": ["SLEEP"],
+      "condition": "q.is_flying",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_sweep18_noctowl', 'air_sleep')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wings_open",
+          "isVisible": true
+        },
+        {
+          "part": "wings_closed",
+          "isVisible": false
+        }
+      ]
+    }
+  }
+}

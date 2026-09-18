@@ -1,0 +1,55 @@
+{
+  "species": "cobblemon:noctowl",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_noctowl",
+      "model": "cobblemon:atlas_sweep18_noctowl.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0164_noctowl/noctowl.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0164_noctowl/noctowl_emissive.png",
+          "emissive": "true"
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0164_noctowl/noctowl_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0164_noctowl/noctowl_shiny_emissive.png",
+          "emissive": "true"
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0164_noctowl/noctowl_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2')"
+    }
+  ]
+}

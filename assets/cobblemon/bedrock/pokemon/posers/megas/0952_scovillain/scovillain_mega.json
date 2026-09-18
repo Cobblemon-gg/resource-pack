@@ -1,0 +1,115 @@
+{
+    "portraitScale": 0.91,
+    "portraitTranslation": [
+        -0.41,
+        1.3,
+        0
+    ],
+    "profileScale": 0.54,
+    "profileTranslation": [
+        -0.1,
+        0.88,
+        0.0
+    ],
+    "rootBone": "scovillain_mega",
+    "animations": {
+        "cry": "q.bedrock_stateful('scovillain_mega', 'cry')",
+        "recoil": "q.bedrock_stateful('scovillain_mega', 'recoil')"
+    },
+    "poses": {
+        "standing": {
+            "poseTypes": [
+                "STAND",
+                "NONE",
+                "PORTRAIT",
+                "PROFILE"
+            ],
+            "condition": "q.has_entity ? !q.in_air : 1.0",
+            "isBattle": false,
+            "animations": [
+                "q.look('neck_left', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_left3', 0.5, 0)",
+                "q.look('head_ai_left', 0.5, -1, 50, -30, 45, -45)",
+                "q.look('neck_right', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_right3', 0.5, 0)",
+                "q.look('head_ai_right', 0.5, -1, 50, -30, 45, -45)",
+                "q.bedrock('scovillain_mega', 'ground_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('scovillain_mega', 'blink')",
+                "q.bedrock_quirk('scovillain_mega', 'blink2')",
+                "q.bedrock_quirk('scovillain_mega', q.array('quirk_ground_idle1', 'quirk_ground_idle2'), 20, 40, 1)"
+            ]
+        },
+        "battle-standing": {
+            "poseTypes": [
+                "STAND"
+            ],
+            "isBattle": true,
+            "animations": [
+                "q.look('neck_left', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_left3', 0.5, 0)",
+                "q.look('head_ai_left', 0.5, -1, 50, -30, 45, -45)",
+                "q.look('neck_right', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_right3', 0.5, 0)",
+                "q.look('head_ai_right', 0.5, -1, 50, -30, 45, -45)",
+                "q.bedrock('scovillain_mega', 'battle_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('scovillain_mega', 'blink')",
+                "q.bedrock_quirk('scovillain_mega', 'blink2')"
+            ]
+        },
+        "walking": {
+            "poseTypes": [
+                "WALK"
+            ],
+            "condition": "!q.is_sprinting",
+            "animations": [
+                "q.look('neck_left', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_left3', 0.5, 0)",
+                "q.look('head_ai_left', 0.5, -1, 50, -30, 45, -45)",
+                "q.look('neck_right', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_right3', 0.5, 0)",
+                "q.look('head_ai_right', 0.5, -1, 50, -30, 45, -45)",
+                "q.bedrock('scovillain_mega', 'ground_walk')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('scovillain_mega', 'blink')",
+                "q.bedrock_quirk('scovillain_mega', 'blink2')"
+            ]
+        },
+        "running": {
+            "poseTypes": [
+                "WALK"
+            ],
+            "condition": "q.is_sprinting",
+            "animations": [
+                "q.look('neck_left', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_left3', 0.5, 0)",
+                "q.look('head_ai_left', 0.5, -1, 50, -30, 45, -45)",
+                "q.look('neck_right', 0, 0.5, 0, 0, 20, -20)",
+                "q.look('neck_right3', 0.5, 0)",
+                "q.look('head_ai_right', 0.5, -1, 50, -30, 45, -45)",
+                "q.bedrock('scovillain_mega', 'ground_run')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('scovillain_mega', 'blink')",
+                "q.bedrock_quirk('scovillain_mega', 'blink2')"
+            ]
+        },
+        "sleep": {
+            "poseTypes": [
+                "SLEEP"
+            ],
+            "animations": [
+                "q.bedrock('scovillain_mega', 'sleep')",
+                {
+                    "namedAnimations": {
+                        "cry": "q.bedrock_stateful('dummy', 'cry')"
+                    }
+                }
+            ]
+        }
+    }
+}

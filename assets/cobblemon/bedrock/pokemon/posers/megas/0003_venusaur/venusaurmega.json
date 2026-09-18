@@ -1,0 +1,153 @@
+{
+  "animations": {
+    "cry": "q.bedrock_stateful('venusaur_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('venusaur_mega', 'recoil')"
+  },
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.25, 0]
+  },
+  "portraitScale": 1.03,
+  "portraitTranslation": [-0.31, 0.12, 0],
+  "poses": {
+    "battle-standing": {
+      "animations": [
+        "q.look('head', 1, 0, 10, -20)",
+        "q.look('leaf_front', 1, 0, 3, -13)",
+        "q.bedrock('venusaur_mega', 'battle_idle')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        }
+      ],
+      "isBattle": true,
+      "poseTypes": ["STAND"],
+      "quirks": [
+        "q.bedrock_quirk('venusaur_mega', 'blink')"
+      ]
+    },
+    "ride_jump": {
+      "animations": [
+        "q.look('head', 1, 0, 10, -20)",
+        "q.look('leaf_front', 1, 0, 0, -13)",
+        "q.bedrock('venusaur_mega', 'ride_jump')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'ride_ground_run')",
+          "condition": "q.is_ridden"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'rider_overlay')",
+          "condition": "q.is_ridden"
+        }
+      ],
+      "condition": "q.in_air && q.has_entity",
+      "isBattle": false,
+      "poseTypes": ["WALK", "STAND", "FLOAT", "NONE"],
+      "quirks": [
+        "q.bedrock_quirk('venusaur_mega', 'blink')"
+      ],
+      "transformTicks": 4,
+      "transformToTicks": 4
+    },
+    "run": {
+      "animations": [
+        "q.look('head', 1, 0, 10, -20)",
+        "q.look('leaf_front', 1, 0, 0, -13)",
+        "q.bedrock('venusaur_mega', 'ground_run')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'ride_ground_run')",
+          "condition": "q.is_ridden"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'rider_overlay')",
+          "condition": "q.is_ridden"
+        }
+      ],
+      "condition": "!q.in_air && q.is_sprinting && q.has_entity",
+      "isBattle": false,
+      "poseTypes": ["WALK"],
+      "quirks": [
+        "q.bedrock_quirk('venusaur_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "animations": [
+        "q.bedrock('venusaur_mega', 'sleep')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        }
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "poseTypes": ["SLEEP"]
+    },
+    "standing": {
+      "animations": [
+        "q.look('head', 1, 0, 10, -20)",
+        "q.look('leaf_front', 1, 0, 3, -13)",
+        "q.bedrock('venusaur_mega', 'ground_idle')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'rider_overlay')",
+          "condition": "q.is_ridden"
+        }
+      ],
+      "condition": "!q.in_air",
+      "isBattle": false,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "quirks": [
+        "q.bedrock_quirk('venusaur_mega', 'blink')",
+        "q.bedrock_quirk('venusaur_mega', 'look_quirk')"
+      ],
+      "transformTicks": 5
+    },
+    "walking": {
+      "animations": [
+        "q.look('head', 1, 0, 10, -20)",
+        "q.look('leaf_front', 1, 0, 0, -13)",
+        "q.bedrock('venusaur_mega', 'ground_walk')",
+        {
+          "animation": "q.bedrock('venusaur_mega', 'hold_item')",
+          "condition": "q.is_holding_item"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'ride_ground_walk')",
+          "condition": "q.is_ridden"
+        },
+        {
+          "animation": "q.bedrock('venusaur_mega', 'rider_overlay')",
+          "condition": "q.is_ridden"
+        }
+      ],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "poseTypes": ["WALK", "SWIM"],
+      "quirks": [
+        "q.bedrock_quirk('venusaur_mega', 'blink')"
+      ],
+      "transformTicks": 5
+    }
+  },
+  "profileScale": 0.47,
+  "profileTranslation": [0, 0.98, 0],
+  "rootBone": "venusaur_mega",
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.45, 1],
+    "seat_1_reverse": [0, 0.45, 1]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.45, 1],
+    "seat_1_reverse": [0, 0.45, 1]
+  }
+}

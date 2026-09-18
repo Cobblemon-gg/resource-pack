@@ -1,0 +1,62 @@
+{
+  "portraitScale": 2.3,
+  "portraitTranslation": [
+    -0.01,
+    -0.6,
+    0
+  ],
+  "profileScale": 0.85,
+  "profileTranslation": [
+    0,
+    0.5,
+    0
+  ],
+  "rootBone": "sandshrew",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_legacy_sandshrew_alolan', 'cry')",
+    "faint": "q.bedrock_stateful('atlas_legacy_sandshrew_alolan', 'faint')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "HOVER",
+        "PROFILE",
+        "PORTRAIT",
+        "NONE"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_sandshrew_alolan', 'blink')"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_sandshrew_alolan', 'ground_idle')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_legacy_sandshrew_alolan', 'sleep')"
+      ]
+    },
+    "walk": {
+      "poseTypes": [
+        "WALK",
+        "SWIM",
+        "FLY"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_sandshrew_alolan', 'blink')"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_sandshrew_alolan', 'ground_walk')"
+      ]
+    }
+  }
+}

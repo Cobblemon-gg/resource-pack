@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:barbaracle",
+  "order": 109,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_barbaracle",
+      "model": "cobblemon:atlas_sweep18_barbaracle.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0689_barbaracle/barbaracle.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0689_barbaracle/barbaracle_shiny.png",
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0689_barbaracle/barbaracle_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+    }
+  ]
+}

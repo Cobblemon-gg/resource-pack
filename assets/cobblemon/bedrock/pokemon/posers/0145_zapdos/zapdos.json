@@ -1,0 +1,62 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [ -1, 0.8, 0 ],
+  "profileScale": 0.6,
+  "profileTranslation": [ -0.15, 0.9, 0 ],
+  "animations": { 
+    "cry": "q.bedrock_stateful('zapdos', 'cry')",
+    "recoil": "q.bedrock_stateful('zapdos', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('zapdos', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('zapdos', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('zapdos', 'blink')"]
+    },
+    "float": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('zapdos', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('zapdos', 'blink')", "q.bedrock_quirk('zapdos', 'air_fly_quirk')", "q.bedrock_quirk('zapdos', 'air_fly_quirk2')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('zapdos', 'sleep')"]
+    }
+  }
+}

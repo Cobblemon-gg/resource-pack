@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:boltund",
+  "order": 100,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:boltund",
+      "model": "cobblemon:atlas_sweep18_boltund.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0836_boltund/boltund.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0836_boltund/boltund_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0836_boltund/boltund_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2')"
+    }
+  ]
+}

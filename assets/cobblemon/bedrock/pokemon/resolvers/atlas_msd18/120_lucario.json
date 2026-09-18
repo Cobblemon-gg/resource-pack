@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:lucario",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_lucario",
+      "model": "cobblemon:atlas_msd18_lucario.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_shiny.png",
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    }
+  ]
+}

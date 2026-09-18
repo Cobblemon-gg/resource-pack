@@ -1,0 +1,163 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "item/set/masquerade/hat_pokemon_3"
+	},
+	"elements": [
+		{
+			"name": "mask_left",
+			"from": [2, -1, 2.899],
+			"to": [8, 9, 2.899],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 11.25, 2.8995]},
+			"faces": {
+				"north": {"uv": [0, 5, 3, 10], "texture": "#0"},
+				"south": {"uv": [3, 5, 6, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mask_right",
+			"from": [2.45672, 9, 5.19518],
+			"to": [8.45672, 16, 5.19518],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [2.45672, 11.25, 5.19468]},
+			"faces": {
+				"north": {"uv": [9, 3.5, 6, 7], "texture": "#0"},
+				"south": {"uv": [12, 3.5, 9, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mask_right3",
+			"from": [3.45672, 16, 5.19518],
+			"to": [6.45672, 21, 5.19518],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [2.45672, 11.25, 5.19468]},
+			"faces": {
+				"north": {"uv": [10.5, 7, 9, 9.5], "texture": "#0"},
+				"south": {"uv": [12, 7, 10.5, 9.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mask_right",
+			"from": [8, -1, 2.899],
+			"to": [14, 9, 2.899],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 11.25, 2.8995]},
+			"faces": {
+				"north": {"uv": [3, 5, 0, 10], "texture": "#0"},
+				"south": {"uv": [6, 5, 3, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mask_left",
+			"from": [7.54366, 9, 5.19518],
+			"to": [13.54366, 16, 5.19518],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [13.54366, 11.25, 5.19468]},
+			"faces": {
+				"north": {"uv": [6, 3.5, 9, 7], "texture": "#0"},
+				"south": {"uv": [9, 3.5, 12, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mask_left3",
+			"from": [9.54366, 16, 5.19518],
+			"to": [12.54366, 21, 5.19518],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [13.54366, 11.25, 5.19468]},
+			"faces": {
+				"north": {"uv": [9, 7, 10.5, 9.5], "texture": "#0"},
+				"south": {"uv": [10.5, 7, 12, 9.5], "texture": "#0"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [129.26, 35.97, -162.46],
+			"translation": [0, 4, -1.25],
+			"scale": [0.45, 0.45, 0.45]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [129.26, 35.97, -162.46],
+			"translation": [0, 4, -1.25],
+			"scale": [0.45, 0.45, 0.45]
+		},
+		"firstperson_righthand": {
+			"rotation": [-180, 24, -180],
+			"translation": [14, -4.25, -19.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-180, 24, -180],
+			"translation": [14, -4.25, -19.5]
+		},
+		"ground": {
+			"translation": [0, 2.75, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"translation": [-0.25, -1.25, 0],
+			"scale": [0.74, 0.74, 0.74]
+		},
+		"head": {
+			"translation": [0, 3.25, -2.5],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"translation": [0, 0, -1]
+		},
+		"on_shelf": {
+			"rotation": [-180, 0, -180],
+			"translation": [0, 2.5, 1]
+		}
+	},
+	"groups": [
+		{
+			"name": "hat_pokemon_3",
+			"origin": [8, 4.5, 2.9],
+			"color": 2,
+			"children": [
+				{
+					"name": "mask_left",
+					"origin": [8, 5, 2.9],
+					"color": 6,
+					"children": [
+						0,
+						{
+							"name": "mask_left2",
+							"origin": [8, 9, 2.9],
+							"color": 7,
+							"children": [
+								1,
+								{
+									"name": "mask_left3",
+									"origin": [7, 16, 2.9],
+									"color": 8,
+									"children": [2]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "mask_right",
+					"origin": [8, 5, 2.9],
+					"color": 6,
+					"children": [
+						3,
+						{
+							"name": "mask_right2",
+							"origin": [8, 9, 2.9],
+							"color": 7,
+							"children": [
+								4,
+								{
+									"name": "mask_right3",
+									"origin": [9, 16, 2.9],
+									"color": 8,
+									"children": [5]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

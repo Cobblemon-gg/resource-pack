@@ -1,0 +1,31 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [ -1.5, 2.3, 0 ],
+  "profileScale": 0.35,
+  "profileTranslation": [ -0.15, 1.2, 0 ],
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('baxcalibur_mega', 'ground_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('baxcalibur_mega', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('baxcalibur_mega', 'ground_walk')"
+      ]
+    }
+  }
+}

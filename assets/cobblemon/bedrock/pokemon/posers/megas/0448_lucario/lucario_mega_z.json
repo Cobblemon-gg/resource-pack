@@ -1,0 +1,75 @@
+{
+    "portraitScale": 2.3,
+    "portraitTranslation": [-0.3, 2.7, 0],
+    "profileScale": 0.45,
+    "profileTranslation": [0, 1, 0],
+    "animations": {
+    "cry": "q.bedrock_stateful('lucario_mega_z', 'cry')",
+    "recoil": "q.bedrock_stateful('lucario_mega_z', 'recoil')",
+    "physical": "q.bedrock_primary('lucario_mega_z', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('lucario_mega_z', 'special', q.curve('symmetrical_wide'))"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "isTouchingWater": false,
+        "animations": [
+          "q.look('head_ai')",
+          "q.bedrock('lucario_mega_z', 'ground_idle')"
+        ],
+      "quirks": [
+        "q.bedrock_quirk('lucario_mega_z', 'blink')"
+      ]
+      },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "isTouchingWater": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('lucario_mega_z', 'battle_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('lucario_mega_z', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('lucario_mega_z', 'ground_run')"],
+      "quirks": ["q.bedrock_quirk('lucario_mega_z', 'blink')"]
+    },
+    "surface_idle": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('lucario_mega_z', 'water_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lucario_mega_z', 'blink')"]
+    },
+    "surface_swim": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('lucario_mega_z', 'water_swim')"
+      ],
+      "quirks": ["q.bedrock_quirk('lucario_mega_z', 'blink')"]
+    },
+      "float": {
+        "poseTypes": ["FLOAT"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('lucario_mega_z', 'water_idle')"
+        ]
+      },
+      "swim": {
+        "poseTypes": ["SWIM"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('lucario_mega_z', 'water_swim')"
+        ]
+      }
+    }
+   }

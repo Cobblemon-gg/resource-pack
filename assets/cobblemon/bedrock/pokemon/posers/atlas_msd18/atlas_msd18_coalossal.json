@@ -1,0 +1,44 @@
+{
+  "portraitScale": 2.19,
+  "portraitTranslation": [
+    -0.65,
+    0.88,
+    0
+  ],
+  "profileScale": 0.62,
+  "profileTranslation": [
+    0.0,
+    0.79,
+    0
+  ],
+  "rootBone": "coalossal",
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('atlas_msd18_coalossal', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_coalossal', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_coalossal', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_coalossal', 'blink')"
+      ]
+    }
+  }
+}

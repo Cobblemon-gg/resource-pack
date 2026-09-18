@@ -1,0 +1,57 @@
+{
+   "portraitScale": 1.96,
+   "portraitTranslation": [ -0.18, -0.84, 0 ],
+   "profileScale": 0.76,
+   "profileTranslation": [ 0.0, 0.57, 0 ],
+   "rootBone": "darumaka",
+   "animations": {
+      "cry": "q.bedrock_stateful('atlas_sweep18_darumaka', 'cry')"
+   },
+   "poses": {
+      "battle-standing": {
+         "poseTypes": [ "STAND" ],
+         "isBattle": true,
+         "animations": [
+            "q.look('torso', 1, 1, 20, -20, 20, -20)",
+            "q.bedrock('atlas_sweep18_darumaka', 'battle_idle')"
+         ],
+         "quirks": [
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'blink')",
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'quirk', 15, 100, 1)"
+         ]
+      },
+      "standing": {
+         "poseTypes": [ "STAND", "NONE", "PORTRAIT", "PROFILE" ],
+         "isBattle": false,
+         "animations": [
+            "q.look('torso', 1, 1, 20, -20, 20, -20)",
+            "q.bedrock('atlas_sweep18_darumaka', 'ground_idle')"
+         ],
+         "quirks": [
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'blink')",
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'quirk', 15, 100, 1)",
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'quirk2', 20, 360, 1)"
+         ]
+      },
+      "walking": {
+         "poseTypes": [ "WALK" ],
+         "animations": [
+            "q.look('torso', 1, 1, 20, -20, 20, -20)",
+            "q.bedrock('atlas_sweep18_darumaka', 'ground_walk')"
+         ],
+         "quirks": [
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'blink')",
+            "q.bedrock_quirk('atlas_sweep18_darumaka', 'quirk', 15, 100, 1)"
+         ]
+      },
+      "sleep": {
+         "poseTypes": [ "SLEEP" ],
+         "animations": [
+            "q.bedrock('atlas_sweep18_darumaka', 'sleep')"
+         ],
+         "namedAnimations": {
+            "cry": "q.bedrock_stateful('dummy', 'cry')"
+         }
+      }
+   }
+}

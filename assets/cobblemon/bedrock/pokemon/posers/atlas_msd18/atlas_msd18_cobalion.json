@@ -1,0 +1,82 @@
+{
+  "head": "head",
+  "portraitScale": 2,
+  "portraitTranslation": [
+    -0.8,
+    3,
+    0
+  ],
+  "profileScale": 0.6,
+  "profileTranslation": [
+    0,
+    0.8,
+    0
+  ],
+  "animations": {
+    "cry": "bedrock('atlas_msd18_cobalion', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_msd18_cobalion', 'recoil')",
+    "status": "q.bedrock_stateful('atlas_msd18_cobalion', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_cobalion', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_cobalion', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_cobalion', 'sleep')"
+      ]
+    }
+  }
+}

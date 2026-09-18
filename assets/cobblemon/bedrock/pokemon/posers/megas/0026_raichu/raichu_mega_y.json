@@ -1,0 +1,36 @@
+{
+  "portraitScale": 1.9,
+  "portraitTranslation": [-0.1, -0.1, 0.0],
+  "profileScale": 0.55,
+  "profileTranslation": [-0.1, 0.9, 0.0],
+  "animations": {
+    "cry": "q.bedrock_stateful('raichumegay', 'cry')",
+    "recoil": "q.bedrock_stateful('raichumegay', 'recoil', q.curve('one'))",
+    "physical": "q.bedrock_primary('raichumegay', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('raichumegay', 'special', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('raichumegay', 'ground_idle')"]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "FLY", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raichumegay', 'battle_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('raichumegay', 'ground_walk')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('raichumegay', 'sleep')"]
+    }
+  }
+}

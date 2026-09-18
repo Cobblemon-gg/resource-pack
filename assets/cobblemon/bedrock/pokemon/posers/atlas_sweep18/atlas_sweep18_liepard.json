@@ -1,0 +1,45 @@
+{
+  "portraitScale": 1.39,
+  "portraitTranslation": [-0.64, 1.94, 0],
+  "profileScale": 0.4,
+  "profileTranslation": [-0.02, 1.14, 0.0],
+  "rootBone": "liepard",
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_sweep18_liepard', 'faint', q.curve('one'))",
+    "recoil": "q.bedrock_stateful('atlas_sweep18_liepard', 'recoil')",
+    "cry": "q.bedrock_stateful('atlas_sweep18_liepard', 'cry')",
+    "physical": "q.bedrock_primary('atlas_sweep18_liepard', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('atlas_sweep18_liepard', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('atlas_sweep18_liepard', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_liepard', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_liepard', 'blink')"],
+      "namedAnimations": {"cry": "q.bedrock_primary('atlas_sweep18_liepard', 'status', q.curve('symmetrical_wide'))"}
+    },
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_liepard', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_liepard', 'blink')", "q.bedrock_quirk('atlas_sweep18_liepard', q.array('idle_quirk','idle_quirk2','idle_quirk3'))"]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_liepard', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_liepard', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('atlas_sweep18_liepard', 'sleep')"],
+      "namedAnimations": {"cry": "q.bedrock_stateful('dummy', 'cry')"}
+    }
+  }
+}

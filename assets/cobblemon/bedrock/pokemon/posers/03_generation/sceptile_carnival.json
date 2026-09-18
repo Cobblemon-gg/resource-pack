@@ -1,0 +1,65 @@
+{
+  "portraitScale": 2.27,
+  "portraitTranslation": [
+    -0.69,
+    2.22,
+    0
+  ],
+  "profileScale": 0.63,
+  "profileTranslation": [
+    0.06,
+    0.91,
+    0
+  ],
+  "rootBone": "sceptile",
+  "animations": {
+    "cry": "q.bedrock_stateful('sceptile', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('sceptile_carnival', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sceptile_carnival', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('sceptile_carnival', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sceptile_carnival', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.biped_walk(0.6, 0.9, 'left_upper_leg', 'right_upper_leg')",
+        "q.bedrock('sceptile_carnival', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sceptile_carnival', 'blink')"
+      ]
+    }
+  }
+}

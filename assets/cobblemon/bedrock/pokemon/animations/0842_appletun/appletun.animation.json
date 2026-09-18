@@ -1,0 +1,206 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.appletun.ground_idle": {
+			"loop": true,
+			"bones": {
+				"leg1": {
+					"rotation": [0, 0, -10],
+					"position": [0, -1, 0]
+				},
+				"leg_part1": {
+					"rotation": [0, 0, 10],
+					"position": [0, 1, 0]
+				},
+				"leg1_fromt": {
+					"rotation": [0, 0, -10],
+					"position": [0, -1, 0]
+				},
+				"leg_fromt_part1": {
+					"rotation": [0, 0, 10],
+					"position": [0, 1, 0]
+				},
+				"torso": {
+					"rotation": ["2.5+math.sin(q.anim_time*90)*4", 0, 0],
+					"position": [0, "0-math.cos(q.anim_time*90*12/6-90)*0.1", "0+math.sin(q.anim_time*90+4+90)*0.2"]
+				},
+				"tail": {
+					"rotation": ["-20+math.sin(q.anim_time*90)*2", "0+math.sin(q.anim_time*90*3)*1.8", 0],
+					"position": [0, -0.91181, -2.04172]
+				},
+				"tail2": {
+					"rotation": [12.5, 0, 0]
+				},
+				"neck": {
+					"rotation": ["5+math.sin(q.anim_time*90)*4", 0, 0]
+				},
+				"neck2": {
+					"rotation": [-5, 0, 0],
+					"position": [0, 0.2, 0]
+				},
+				"head": {
+					"rotation": ["-2.5+math.sin(q.anim_time*90)*2 ", 0, 0]
+				},
+				"eye1": {
+					"rotation": [0, 0, "10+math.sin(q.anim_time*90*2+90)*4 "]
+				},
+				"hoja1": {
+					"rotation": [0, 0, "math.sin(q.anim_time*90*4)*2"]
+				},
+				"hoja2": {
+					"rotation": [0, 0, "math.sin(q.anim_time*90*4)*2"]
+				},
+				"leg1_fromt2": {
+					"rotation": [0, 0, 10],
+					"position": [0, -1, 0]
+				},
+				"leg_fromt_part2": {
+					"rotation": [0, 0, -10],
+					"position": [0, 1, 0]
+				},
+				"leg2": {
+					"rotation": [0, 0, 10],
+					"position": [0, -1, 0]
+				},
+				"leg_part2": {
+					"rotation": [0, 0, -10],
+					"position": [-0.17365, 0.98481, 0]
+				},
+				"eye2": {
+					"rotation": [0, 0, "-10-math.sin(q.anim_time*90*2+90)*4 "]
+				}
+			}
+		},
+		"animation.appletun.blink": {
+			"animation_length": 0.25
+		},
+		"animation.appletun.ground_walk": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, -0.99, 0],
+						"0.0833": [0, 0.12, 0],
+						"0.4583": [0, 0.08, 0],
+						"0.5": [0, -1, 0],
+						"0.5417": [0, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"leg1": {
+					"rotation": [
+						"1.7538+math.clamp(math.sin(query.anim_time*90*4*1+180)*22.5,-22,0)+math.clamp(math.sin(query.anim_time*90*4*1+180)*7.5,0,5)",
+						"-9.8466+math.sin(q.anim_time*90*4+0)*5",
+						"-10.151-(math.clamp(math.sin(query.anim_time*90*4*1+10)*6,-0,5))"
+					],
+					"position": [
+						"0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+						"-1.3+math.clamp(math.sin(query.anim_time*90*4*1+200+180)*1,-0.1,1)",
+						"math.sin(q.anim_time*90*4-75+180)*1.5"
+					]
+				},
+				"leg_part1": {
+					"rotation": [0, 0, 10],
+					"position": [0.19125, 0.98154, -0.00316]
+				},
+				"leg1_fromt": {
+					"rotation": [
+						"-1.7539+math.clamp(math.sin(query.anim_time*90*4*1+0)*22.5,-22,0)+math.clamp(math.sin(query.anim_time*90*4*1+0)*7.5,0,5)",
+						"9.8466+math.sin(q.anim_time*90*4-0)*5",
+						"-10.151-(math.clamp(math.sin(query.anim_time*90*4*1+10)*6,-5,0))"
+					],
+					"position": {
+						"0.0": [
+							"-0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+							"-1+math.clamp(math.sin(query.anim_time*90*4*1+200)*1,-0.1,1)",
+							"math.sin(q.anim_time*90*4-75)*1.5"
+						],
+						"0.5": [
+							"-0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+							"-1+math.clamp(math.sin(query.anim_time*90*4*1+200)*1,-0.1,1)",
+							"-1+math.sin(q.anim_time*90*4-75)*1.5"
+						],
+						"1.0": [
+							"-0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+							"-1+math.clamp(math.sin(query.anim_time*90*4*1+200)*1,-0.1,1)",
+							"math.sin(q.anim_time*90*4-75)*1.5"
+						]
+					}
+				},
+				"leg_fromt_part1": {
+					"rotation": {
+						"0.0": [0, 0, 10],
+						"0.25": [10, 0, 10],
+						"0.75": [-7.5, 0, 10],
+						"1.0": [0, 0, 10]
+					},
+					"position": {
+						"0.0": [0.17365, 0.98481, 0],
+						"1.0": [0.17365, 0.98481, 0]
+					}
+				},
+				"torso": {
+					"rotation": ["2.5+math.sin(q.anim_time*90*8+90)*1", 0, "0+math.cos(q.anim_time*90*4)*2"],
+					"position": [0, "0-math.sin(q.anim_time*90*8)*0.2", 0]
+				},
+				"tail": {
+					"rotation": [-20, "math.sin(q.anim_time*90*4)*15", 0],
+					"position": [0, -0.91181, -2.04172]
+				},
+				"tail2": {
+					"rotation": [12.5, "math.sin(q.anim_time*90*4)*12", 0]
+				},
+				"neck": {
+					"rotation": [5, 0, 0]
+				},
+				"neck2": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"head": {
+					"rotation": ["-5+math.sin(q.anim_time*90*8+90)*2", 0, 0]
+				},
+				"eye1": {
+					"rotation": [0, "0+math.sin(q.anim_time*90*8+0)*4", "10+math.sin(q.anim_time*90*4+0)*8"]
+				},
+				"leg1_fromt2": {
+					"rotation": [
+						"1.7538+math.clamp(math.sin(query.anim_time*90*4*1+180)*22.5,-22,0)+math.clamp(math.sin(query.anim_time*90*4*1+180)*7.5,0,5)",
+						"9.8466+math.sin(q.anim_time*90*4+0)*5",
+						"10.151-(math.clamp(math.sin(query.anim_time*90*4*1+10)*6,-0,5))"
+					],
+					"position": [
+						"-0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+						"-1.3+math.clamp(math.sin(query.anim_time*90*4*1+200+180)*1,-0.1,1)",
+						"math.sin(q.anim_time*90*4-75+180)*1.5"
+					]
+				},
+				"leg_fromt_part2": {
+					"rotation": [0, 0, -10],
+					"position": [-0.15598, 0.98775, 0.00316]
+				},
+				"leg2": {
+					"rotation": [
+						"1.7537+math.clamp(math.sin(query.anim_time*90*4*1+0)*22.5,-22,0)+math.clamp(math.sin(query.anim_time*90*4*1+0)*7.5,0,5)",
+						"9.8466+math.sin(q.anim_time*90*4-0)*5",
+						"10.151-(math.clamp(math.sin(query.anim_time*90*4*1+10)*6,-5,0))"
+					],
+					"position": [
+						"-0.2+math.sin(q.anim_time*90*4-75+180)*0.25",
+						"-1+math.clamp(math.sin(query.anim_time*90*4*1+200)*1,-0.1,1)",
+						"math.sin(q.anim_time*90*4-75)*1.5"
+					]
+				},
+				"leg_part2": {
+					"rotation": [0, 0, -10],
+					"position": [-0.17365, 0.98481, 0]
+				},
+				"eye2": {
+					"rotation": [0, "0-math.sin(q.anim_time*90*8+0)*4", "-10-math.sin(q.anim_time*90*4+0)*8"]
+				}
+			}
+		}
+	}
+}

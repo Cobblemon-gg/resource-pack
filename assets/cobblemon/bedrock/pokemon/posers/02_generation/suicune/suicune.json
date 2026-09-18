@@ -1,0 +1,52 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [ -1.36, 2.15, 0.0],
+  "profileScale": 0.5,
+  "profileTranslation": [0, 1.1, 0.0],
+  "animations": { 
+    "cry": "q.bedrock_stateful('suicune', 'cry')",
+    "recoil": "q.bedrock_stateful('suicune', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('suicune', 'battle_idle')",
+        "q.bedrock('suicune', 'tail_idle')",
+        "q.bedrock('suicune', 'hair')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('suicune', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('suicune', 'ground_idle')",
+        "q.bedrock('suicune', 'tail_idle')",
+        "q.bedrock('suicune', 'hair')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('suicune', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('suicune', 'ground_walk')",
+        "q.bedrock('suicune', 'tail_idle')",
+        "q.bedrock('suicune', 'hair')"
+      ],
+      "quirks": ["q.bedrock_quirk('suicune', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('suicune', 'sleep')", "q.bedrock('suicune', 'tail_sleep')", "q.bedrock('suicune', 'hair')"]
+    }
+  }
+}

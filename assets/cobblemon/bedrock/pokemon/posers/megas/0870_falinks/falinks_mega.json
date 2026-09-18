@@ -1,0 +1,31 @@
+{
+  "portraitScale": 1.5,
+  "portraitTranslation": [-0.05, 1.6, 0.0],
+  "profileScale": 0.5,
+  "profileTranslation": [0, 1, 0.0],
+  "animations": {
+    "physical": "q.bedrock_primary('falinks_mega', 'physical')",
+    "ironhead": "q.bedrock_primary('falinks_mega', 'headbutt')",
+    "headbutt": "q.bedrock_primary('falinks_mega', 'headbutt')",
+    "zenheadbutt": "q.bedrock_primary('falinks_mega', 'headbutt')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.bedrock('falinks_mega', 'ground_idle')"]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "FLY", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('falinks_mega', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('falinks_mega', 'ground_walk')"]
+    }
+  }
+}

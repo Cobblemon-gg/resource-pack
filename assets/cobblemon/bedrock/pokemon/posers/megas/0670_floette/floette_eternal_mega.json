@@ -1,0 +1,37 @@
+{
+    "portraitScale": 2,
+    "portraitTranslation": [0, -0.3, 0],
+    "profileScale": 0.6,
+    "profileTranslation": [0, 0.9, 0],
+    "rootBone": "floette_eternal_mega",
+    "animations": {
+      "recoil": "q.bedrock_stateful('floette_eternal_mega', 'recoil')",
+       "cry": "q.bedrock_stateful('floette_eternal_mega', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('floette_eternal_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('floette_eternal_mega', 'blink')"]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.look('head')", "q.bedrock('floette_eternal_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('floette_eternal_mega', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('floette_eternal_mega', 'ground_idle')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('floette_eternal_mega', 'ground_walk')"]
+    }
+    }
+   }

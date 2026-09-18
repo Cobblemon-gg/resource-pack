@@ -1,0 +1,52 @@
+{
+  "portraitScale": 2.6,
+  "portraitTranslation": [-0.4,3.0,0],
+  "profileScale": 0.45,
+  "profileTranslation": [0.0,1.0,0],
+  "rootBone": "garganacl",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_hotfix18_garganacl', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_hotfix18_garganacl', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_hotfix18_garganacl', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_hotfix18_garganacl', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_hotfix18_garganacl', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_hotfix18_garganacl', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_hotfix18_garganacl', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('atlas_hotfix18_garganacl', 'sleep')"],
+      "namedAnimations": {"cry": "q.bedrock_stateful('dummy', 'cry')"}
+    }
+  }
+}

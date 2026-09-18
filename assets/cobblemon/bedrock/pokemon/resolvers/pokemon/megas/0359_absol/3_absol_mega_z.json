@@ -1,0 +1,58 @@
+{
+  "species": "cobblemon:absol",
+  "order": 3,
+  "variations": [
+    {
+      "aspects": [
+        "mega-z"
+      ],
+      "poser": "cobblemon:absol_mega_z",
+      "model": "cobblemon:absol_mega_z.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0359_absol/absol_mega_z.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0359_absol/absol_mega_z_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega-z",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0359_absol/absol_mega_z_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0359_absol/absol_mega_z_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega-z"
+      ],
+      "poser": "cobblemon:atlas_msd18_absol_mega_z",
+      "model": "cobblemon:atlas_msd18_absol_mega_z.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0359_absol/absol_mega_z.png",
+      "layers": [
+        {
+          "name": "glow",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura') && !q.has_aspect('mega') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "mega-z",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0359_absol/absol_mega_z_shiny.png",
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura') && !q.has_aspect('mega') && !q.has_aspect('plushie')"
+    }
+  ]
+}

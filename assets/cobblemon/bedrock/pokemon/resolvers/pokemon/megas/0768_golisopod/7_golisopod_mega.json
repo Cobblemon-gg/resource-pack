@@ -1,0 +1,54 @@
+{
+  "species": "cobblemon:golisopod",
+  "order": 7,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:golisopod_mega",
+      "model": "cobblemon:golisopod_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0768_golisopod/golisopod_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0768_golisopod/golisopod_mega_shiny.png"
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_golisopod_mega",
+      "model": "cobblemon:atlas_msd18_golisopod_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0768_golisopod/golisopod_mega.png",
+      "layers": [],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0768_golisopod/golisopod_mega_shiny.png",
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0768_golisopod/golisopod_mega_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2')"
+    }
+  ]
+}

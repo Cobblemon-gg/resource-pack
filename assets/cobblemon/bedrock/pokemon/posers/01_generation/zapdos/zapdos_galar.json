@@ -1,0 +1,35 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [ -0.79, 2.88, 0 ],
+  "profileScale": 0.55,
+  "profileTranslation": [ 0, 1, 0 ],
+  "animations": { 
+    "cry": "q.bedrock_stateful('zapdos', 'cry')",
+    "recoil": "q.bedrock_stateful('zapdos', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos_galar', 'ground_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos_galar', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('zapdos_galar', 'ground_walk')"
+      ]
+    }
+  }
+}

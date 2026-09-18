@@ -1,0 +1,24 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [-0.7, 4, 0],
+    "profileScale": 0.23,
+    "profileTranslation": [-0.1, 1.4, 0],
+    "rootBone": "crabominable_mega",
+    "animations": {
+      "cry": "q.bedrock_stateful('crabominable_mega', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.bedrock('crabominable_mega', 'ground_idle')"
+        ]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": [ "q.bedrock('crabominable_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('crabominable_mega', 'blink')"]
+    }
+    }
+   }

@@ -1,0 +1,57 @@
+{
+  "species": "cobblemon:magmortar",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_magmortar",
+      "model": "cobblemon:atlas_sweep18_magmortar.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0467_magmortar/magmortar.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0467_magmortar/magmortar_emissive.png",
+          "translucent": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0467_magmortar/magmortar_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0467_magmortar/magmortar_emissive_shiny.png",
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0467_magmortar/magmortar_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-0.3, 1.4, 0],
+    "profileScale": 0.5,
+    "profileTranslation": [-0.1, 1, 0],
+    "rootBone": "starmie_mega",
+    "animations": {
+      "cry": "q.bedrock_stateful('starmie_mega', 'cry')"
+    },
+    "poses": {
+       "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('starmie_mega', 'battle_idle')"
+      ]
+    },
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('starmie_mega', 'ground_idle')"
+        ]
+      },
+      "walking": {
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('starmie_mega', 'ground_walk')"
+        ]
+      },
+      "sleep": {
+        "poseTypes": ["SLEEP"],
+        "animations": ["q.bedrock('starmie_mega', 'sleep')"]
+      },
+      "float": {
+        "poseTypes": ["FLOAT"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('starmie_mega', 'water_idle')"
+        ]
+      },
+      "swim": {
+        "poseTypes": ["SWIM"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('starmie_mega', 'surfacewater_swim')"
+        ]
+      },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["STAND","WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.bedrock('starmie_mega', 'ground_walk')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('starmie_mega', 'ground_walk')"
+        }
+      ],
+      "transformTicks": 10
+    }
+    }
+   }

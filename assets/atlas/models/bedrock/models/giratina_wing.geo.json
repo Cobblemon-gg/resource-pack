@@ -1,0 +1,86 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.giratina_wing",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, -29, -3.5]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, -22, -3]
+				},
+				{
+					"name": "chest",
+					"parent": "torso",
+					"pivot": [0, -15, -3.5]
+				},
+				{
+					"name": "chest2",
+					"parent": "chest",
+					"pivot": [0, -7.5, -3]
+				},
+				{
+					"name": "wings",
+					"parent": "chest2",
+					"pivot": [0, -2.5, 3]
+				},
+				{
+					"name": "wing_left",
+					"parent": "wings",
+					"pivot": [2.5, 0, 3],
+					"rotation": [0, -25, 0],
+					"cubes": [
+						{"origin": [2.5, -17, 3], "size": [17, 23, 0], "uv": [0, 37]},
+						{"origin": [8.5, -20.4291, 0.12987], "size": [7, 12, 0], "pivot": [12, -9.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37]}
+					]
+				},
+				{
+					"name": "wing_left2",
+					"parent": "wing_left",
+					"pivot": [19.5, 2, 3],
+					"cubes": [
+						{"origin": [19.5, -22, 3], "size": [31, 37, 0], "uv": [0, 0]},
+						{"origin": [21.5, -19.4291, 0.12987], "size": [7, 12, 0], "pivot": [25, -8.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37]},
+						{"origin": [34.5, -17.4291, 0.12987], "size": [7, 12, 0], "pivot": [38, -6.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37]}
+					]
+				},
+				{
+					"name": "wing_right",
+					"parent": "wings",
+					"pivot": [-2.5, 0, 3],
+					"rotation": [0, 25, 0],
+					"cubes": [
+						{"origin": [-19.5, -17, 3], "size": [17, 23, 0], "uv": [0, 37], "mirror": true},
+						{"origin": [-15.5, -20.4291, 0.12987], "size": [7, 12, 0], "pivot": [-12, -9.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37], "mirror": true}
+					]
+				},
+				{
+					"name": "wing_right2",
+					"parent": "wing_right",
+					"pivot": [-19.5, 2, 3],
+					"cubes": [
+						{"origin": [-50.5, -22, 3], "size": [31, 37, 0], "uv": [0, 0], "mirror": true},
+						{"origin": [-28.5, -19.4291, 0.12987], "size": [7, 12, 0], "pivot": [-25, -8.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37], "mirror": true},
+						{"origin": [-41.5, -17.4291, 0.12987], "size": [7, 12, 0], "pivot": [-38, -6.9291, 0.12987], "rotation": [-22.5, 0, 0], "uv": [34, 37], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

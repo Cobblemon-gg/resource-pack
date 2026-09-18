@@ -1,0 +1,56 @@
+{
+  "head": "head",
+  "portraitScale": 2,
+  "portraitTranslation": [-0.8, 3, 0],
+  "profileScale": 0.5,
+  "profileTranslation": [0, 1.1, 0],
+  "animations": {
+    "cry": "bedrock('cobalion', 'cry')",
+    "recoil": "q.bedrock_stateful('cobalion', 'recoil')",
+    "status": "q.bedrock_stateful('cobalion', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('cobalion', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('cobalion', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('cobalion', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('cobalion', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('cobalion', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.bedrock('cobalion', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('cobalion', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('cobalion', 'sleep')"]
+    }
+  }
+}

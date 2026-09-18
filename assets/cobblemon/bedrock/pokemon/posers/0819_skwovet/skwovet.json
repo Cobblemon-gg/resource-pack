@@ -1,0 +1,55 @@
+{
+    "portraitScale": 1.35,
+    "portraitTranslation": [ 0, 0.0, 0 ],
+    "profileScale": 0.8,
+    "profileTranslation": [ 0, 0.7, 0 ],
+    "animations": {
+      "faint": "q.bedrock_primary('skwovet', 'ground_idle', q.curve('one'))"
+    },
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('skwovet', 'ground_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('skwovet', 'blink')"
+       ]
+      },
+      "battle": {
+        "poseName": "battle_idle",
+        "transformTicks": 10,
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('skwovet', 'ground_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('skwovet', 'blink')"
+       ]
+      },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.bedrock('skwovet', 'ground_walk')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('skwovet', 'blink')"       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('skwovet', 'ground_idle')"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:virizion",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:virizion",
+      "model": "cobblemon:virizion.geo",
+      "texture": "cobblemon:textures/pokemon/05_generation/virizion/virizion.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/05_generation/virizion/virizion_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_virizion",
+      "model": "cobblemon:atlas_msd18_virizion.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0640_virizion/virizion.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('plushie') && !q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0640_virizion/virizion_shiny.png",
+      "condition": "!q.has_aspect('plushie') && !q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    }
+  ]
+}

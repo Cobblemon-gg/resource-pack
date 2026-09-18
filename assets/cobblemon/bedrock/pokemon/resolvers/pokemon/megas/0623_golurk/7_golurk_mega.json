@@ -1,0 +1,106 @@
+{
+  "species": "cobblemon:golurk",
+  "order": 7,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:golurk_mega",
+      "model": "cobblemon:golurk_mega.geo",
+      "texture": {
+        "frames": [
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png",
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png",
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png"
+        ],
+        "fps": 10,
+        "loop": true
+      },
+      "layers": [
+        {
+          "name": "color",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": {
+        "frames": [
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png",
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png",
+          "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png"
+        ],
+        "fps": 10,
+        "loop": true
+      },
+      "layers": [
+        {
+          "name": "color",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_golurk_mega",
+      "model": "cobblemon:atlas_msd18_golurk_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('halloween')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny_emissive.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('halloween')"
+    }
+  ]
+}

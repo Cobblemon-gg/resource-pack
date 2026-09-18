@@ -1,0 +1,67 @@
+{
+  "portraitScale": 0.41,
+  "portraitTranslation": [-0.13, 2.39, 0],
+  "profileScale": 0.21,
+  "profileTranslation": [-0.04, 1.44, 0],
+  "rootBone": "regigigas",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.25, -0.45]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [1.15, 0.35, 2.75],
+    "seat_1_reverse": [1.15, 0.35, 2.5]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('regigigas', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('regigigas', 'cry')",
+    "recoil": "q.bedrock_primary('regigigas', 'recoil')",
+    "physical": "q.bedrock_primary('regigigas', 'physical', q.curve('symmetrical'))",
+    "special": "q.bedrock_primary('regigigas', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('regigigas', 'status', q.curve('symmetrical'))",
+    "crushgrip": "q.bedrock_primary('regigigas', 'crush_grip', q.curve('symmetrical'))"
+
+  },
+  "poses": {
+    "portrait": {
+      "poseTypes": ["PORTRAIT"],
+      "animations": [
+        "q.bedrock('regigigas', 'ground_idle')"
+      ]
+    },
+    "profile": {
+      "poseTypes": ["PROFILE"],
+      "animations": ["q.bedrock('regigigas', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('regigigas', 'blink', 5, 15, 1)"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE"],
+      "animations": ["q.bedrock('regigigas', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('regigigas', 'blink', 5, 15, 1)"]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('regigigas', 'battle_idle')",
+        "q.bedrock_stateful('regigigas', 'cry', q.curve('one'))"
+      ],
+      "quirks": ["q.bedrock_quirk('regigigas', 'blink', 5, 15, 1)"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.is_sprinting",
+      "animations": ["q.bedrock('regigigas', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('regigigas', 'blink', 5, 15, 1)"]
+    },
+    "run": {
+      "poseTypes": ["STAND","WALK"],
+      "condition": "q.is_sprinting && q.is_ridden",
+      "animations": ["q.bedrock('regigigas', 'ground_run')"],
+      "quirks": ["q.bedrock_quirk('regigigas', 'blink', 5, 15, 1)"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('regigigas', 'sleep')"]
+    }
+  }
+}

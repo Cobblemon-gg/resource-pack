@@ -1,0 +1,36 @@
+{
+  "portraitScale": 1.5,
+  "portraitTranslation": [0.03, -0.16, 0],
+  "profileScale": 0.67,
+  "profileTranslation": [0, 0.75, 0],
+  "rootBone": "bronzor",
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "HOVER", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('body')", 
+        "q.bedrock('bronzor', 'ground_idle')"
+      ],
+      "quirks": [
+      "q.bedrock_quirk('bronzor', 'blink')",
+      "q.bedrock_quirk('bronzor', 'idle_quirk')"
+    ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLY"],
+      "animations": [
+        "q.look('body')", 
+        "q.bedrock('bronzor', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bronzor', 'blink')"
+      ]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('bronzor', 'sleep')"
+      ]
+    }
+  }
+}

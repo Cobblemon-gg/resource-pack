@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:nidoking",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_hotfix18_nidoking",
+      "model": "cobblemon:atlas_hotfix18_nidoking.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0034_nidoking/nidoking.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('oni') && !q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0034_nidoking/nidoking_shiny.png",
+      "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('oni') && !q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0034_nidoking/nidoking_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('oni') && !q.has_aspect('plushie') && !q.has_aspect('valentines')"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:cobalion",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cobalion",
+      "model": "cobblemon:cobalion.geo",
+      "texture": "cobblemon:textures/pokemon/05_generation/cobalion/cobalion.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/05_generation/cobalion/cobalion_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_cobalion",
+      "model": "cobblemon:atlas_msd18_cobalion.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0638_cobalion/cobalion.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0638_cobalion/cobalion_shiny.png",
+      "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

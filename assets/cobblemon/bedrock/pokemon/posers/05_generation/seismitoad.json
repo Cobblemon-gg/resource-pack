@@ -1,0 +1,41 @@
+{
+  "portraitScale": 1.8,
+  "portraitTranslation": [-0.5, 0.5, 0],
+  "profileScale": 0.8,
+  "profileTranslation": [0, 0.6, 0],
+  "cry": "bedrock(seismitoad, cry)",
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": ["bedrock(seismitoad, ground_idle)"],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(seismitoad, blink)"]
+        },
+        {
+          "name": "gulp_quirk",
+          "animations": ["bedrock(seismitoad, gulp_quirk)"]
+        }
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": ["WALK"],
+      "animations": ["bedrock(seismitoad, ground_walk)"],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(seismitoad, blink)"]
+        },
+        {
+          "name": "gulp_quirk",
+          "animations": ["bedrock(seismitoad, gulp_quirk)"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "species": "cobblemon:lucario",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "model": "cobblemon:lucario_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0448_lucario/lucario_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "model": "cobblemon:lucario_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0448_lucario/lucario_mega_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_lucario_mega",
+      "model": "cobblemon:atlas_msd18_lucario_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_mega.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_mega_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_mega_shiny.png",
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0448_lucario/lucario_mega_alpha.png",
+          "emissive": false
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-shears') && !q.has_aspect('egyptian') && !q.has_aspect('galaxy') && !q.has_aspect('golden') && !q.has_aspect('mega-z') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('skel') && !q.has_aspect('summer')"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.applin",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "applin",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "applin",
+					"pivot": [0, 5, 0]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "torso",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 0, -4], "size": [8, 2, 8], "uv": [0, 36]},
+						{"origin": [-4.5, 1.5, -4.5], "size": [9, 8, 9], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "eyes",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "eye1",
+					"parent": "eyes",
+					"pivot": [-2, 10, 0],
+					"rotation": [0, 0, 20],
+					"cubes": [
+						{"origin": [0, 10.3, 0], "size": [3, 6, 0], "uv": [37, 6]}
+					]
+				},
+				{
+					"name": "eye_pupiled1",
+					"parent": "eye1",
+					"pivot": [-2, 14, 0],
+					"cubes": [
+						{"origin": [0.5, 13, -0.01], "size": [1, 1, 0], "uv": [37, 20]}
+					]
+				},
+				{
+					"name": "eye2",
+					"parent": "eyes",
+					"pivot": [2, 10, 0],
+					"rotation": [0, 0, -20],
+					"cubes": [
+						{"origin": [-3, 10.3, 0], "size": [3, 6, 0], "uv": [37, 6], "mirror": true}
+					]
+				},
+				{
+					"name": "eye_pupiled2",
+					"parent": "eye2",
+					"pivot": [2, 14, 0],
+					"cubes": [
+						{"origin": [-1.5, 13, -0.01], "size": [1, 1, 0], "uv": [37, 20], "mirror": true}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "torso",
+					"pivot": [0, 0, 5],
+					"cubes": [
+						{"origin": [-1.5, 0, 4], "size": [3, 3, 3], "uv": [33, 36]}
+					]
+				},
+				{
+					"name": "tail2",
+					"parent": "tail",
+					"pivot": [0, 0, 8],
+					"cubes": [
+						{"origin": [-1, 0, 6.6], "size": [2, 2, 3], "uv": [37, 0]}
+					]
+				}
+			]
+		}
+	]
+}

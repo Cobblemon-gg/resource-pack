@@ -1,0 +1,74 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [
+    -0.6,
+    0.6,
+    0
+  ],
+  "profileScale": 0.9,
+  "profileTranslation": [
+    0,
+    0.4,
+    0
+  ],
+  "rootBone": "talonflame",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_legacy_talonflame', 'cry')"
+  },
+  "poses": {
+    "stand": {
+      "poseTypes": [
+        "STAND",
+        "PROFILE",
+        "PORTRAIT",
+        "NONE"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_legacy_talonflame', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_talonflame', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_legacy_talonflame', 'ground_idle')",
+        "q.biped_walk(0.6662, 1.4, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_talonflame', 'blink')"
+      ]
+    },
+    "floating": {
+      "poseTypes": [
+        "FLOAT",
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_legacy_talonflame', 'hover')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_talonflame', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseTypes": [
+        "FLY",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_legacy_talonflame', 'fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_talonflame', 'blink')"
+      ]
+    }
+  }
+}

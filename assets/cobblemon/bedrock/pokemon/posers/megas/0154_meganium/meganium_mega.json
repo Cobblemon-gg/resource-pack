@@ -1,0 +1,37 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [-0.8, 2.5, 0],
+    "profileScale": 0.4,
+    "profileTranslation": [0, 1.2, 0],
+    "rootBone": "meganium_mega",
+  "animations": {
+    "cry": "q.bedrock_stateful('meganium_mega', 'cry')"
+  },
+    "poses": {
+       "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('meganium_mega', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('meganium_mega', 'blink')"]
+    },
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('meganium_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('meganium_mega', 'blink')"]
+      },
+      "walking": {
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('meganium_mega', 'ground_walk')"
+        ],
+      "quirks": ["q.bedrock_quirk('meganium_mega', 'blink')"]
+      }
+    }
+   }

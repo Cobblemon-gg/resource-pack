@@ -1,0 +1,62 @@
+{
+  "portraitScale": 1.63,
+  "portraitTranslation": [-0.87, 0.72, 0],
+  "profileScale": 0.64,
+  "profileTranslation": [0, 0.76, 0],
+  "rootBone": "eelektross",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_eelektross', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head', 1, 1, 30, -10, 40, -40)",
+        "q.bedrock('atlas_sweep18_eelektross', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head', 1, 1, 30, -10, 40, -40)",
+        "q.bedrock('atlas_sweep18_eelektross', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head', 1, 1, 30, -10, 40, -40)",
+        "q.bedrock('atlas_sweep18_eelektross', 'water_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('atlas_sweep18_eelektross', 'water_swim')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('head', 1, 1, 30, -10, 40, -40)",
+        "q.bedrock('atlas_sweep18_eelektross', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('atlas_sweep18_eelektross', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_eelektross', 'blink')"]
+    }
+  }
+}

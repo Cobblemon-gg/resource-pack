@@ -1,0 +1,46 @@
+{
+  "species": "cobblemon:chiyu",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:chiyu",
+      "model": "cobblemon:chiyu.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chiyu/chiyu.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/chiyu/chiyu_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_chiyu",
+      "model": "cobblemon:atlas_msd18_chiyu.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1004_chiyu/chiyu.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1004_chiyu/chiyu_emissive.png"
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1004_chiyu/chiyu_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1004_chiyu/chiyu_shiny_emissive.png"
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    }
+  ]
+}

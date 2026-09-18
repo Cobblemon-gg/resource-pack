@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:swampert",
+  "order": 104,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_swampert",
+      "model": "cobblemon:atlas_sweep18_swampert.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0260_swampert/swampert.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('carnival') && !q.has_aspect('ice') && !q.has_aspect('mega') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0260_swampert/swampert_shiny.png",
+      "condition": "!q.has_aspect('carnival') && !q.has_aspect('ice') && !q.has_aspect('mega') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0260_swampert/swampert_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('carnival') && !q.has_aspect('ice') && !q.has_aspect('mega') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2')"
+    }
+  ]
+}

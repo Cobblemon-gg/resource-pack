@@ -1,0 +1,67 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [ -0.375, 2.75, 0 ],
+  "profileScale": 0.55,
+  "profileTranslation": [ 0, 1.05, 0 ],
+  "animations": {
+    "cry": "q.bedrock_stateful('articuno', 'cry')",
+    "recoil": "q.bedrock_stateful('articuno', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno', 'battle_idle')",
+        "q.bedrock('articuno', 'tail_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('articuno', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno', 'ground_idle')",
+        "q.bedrock('articuno', 'tail_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('articuno', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno', 'ground_walk')",
+        "q.bedrock('articuno', 'tail_layer')"
+      ],
+      "quirks": ["q.bedrock_quirk('articuno', 'blink')"]
+    },
+    "float": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno', 'air_idle')",
+        "q.bedrock('articuno', 'tail_layer')"
+      ],
+      "quirks": ["q.bedrock_quirk('articuno', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno', 'air_fly')",
+        "q.bedrock('articuno', 'tail_layer')"
+      ],
+      "quirks": ["q.bedrock_quirk('articuno', 'blink')", "q.bedrock_quirk('articuno', 'air_fly_quirk')", "q.bedrock_quirk('articuno', 'air_fly_quirk2')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('articuno', 'sleep')", "q.bedrock('articuno', 'tail_layer')"]
+    }
+  }
+}

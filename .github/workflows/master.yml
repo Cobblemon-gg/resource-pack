@@ -4,25 +4,22 @@ on:
   release:
     types: [created]
 
+permissions:
+  contents: write
+
 jobs:
   zip-resources:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Zip files
-      uses: montudor/action-zip@v1
-      with:
-        args: zip -qq -r resource-pack.zip .
-
-    - name: Upload zip as release asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      with:
-        upload_url: ${{ github.event.release.upload_url }} 
-        asset_path: ./resource-pack.zip
-        asset_name: resource-pack.zip
-        asset_content_type: application/zip
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify overlay builder
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
+      - name: Build server overlay and complete fallback
+        run: python3 tools/build_pack.py build
+      - name: Upload release packs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$GITHUB_REF_NAME" dist/resource-pack.zip dist/resource-pack-full.zip dist/asset-size-report.json --clobber

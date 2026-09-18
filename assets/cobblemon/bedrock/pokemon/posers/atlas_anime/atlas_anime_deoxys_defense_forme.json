@@ -1,0 +1,95 @@
+{
+  "portraitScale": 1.5,
+  "portraitTranslation": [
+    -0.2,
+    3.4,
+    0
+  ],
+  "profileScale": 0.4,
+  "profileTranslation": [
+    0,
+    1.2,
+    0
+  ],
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_anime_deoxys_defense_forme_deoxysdefense', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_anime_deoxys_defense_forme_deoxysdefense', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_anime_deoxys_defense_forme_deoxysdefense', 'recoil')",
+    "physical": "q.bedrock_primary('atlas_anime_deoxys_defense_forme_deoxysdefense', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('atlas_anime_deoxys_defense_forme_deoxysdefense', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('atlas_anime_deoxys_defense_forme_deoxysdefense', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_idle')"
+      ]
+    },
+    "standing": {
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "transformTicks": 8,
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "transformTicks": 5,
+      "poseTypes": [
+        "FLY",
+        "HOVER",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "transformTicks": 5,
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "transformTicks": 8,
+      "poseTypes": [
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "transformTicks": 10,
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_anime_deoxys_defense_forme_deoxysdefense', 'sleep')"
+      ]
+    }
+  },
+  "rootBone": "deoxys"
+}

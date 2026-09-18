@@ -1,0 +1,43 @@
+{
+  "portraitScale": 1.75,
+  "portraitTranslation": [-0.79, 1.43, 0],
+  "profileScale": 0.59,
+  "profileTranslation": [0.01, 0.81, 0],
+  "rootBone": "druddigon",
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+		"q.look('head_ai')",
+        "q.bedrock('atlas_hotfix18_druddigon', 'battle_idle')",
+		{
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('atlas_hotfix18_druddigon', 'hold_item')"
+        }
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+		"q.look('head_ai')",
+        "q.bedrock('atlas_hotfix18_druddigon', 'ground_idle')",
+		{
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('atlas_hotfix18_druddigon', 'hold_item')"
+        }
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('atlas_hotfix18_druddigon', 'ground_idle')",
+		{
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('atlas_hotfix18_druddigon', 'hold_item')"
+        }
+      ]
+    }
+  }
+ }

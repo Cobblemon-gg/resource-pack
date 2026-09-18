@@ -1,0 +1,111 @@
+{
+  "portraitScale": 0.8,
+  "portraitTranslation": [-0.88,5.04, 0],
+  "profileScale": 0.2,
+  "profileTranslation": [0, 1.46, -20],
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0, 2],
+    "seat_1_reverse": [0, 0.45, 1]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0, 3],
+    "seat_1_reverse": [0, 0.45, 1]
+  },
+  "animations": {
+    
+
+    
+  },
+  "poses": {
+    "battle-standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'battle_idle')"
+      ]
+    },
+    "standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "condition": "!q.in_air" ,
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "transformTicks": 8,
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "transformTicks": 5,
+      "poseTypes": [  "HOVER", "FLOAT" ],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'air_idle')"
+       ]
+    },
+    "in-air": {
+        "poseTypes": ["STAND", "WALK"],
+        "isBattle": false,
+        "condition": "q.in_air && q.is_ridden",
+        "animations": ["q.look('head')", "q.bedrock('reshiram', 'ride_jump')"],
+        "transformTicks": 2,
+        "transformToTicks": 2
+      },
+     "run": {
+        "poseTypes": ["STAND","WALK"],
+        "isBattle": false,
+        "condition": "!q.in_air && q.is_sprinting",
+        "animations": [
+         "q.look('head')",
+          "q.bedrock('reshiram', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('reshiram', 'ride_ground_run')"
+        }
+        ],
+        "transformTicks": 10
+      },
+    "fly": {
+      "transformTicks": 5,
+      "poseTypes": [ "FLY" ],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'air_fly')"
+       ]
+    },
+    "float": {
+      "transformTicks": 5,
+      "poseTypes": ["FLOAT"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'air_idle')"
+      ]
+    },
+    "swim": {
+      "transformTicks": 8,
+      "poseTypes": ["SWIM"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('reshiram', 'ground_walk')"
+      ]
+    }
+  }
+}

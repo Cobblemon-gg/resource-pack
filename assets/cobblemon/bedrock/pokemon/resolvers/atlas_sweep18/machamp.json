@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:machamp",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:machamp",
+      "model": "cobblemon:atlas_sweep18_machamp.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0068_machamp/machamp.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0068_machamp/machamp_shiny.png",
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0068_machamp/machamp_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('superhero')"
+    }
+  ]
+}

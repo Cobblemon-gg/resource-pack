@@ -1,0 +1,85 @@
+{
+  "portraitScale": 1,
+  "portraitTranslation": [
+    0,
+    0.3,
+    0
+  ],
+  "profileScale": 1,
+  "profileTranslation": [
+    0,
+    0.3,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_primary('atlas_msd18_pokemans_munkidori', 'cry', q.curve('symmetrical_wide'))",
+    "physical": "q.bedrock_primary('atlas_msd18_pokemans_munkidori', 'physical_attack', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('atlas_msd18_pokemans_munkidori', 'physical_attack', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('atlas_msd18_pokemans_munkidori', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "look",
+        "q.bedrock('atlas_msd18_pokemans_munkidori', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_pokemans_munkidori', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "look",
+        "q.bedrock('atlas_msd18_pokemans_munkidori', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_pokemans_munkidori', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "look",
+        "q.bedrock('atlas_msd18_pokemans_munkidori', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_pokemans_munkidori', 'blink')"
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_pokemans_munkidori', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_pokemans_munkidori', 'blink')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_pokemans_munkidori', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_pokemans_munkidori', 'blink')"
+      ]
+    }
+  }
+}

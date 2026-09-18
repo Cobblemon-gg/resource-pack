@@ -1,0 +1,34 @@
+{
+  "species": "cobblemon:terrakion",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:terrakion",
+      "model": "cobblemon:terrakion.geo",
+      "texture": "cobblemon:textures/pokemon/05_generation/terrakion/terrakion.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/05_generation/terrakion/terrakion_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_terrakion",
+      "model": "cobblemon:atlas_msd18_terrakion.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0639_terrakion/terrakion.png",
+      "layers": [],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0639_terrakion/terrakion_shiny.png",
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    }
+  ]
+}

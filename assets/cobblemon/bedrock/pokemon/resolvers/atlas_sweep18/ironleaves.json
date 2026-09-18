@@ -1,0 +1,61 @@
+{
+  "species": "cobblemon:ironleaves",
+  "order": 102,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ironleaves",
+      "model": "cobblemon:atlas_sweep18_ironleaves.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/1010_ironleaves/ironleaves.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/1010_ironleaves/ironleaves_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "sleep",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "sleep"
+      ],
+      "layers": [
+        {
+          "name": "sleep",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/1010_ironleaves/ironleaves_sleep.png",
+          "emissive": false
+        }
+      ],
+      "condition": "!q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/1010_ironleaves/ironleaves_shiny.png",
+      "condition": "!q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/1010_ironleaves/ironleaves_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('valentines')"
+    }
+  ]
+}

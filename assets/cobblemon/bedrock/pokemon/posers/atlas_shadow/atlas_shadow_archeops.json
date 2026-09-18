@@ -1,0 +1,290 @@
+{
+  "portraitScale": 1.51,
+  "portraitTranslation": [
+    -1.19,
+    1.15,
+    0.0
+  ],
+  "profileScale": 0.49,
+  "profileTranslation": [
+    -0.04,
+    0.97,
+    -6.0
+  ],
+  "rootBone": "archeops",
+  "firstPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.45,
+      0
+    ]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.5,
+      0
+    ],
+    "seat_1_reverse": [
+      0,
+      0.5,
+      0
+    ]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [
+      0,
+      0.5,
+      0
+    ],
+    "seat_1_reverse": [
+      0,
+      0.5,
+      0
+    ]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_shadow_archeops_archeops', 'cry')"
+  },
+  "poses": {
+    "portrait": {
+      "poseTypes": [
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_shadow_archeops_archeops', 'cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "battle-flying": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_shadow_archeops_archeops', 'air_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "jump": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "condition": "q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ride_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "running": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_shadow_archeops_archeops', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')",
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', q.array('quirk', 'quirk2'), 30, 60, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_shadow_archeops_archeops', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_shadow_archeops_archeops', 'air_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "isBattle": false,
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'air_fly')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_shadow_archeops_archeops', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_shadow_archeops_archeops', 'air_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "glide": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "isBattle": false,
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'air_glide')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'ride_dive')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_shadow_archeops_archeops', 'ride_air_glide')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ]
+    },
+    "surface_idle": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'surfacewater_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [
+            0,
+            23,
+            0
+          ]
+        }
+      ]
+    },
+    "surface_swim": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_shadow_archeops_archeops', 'surfacewater_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_archeops_archeops', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [
+            0,
+            23,
+            0
+          ]
+        }
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_shadow_archeops_archeops', 'sleep')"
+      ],
+      "quirks": []
+    }
+  }
+}

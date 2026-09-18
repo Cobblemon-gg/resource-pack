@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:tinglu",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:tinglu",
+      "model": "cobblemon:tinglu.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/tinglu/tinglu.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/tinglu/tinglu_shiny.png"
+    },
+    {
+      "poser": "cobblemon:atlas_msd18_tinglu",
+      "model": "cobblemon:atlas_msd18_tinglu.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1003_tinglu/tinglu.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2')",
+      "aspects": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1003_tinglu/tinglu_shiny.png",
+      "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2')"
+    }
+  ]
+}

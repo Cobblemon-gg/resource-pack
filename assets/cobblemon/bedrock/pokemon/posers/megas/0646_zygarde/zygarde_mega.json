@@ -1,0 +1,27 @@
+{
+    "portraitScale": 0.8,
+    "portraitTranslation": [-0.35, 5.2, 0],
+    "profileScale": 0.15,
+    "profileTranslation": [0, 1.7, 0],
+    "rootBone": "zygarde_mega",
+    "animations": {
+    "recoil": "q.bedrock_stateful('zygarde_mega', 'recoil')",
+    "physical": "q.bedrock_primary('zygarde_mega', 'attack', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('zygarde_mega', 'attack', q.curve('symmetrical_wide'))",
+    "nihillight": "q.bedrock_primary('zygarde_mega', 'nihillight', q.curve('symmetrical_wide'))"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('zygarde_mega', 'ground_idle')"
+        ]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('zygarde_mega', 'ground_walk')"]
+    }
+    }
+   }

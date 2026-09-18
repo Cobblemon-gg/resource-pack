@@ -1,0 +1,48 @@
+{
+    "portraitScale": 1.3,
+    "portraitTranslation": [-0.3, 1.4, 0],
+    "profileScale": 0.4,
+    "profileTranslation": [0, 1.2, 0],
+    "rootBone": "clefable_mega",
+    "animations": {
+      "faint": "q.bedrock_primary('clefable_mega', 'faint')",
+      "cry": "q.bedrock_stateful('clefable_mega', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('clefable_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('clefable_mega', 'blink')"]
+      },
+      "walking": {
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('clefable_mega', 'ground_walk')"
+        ],
+      "quirks": ["q.bedrock_quirk('clefable_mega', 'blink')"]
+      },
+      "sleep": {
+        "poseTypes": ["SLEEP"],
+        "animations": ["q.bedrock('clefable_mega', 'sleep')"],
+      "quirks": ["q.bedrock_quirk('clefable_mega', 'blink')"]
+      },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('clefable_mega', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('clefable_mega', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('clefable_mega', 'ground_walk')"],
+      "quirks": [
+        "q.bedrock_quirk('clefable_mega', 'blink')"
+      ]
+    }
+    }
+   }

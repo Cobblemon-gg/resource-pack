@@ -1,0 +1,86 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [
+    -0.69,
+    -0.18,
+    0
+  ],
+  "profileScale": 0.7,
+  "profileTranslation": [
+    0.0,
+    0.63,
+    0
+  ],
+  "rootBone": "golem",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_anime_golem_golem', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_anime_golem_golem', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_anime_golem_golem', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_golem_golem', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_anime_golem_golem', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_golem_golem', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_anime_golem_golem', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_golem_golem', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "isWild": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_anime_golem_golem', 'sleep')"
+      ]
+    },
+    "wild_sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "isWild": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_anime_golem_golem', math.random(0, 1) < 0.4 ? 'wild_sleep3' : (math.random(0, 1) < 0.5 ? 'wild_sleep2' : 'wild_sleep1'))"
+      ]
+    }
+  }
+}

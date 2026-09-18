@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.baxcalibur.ground_idle": {
+			"loop": true,
+			"bones": {
+				"arm_left": {
+					"rotation": [0, "0-Math.cos((query.anim_time - 0.5) * 90) * 2", 35]
+				},
+				"head": {
+					"rotation": ["-15-Math.cos((query.anim_time - 0.8) * 90) * 2", 0, 0]
+				},
+				"bone11": {
+					"rotation": ["5-Math.cos((query.anim_time - 0.8) * 90) * 2", 0, 0],
+					"position": [0, 0, 0.25]
+				},
+				"arm_left2": {
+					"rotation": [0, "67.5-Math.cos((query.anim_time - 0.8) * 90) * 2", 0],
+					"position": [-2, 0, 2]
+				},
+				"arm_right": {
+					"rotation": [0, "0+Math.cos((query.anim_time - 0.5) * 90) * 2", -35]
+				},
+				"arm_right2": {
+					"rotation": [0, "-67.5+Math.cos((query.anim_time - 0.8) * 90) * 2", 0],
+					"position": [2, 0, 2]
+				},
+				"torso": {
+					"rotation": ["7.5-Math.cos((query.anim_time - 0.2) * 90) * 2", "-Math.cos((query.anim_time - 0.2) * 90) * 2", 0]
+				},
+				"neck": {
+					"rotation": ["5-Math.cos((query.anim_time - 0.5) * 90) * 2", 0, 0]
+				},
+				"body": {
+					"rotation": [0, 0, 0]
+				},
+				"tail": {
+					"rotation": [0, "0-Math.cos((query.anim_time - 0.5) * 90) * 2", 0]
+				},
+				"tail2": {
+					"rotation": [0, "0-Math.cos((query.anim_time - 0.8) * 90) * 2", 0]
+				}
+			}
+		}
+	}
+}

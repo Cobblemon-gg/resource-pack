@@ -1,0 +1,32 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [-0.42, 2.06, 0],
+  "profileScale": 0.45,
+  "profileTranslation": [0.01, 1.12, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_lopunny', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_lopunny', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lopunny', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_lopunny', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lopunny', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.look('head')", "q.bedrock('atlas_sweep18_lopunny', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lopunny', 'blink')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('atlas_sweep18_lopunny', 'sleep')"]
+    }
+  }
+}

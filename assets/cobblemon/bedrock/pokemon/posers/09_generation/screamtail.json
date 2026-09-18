@@ -1,0 +1,81 @@
+{
+  "portraitScale": 1.6,
+  "portraitTranslation": [-0.4, 0, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0, 0.6, -1.8],
+  "animations": {
+    "cry": "bedrock('screamtail', 'cry')",
+    "recoil": "q.bedrock_stateful('screamtail', 'recoil')",
+    "physical": "q.bedrock_primary('screamtail', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('screamtail', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_stateful('screamtail', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('screamtail', 'battle_idle')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(screamtail, blink)"]
+        },
+        {
+          "name": "quirk",
+          "animations": ["bedrock(screamtail, ear_flick)"]
+        }
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('screamtail', 'ground_idle')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(screamtail, blink)"]
+        },
+        {
+          "name": "quirk",
+          "animations": ["bedrock(screamtail, ear_flick)"]
+        },
+        {
+          "name": "quirk2",
+          "animations": ["bedrock(screamtail, cry)"]
+        }
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('screamtail', 'ground_walk')"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(screamtail, blink)"]
+        }
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.bedrock('screamtail', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('screamtail', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('screamtail', 'sleep')"]
+    }
+  }
+}

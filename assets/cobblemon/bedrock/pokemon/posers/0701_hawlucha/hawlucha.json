@@ -1,0 +1,44 @@
+{
+  "portraitScale": 1.86,
+  "portraitTranslation": [ -0.13, 1.43, 0],
+  "profileScale": 0.54,
+  "profileTranslation": [ 0, 0.95, 0],
+  "rootBone": "hawlucha",
+  "animations": {
+    "cry": "q.bedrock_stateful('hawlucha', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('hawlucha', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('hawlucha', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('hawlucha', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')",
+        "q.bimanual_swing(1, 1, 'arm_left', 'arm_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('hawlucha', 'blink')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "portraitScale": 1.55,
+  "portraitTranslation": [-1.23, 2.79, 0],
+  "profileScale": 0.45,
+  "profileTranslation": [0, 1.03, 0],
+  "rootBone": "turtonator",
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_turtonator', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_turtonator', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_turtonator', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_turtonator', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_turtonator', 'ground_idle')",
+        "q.bimanual_swing(0.66, 1.4, 'arm_left', 'arm_right')" ,
+        "q.biped_walk(0.66, 1.4, 'leg_left', 'leg_right')" 
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_turtonator', 'blink')"]
+    }
+  }
+}

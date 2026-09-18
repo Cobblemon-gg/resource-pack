@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:rillaboom",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rillaboom",
+      "model": "cobblemon:atlas_sweep18_rillaboom.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0812_rillaboom/rillaboom.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0812_rillaboom/rillaboom_shiny.png",
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0812_rillaboom/rillaboom_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    }
+  ]
+}

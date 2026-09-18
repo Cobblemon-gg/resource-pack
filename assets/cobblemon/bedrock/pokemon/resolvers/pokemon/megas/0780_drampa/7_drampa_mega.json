@@ -1,0 +1,62 @@
+{
+  "species": "cobblemon:drampa",
+  "order": 7,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:drampa_mega",
+      "model": "cobblemon:drampa_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_shiny.png"
+    },
+    {
+      "aspects": [
+        "lunar-new-year",
+        "mega"
+      ],
+      "model": "cobblemon:drampa_mega_lur.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_lur.png"
+    },
+    {
+      "aspects": [
+        "lunar-new-year",
+        "mega",
+        "shiny"
+      ],
+      "model": "cobblemon:drampa_mega_lur.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_shiny_lur.png"
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_drampamega",
+      "model": "cobblemon:atlas_msd18_drampamega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0780_drampa/drampa_mega.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('lunar-new-year')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0780_drampa/drampa_mega_shiny.png",
+      "condition": "!q.has_aspect('lunar-new-year')"
+    }
+  ]
+}

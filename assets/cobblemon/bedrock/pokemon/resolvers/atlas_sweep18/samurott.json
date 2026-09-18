@@ -1,0 +1,83 @@
+{
+  "species": "cobblemon:samurott",
+  "order": 104,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:samurott",
+      "model": "cobblemon:atlas_sweep18_samurott.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    },
+    {
+      "aspects": [
+        "hisuian"
+      ],
+      "poser": "cobblemon:samurott_hisuian",
+      "model": "cobblemon:atlas_sweep18_samurott_hisuian.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott_hisuian.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    },
+    {
+      "aspects": [
+        "hisuian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott_hisuian_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0503_samurott/samurott_hisuian_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2')"
+    }
+  ]
+}

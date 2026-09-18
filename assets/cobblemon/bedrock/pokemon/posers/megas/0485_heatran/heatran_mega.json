@@ -1,0 +1,39 @@
+{
+  "portraitScale": 0.8,
+  "portraitTranslation": [ -0.75, 0.83, 0.0],
+  "profileScale": 0.35,
+  "profileTranslation": [-0.16, 1.1, 0.0],
+  "animations": {
+    "cry": "q.bedrock_stateful('heatran_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('heatran_mega', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('heatran_mega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('heatran_mega', 'blink')"
+      ] 
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('heatran_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('heatran_mega', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.bedrock('heatran_mega', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('heatran_mega', 'blink')"]
+    }
+  }
+}

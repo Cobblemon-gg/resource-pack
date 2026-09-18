@@ -1,0 +1,96 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [-1, 1.2, 0],
+    "profileScale": 0.38,
+    "profileTranslation": [-0.1, 1.1, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('golisopod_mega', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "isUnderWater": false,
+      "condition": "!q.in_air && !q.is_ridden",
+      "animations": [
+        "q.bedrock('golisopod_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('golisopod_mega', 'sleep')"
+      ]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('golisopod_mega', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('golisopod_mega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "float": {
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.bedrock('golisopod_mega', 'water_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "swim": {
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('golisopod_mega', 'water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "surface_idle": {
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["STAND", "FLOAT"],
+      "animations": [
+        "q.bedrock('golisopod_mega', 'water_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    },
+    "surface_swim": {
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('golisopod_mega', 'water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('golisopod_mega', 'blink')"
+      ]
+    }
+  }
+}

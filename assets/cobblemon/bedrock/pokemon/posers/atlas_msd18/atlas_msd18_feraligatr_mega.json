@@ -1,0 +1,151 @@
+{
+  "portraitScale": 1.3,
+  "portraitTranslation": [
+    -0.7,
+    1.1,
+    0
+  ],
+  "profileScale": 0.6,
+  "profileTranslation": [
+    0,
+    0.8,
+    -10
+  ],
+  "rootBone": "feraligatr",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_msd18_feraligatr_mega', 'cry')",
+    "physical": "q.bedrock_primary('atlas_msd18_feraligatr_mega', 'physical', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "PROFILE",
+        "PORTRAIT",
+        "NONE"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "isTouchingWater": false,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "surface_float": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'watersurface_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "surface_swim": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'watersurface_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'water_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_feraligatr_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "isTouchingWater": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_msd18_dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'sleep')"
+      ]
+    },
+    "water-sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "isTouchingWater": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_msd18_dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_msd18_feraligatr_mega', 'water_sleep')"
+      ]
+    }
+  }
+}

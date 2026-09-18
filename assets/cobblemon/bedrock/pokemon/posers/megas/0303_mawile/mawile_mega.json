@@ -1,0 +1,29 @@
+{
+  "portraitScale": 2.4,
+  "portraitTranslation": [-0.12, 0.7, 0.0],
+  "profileScale": 0.8,
+  "profileTranslation": [0.09, 0.6, 0.0],
+  "rootBone": "mawile",
+  "animations": {
+    "cry": "q.bedrock_stateful('mawile_mega', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.bedrock('mawile_mega', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('mawile_mega', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.bedrock('mawile_mega', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('mawile_mega', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.bedrock('mawile_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('mawile_mega', 'blink')"]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "portraitScale": 1.05,
+  "portraitTranslation": [
+    -0.28,
+    0.48,
+    0.0
+  ],
+  "profileScale": 0.63,
+  "profileTranslation": [
+    0.0,
+    0.69,
+    0.0
+  ],
+  "rootBone": "darmanitan",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_compat18_legacy_darmanitan_zen', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('atlas_compat18_legacy_darmanitan_zen', 'battle_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_compat18_legacy_darmanitan_zen', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "FLOAT",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('atlas_compat18_legacy_darmanitan_zen', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_compat18_legacy_dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_compat18_legacy_darmanitan_zen', 'sleep')"
+      ]
+    }
+  }
+}
