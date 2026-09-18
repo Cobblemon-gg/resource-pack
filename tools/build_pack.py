@@ -79,6 +79,8 @@ def build(args):
     from msd18_skin_guards import check
     check(args.root)
     current=runtime_files(args.root)
+    from check_bedrock_uv import check as check_bedrock_uv
+    check_bedrock_uv(current)
     manifest=json.loads(args.manifest.read_text())
     baseline=manifest['files']
     changed={p:d for p,d in current.items() if p not in baseline or digest(d)!=baseline[p]['sha256']}
