@@ -1,0 +1,172 @@
+{
+  "head": "head_pivot",
+  "portraitScale": 2,
+  "portraitTranslation": [
+    -0.2,
+    3,
+    0
+  ],
+  "profileScale": 0.5,
+  "profileTranslation": [
+    -0.1,
+    1.05,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_anime_scizor_mega_scizor_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_anime_scizor_mega_scizor_mega', 'recoil')",
+    "bulletpunch": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'bulletpunch', q.curve('symmetrical_wide'))",
+    "air_bulletpunch": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_bulletpunch', q.curve('symmetrical_wide'))",
+    "closecombat": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'closecombat', q.curve('symmetrical_wide'))",
+    "air_closecombat": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_closecombat', q.curve('symmetrical_wide'))",
+    "physical": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'special', q.curve('symmetrical_wide'))",
+    "battle_cry": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))",
+    "air_physical": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_physical', q.curve('symmetrical_wide'))",
+    "air_special": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_special', q.curve('symmetrical_wide'))",
+    "air_status": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))",
+    "faint": "q.bedrock_stateful('atlas_anime_scizor_mega_scizor_mega', 'faint', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')",
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'snap_quirk', 6, 32, 1)"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "battle-flying": {
+      "poseTypes": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))",
+        "bulletpunch": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_bulletpunch', q.curve('symmetrical_wide'))",
+        "closecombat": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_closecombat', q.curve('symmetrical_wide'))",
+        "physical": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_physical', q.curve('symmetrical_wide'))",
+        "special": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_special', q.curve('symmetrical_wide'))",
+        "status": "q.bedrock_primary('atlas_anime_scizor_mega_scizor_mega', 'air_battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "standing": {
+      "poseName": "standing",
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "hovering": {
+      "poseName": "hovering",
+      "transformTicks": 10,
+      "poseTypes": [
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "flying": {
+      "poseName": "flying",
+      "transformTicks": 10,
+      "poseTypes": [
+        "FLY"
+      ],
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "floating": {
+      "poseName": "floating",
+      "transformTicks": 10,
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head_pivot')",
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_scizor_mega_scizor_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_anime_scizor_mega_scizor_mega', 'sleep')"
+      ]
+    }
+  },
+  "rootBone": "scizor"
+}
