@@ -40,7 +40,13 @@ python3 tools/build_pack.py build
 ```
 
 Upload `dist/resource-pack.zip` to the existing server pack delivery mechanism.
-It includes only files that changed or were added since the frozen client
+`server-overrides.json` maps exact authoring asset paths to reasons for always
+including them in the overlay, even when unchanged from the frozen baseline.
+The temporary Rayquaza entry repairs clients that load the baseline below mod
+defaults. Keep it until the client pack-order fix is required; do not refresh the
+baseline or rename the resolver to force delivery. Missing override assets fail
+the build.
+Apart from these explicit overrides, it includes only files that changed or were added since the frozen client
 baseline, so no client update is required. Font files and resolver JSONs must
 contain the complete desired definition at their existing path; do not rename a
 resolver when replacing it, since Cobblemon merges resolver sets across paths.

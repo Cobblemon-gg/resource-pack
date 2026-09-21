@@ -84,6 +84,16 @@ def build(args):
     manifest=json.loads(args.manifest.read_text())
     baseline=manifest['files']
     changed={p:d for p,d in current.items() if p not in baseline or digest(d)!=baseline[p]['sha256']}
+    # Some shipped clients load the baseline below mod defaults. Keep targeted
+    # same-path overrides in the server pack even when their bytes are unchanged.
+    override_file=args.root/'server-overrides.json'
+    overrides=json.loads(override_file.read_text()) if override_file.exists() else {}
+    if not isinstance(overrides,dict) or any(not isinstance(reason,str) or not reason.strip() for reason in overrides.values()):
+        raise SystemExit('server-overrides.json must map asset paths to nonempty reasons')
+    missing=sorted(set(overrides)-set(current))
+    if missing:
+        raise SystemExit('Server override assets are missing from the authoring tree:\n'+'\n'.join(missing))
+    changed.update({p:current[p] for p in overrides})
     removed=sorted(set(baseline)-set(current))
     overlaps=manifest.get('upstream_overlapping_paths')
     if removed and overlaps is None:
@@ -113,6 +123,7 @@ def build(args):
     assert effective == {p:digest(d) for p,d in current.items()}, 'Overlay does not reconstruct authoring assets'
     report={'baseline_id':manifest['baseline_id'],'baseline_files':len(baseline),'baseline_raw_bytes':sum(v['bytes'] for v in baseline.values()),'overlay_files':len(changed),'masked_deleted_files':len(removed),'overlay_zip_bytes':(args.output/'resource-pack.zip').stat().st_size,'full_zip_bytes':(args.output/'resource-pack-full.zip').stat().st_size,'changed_paths':sorted(changed),'deleted_paths':removed}
     report['download_reduction_percent']=round(100*(1-report['overlay_zip_bytes']/report['full_zip_bytes']),4)
+    report['server_override_paths']=sorted(overrides)
     (args.output/'asset-size-report.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))
 

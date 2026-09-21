@@ -4,6 +4,33 @@ from pathlib import Path
 from build_pack import build, freeze, annotate_upstream
 
 class PackSplitTest(unittest.TestCase):
+    def test_unchanged_server_override_wins_over_mod_between_baseline_and_overlay(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'pack'; client=Path(temp)/'client'; upstream=Path(temp)/'upstream'
+            asset='assets/cobblemon/bedrock/pokemon/resolvers/0384_rayquaza/0_rayquaza_base.json'
+            custom=b'{"species":"cobblemon:rayquaza","variations":[{"aspects":["skel"]}]}'
+            normal=b'{"species":"cobblemon:rayquaza","variations":[{"aspects":[]}]}'
+            for folder,data in ((root,custom),(upstream,normal)):
+                target=folder/asset;target.parent.mkdir(parents=True);target.write_bytes(data)
+            args=argparse.Namespace(root=root,client=client,manifest=root/'client-baseline.json',output=root/'dist',baseline_id='test',replace_baseline=False,upstream_source=[upstream])
+            with contextlib.redirect_stdout(io.StringIO()):freeze(args)
+            archive=client/'resource-pack/atlas-baseline.zip'; frozen=archive.read_bytes()
+            with contextlib.redirect_stdout(io.StringIO()):build(args)
+            with zipfile.ZipFile(args.output/'resource-pack.zip') as z:
+                self.assertNotIn(asset,z.namelist())
+            (root/'server-overrides.json').write_text(json.dumps({asset:'Repair baseline priority'}))
+            with contextlib.redirect_stdout(io.StringIO()):build(args)
+            with zipfile.ZipFile(archive) as z:effective={asset:z.read(asset)}
+            effective[asset]=normal  # Mod assets override a misplaced baseline.
+            with zipfile.ZipFile(args.output/'resource-pack.zip') as z:
+                effective.update({n:z.read(n) for n in z.namelist()})
+            self.assertEqual(effective[asset],custom)
+            self.assertEqual(archive.read_bytes(),frozen)
+            # A typo/deleted pin must never silently drop the repair.
+            (root/'server-overrides.json').write_text(json.dumps({asset+'.missing':'Typo'}))
+            with self.assertRaisesRegex(SystemExit,'Server override assets are missing'):
+                build(args)
+
     def test_overlay_reconstructs_changed_new_deleted_assets_without_new_client(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/'pack'; client=Path(temp)/'client'; (root/'assets/cobblemon').mkdir(parents=True)
