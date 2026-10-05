@@ -1,0 +1,32 @@
+{
+  "portraitScale": 1.8,
+  "portraitTranslation": [-0.2, 1.55, 0.0],
+  "profileScale": 0.48,
+  "profileTranslation": [-0.1, 0.95, 0.0],
+  "animations": {
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('victreebelmega', 'ground_idle')"]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "FLY", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('victreebelmega', 'battle_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('victreebelmega', 'ground_walk')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('victreebelmega', 'sleep')"]
+    }
+  }
+}

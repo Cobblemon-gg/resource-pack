@@ -1,0 +1,65 @@
+{
+  "portraitScale": 1,
+  "portraitTranslation": [-1.2, 2.3, 0],
+  "profileScale": 0.35,
+  "profileTranslation": [0, 1.2, -1.8],
+  "animations": {
+    "faint": "q.bedrock_primary('haxorus_carnival', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('haxorus_carnival', 'cry')",
+    "recoil": "q.bedrock_stateful('haxorus_carnival', 'recoil')",
+    "physical": "q.bedrock_primary('haxorus_carnival', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('haxorus_carnival', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('haxorus_carnival', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('haxorus_carnival', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('haxorus_carnival', 'blink')",
+        "q.bedrock_quirk('haxorus_carnival', 'stomp_head_shake')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('haxorus_carnival', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('haxorus_carnival', 'blink')",
+        "q.bedrock_quirk('haxorus_carnival', 'head_shake')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('haxorus_carnival', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('haxorus_carnival', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('haxorus_carnival', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('haxorus_carnival', 'sleep')"]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "portraitScale": 2.49,
+  "portraitTranslation": [-1.05, 1.1, 0],
+  "profileScale": 0.69,
+  "profileTranslation": [0, 0.7, 0],
+  "rootBone": "skarmory",
+  "animations": {
+    "faint": "q.bedrock_primary('skarmory', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('skarmory', 'cry')",
+    "recoil": "q.bedrock_stateful('skarmory', 'recoil')",
+    "physical": "q.bedrock_primary('skarmory', 'physical', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "HOVER", "FLOAT"],
+      "isBattle": true,
+      "animations": ["q.look('head')", "q.bedrock('skarmory', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('skarmory', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('skarmory', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('skarmory', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.biped_walk(0.86, 0.8, 'left_thigh', 'right_thigh')",
+        "q.bedrock('skarmory', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('skarmory', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": ["q.look('head')", "q.bedrock('skarmory', 'air_idle')"],
+      "quirks": ["q.bedrock_quirk('skarmory', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": ["q.look('head')", "q.bedrock('skarmory', 'air_fly')"],
+      "quirks": ["q.bedrock_quirk('skarmory', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('skarmory', 'sleep')"]
+    }
+  }
+}

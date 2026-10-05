@@ -1,0 +1,360 @@
+{
+  "portraitScale": 1.2,
+  "portraitTranslation": [
+    -1.2,
+    1.2,
+    0
+  ],
+  "profileScale": 0.45,
+  "profileTranslation": [
+    -0.3,
+    1.0,
+    0
+  ],
+  "rootBone": "blastoise_mega",
+  "firstPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.45,
+      0
+    ],
+    "seat_2": [
+      0,
+      0.45,
+      0
+    ]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_1_reverse": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_2": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_2_reverse": [
+      0,
+      0.45,
+      0.5
+    ]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_1_reverse": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_2": [
+      0,
+      0.45,
+      0.5
+    ],
+    "seat_2_reverse": [
+      0,
+      0.45,
+      0.5
+    ]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_msd18_blastoise_mega', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_msd18_blastoise_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_msd18_blastoise_mega', 'recoil')",
+    "physical": "q.bedrock_primary('atlas_msd18_blastoise_mega', 'special', q.curve('one'))",
+    "special": "q.bedrock_primary('atlas_msd18_blastoise_mega', 'special', q.curve('one'))",
+    "status": "q.bedrock_primary('atlas_msd18_blastoise_mega', 'status', q.curve('one'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_msd18_blastoise_mega', 'battle_cry', q.curve('one'))"
+      }
+    },
+    "run-jump": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "condition": "q.is_ridden && q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ride_run_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "walk-jump": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "condition": "q.is_ridden && q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ride_walk_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')",
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'quirk_ground_idle', 20, 60, 1)"
+      ]
+    },
+    "walk": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "q.has_entity ? !q.in_air && !q.is_sprinting : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_ground_walk')"
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "run": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "q.has_entity ? !q.in_air && q.is_sprinting : 0.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_ground_run')"
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'air_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_air_idle')"
+        },
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_jetstream_idle')"
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'air_fly')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_air_fly')"
+        },
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_jetstream_fly')"
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "mount-surfacewater-float": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "condition": "q.is_ridden",
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'surfacewater_idle')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ride_water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "surfacewater-float": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "condition": "!q.is_ridden",
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'surfacewater_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [
+            0,
+            21,
+            0
+          ]
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "mount-surfacewater-swim": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "condition": "q.is_ridden",
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'surfacewater_swim')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'ride_water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "surfacewater-swim": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "condition": "!q.is_ridden",
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'surfacewater_swim')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('atlas_msd18_blastoise_mega', 'ride_water_swim')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [
+            0,
+            21,
+            0
+          ]
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "float": {
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'water_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "SWIM"
+      ],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_blastoise_mega', 'water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_blastoise_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_msd18_dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_msd18_blastoise_mega', 'sleep')"
+      ]
+    }
+  }
+}

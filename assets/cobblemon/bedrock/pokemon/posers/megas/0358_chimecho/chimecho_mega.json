@@ -1,0 +1,47 @@
+{
+    "portraitScale": 1,
+    "portraitTranslation": [0.1, 1 , 0],
+    "profileScale": 0.54,
+    "profileTranslation": [0, 1, 0],
+    "rootBone": "chimecho_mega",
+  "animations": {
+    "faint": "q.bedrock_primary('chimecho_mega', 'faint', q.curve('symmetrical_wide'))",
+    "cry": "q.bedrock_stateful('chimecho_mega', 'cry')"
+  },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.bedrock('chimecho_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('chimecho_mega', 'blink')"]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('chimecho_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('chimecho_mega', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": ["q.bedrock('chimecho_mega', 'air_idle')"],
+      "quirks": ["q.bedrock_quirk('chimecho_mega', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": ["q.bedrock('chimecho_mega', 'air_fly')"],
+      "quirks": [
+        "q.bedrock_quirk('chimecho_mega', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('chimecho_mega', 'sleep')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+   }
+  }

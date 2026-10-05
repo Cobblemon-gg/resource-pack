@@ -1,0 +1,68 @@
+{
+  "rootBone": "chatot",
+  "portraitScale": 3.5,
+  "portraitTranslation": [
+    -0.1,
+    -2.1,
+    0
+  ],
+  "profileScale": 1.2,
+  "profileTranslation": [
+    0,
+    -0.01,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_compat18_chatot_circus', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE",
+        "SLEEP",
+        "SHOULDER_LEFT",
+        "SHOULDER_RIGHT"
+      ],
+      "transformTicks": 10,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_compat18_chatot_circus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_chatot_circus', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "transformTicks": 10,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_compat18_chatot_circus', 'ground_idle')",
+        "q.biped_walk(0.6662, 1.4, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_chatot_circus', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER",
+        "FLY"
+      ],
+      "transformTicks": 10,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_compat18_chatot_circus', 'air_idle')",
+        "q.sine_wing_flap(0.6, 0.9, -0.174532925, 'z', 'wing_left', 'wing_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_chatot_circus', 'blink')"
+      ]
+    }
+  }
+}

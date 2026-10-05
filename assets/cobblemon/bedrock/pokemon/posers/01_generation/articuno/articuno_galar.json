@@ -1,0 +1,49 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [ -0.13, 3.84, 0 ],
+  "profileScale": 0.48,
+  "profileTranslation": [ 0, 1.16, 0 ],
+  "animations": {
+    "cry": "q.bedrock_stateful('articuno', 'cry')",
+    "recoil": "q.bedrock_stateful('articuno', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno_galar', 'air_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno_galar', 'air_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno_galar', 'air_idle')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno_galar', 'air_idle')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('articuno_galar', 'air_idle')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "species": "cobblemon:dodrio",
+  "order": 101,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:dodrio",
+      "model": "cobblemon:atlas_sweep18_dodrio_male.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0085_dodrio/dodrio.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('safari') && !q.has_aspect('safari-aura1') && !q.has_aspect('safari-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0085_dodrio/dodrio_shiny.png",
+      "condition": "!q.has_aspect('safari') && !q.has_aspect('safari-aura1') && !q.has_aspect('safari-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0085_dodrio/dodrio_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('safari') && !q.has_aspect('safari-aura1') && !q.has_aspect('safari-aura2')"
+    },
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:atlas_sweep18_dodrio_female.geo",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('safari') && !q.has_aspect('safari-aura1') && !q.has_aspect('safari-aura2')"
+    }
+  ]
+}

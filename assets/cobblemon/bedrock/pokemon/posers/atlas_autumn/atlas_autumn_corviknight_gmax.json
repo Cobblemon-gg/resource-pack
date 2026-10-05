@@ -1,0 +1,37 @@
+{
+  "portraitScale": 0.93,
+  "portraitTranslation": [
+    -1.08,
+    2.61,
+    0.0
+  ],
+  "profileScale": 0.28,
+  "profileTranslation": [
+    0.0,
+    1.2,
+    0.0
+  ],
+  "rootBone": "corviknight",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_autumn_corviknight_gmax_corviknight', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_gmax_corviknight', 'air_glide')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_gmax_corviknight', 'blink')"
+      ]
+    }
+  }
+}

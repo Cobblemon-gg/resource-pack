@@ -1,0 +1,42 @@
+{
+  "head": "head",
+  "portraitScale": 2.4,
+  "portraitTranslation": [-0.6, 2.3, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [0, 0.95, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('zeraora', 'cry')",
+	"faint": "q.bedrock_primary('zeraora', 'faint', q.curve('one'))"
+  },
+  "poses": {
+    "standing": {
+       "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+       "isBattle": false,
+       "animations": ["q.look('head')", "q.bedrock('zeraora', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('zeraora', 'blink')",
+        "q.bedrock_quirk('zeraora', 'lick_quirk'), 20, 50, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.look('head')", "q.bedrock('zeraora', 'ground_walk')"],
+      "quirks": [
+        "q.bedrock_quirk('zeraora', 'blink')"
+      ]
+    },    
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('zeraora', 'sleep')"]
+    },
+    "battle-idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head')", "q.bedrock('zeraora', 'battle_idle')"],
+        "quirks": [
+          "q.bedrock_quirk('zeraora', 'blink')"
+        ]
+    }
+  }
+}

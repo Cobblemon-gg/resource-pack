@@ -1,0 +1,94 @@
+{
+  "species": "cobblemon:chienpao",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:chienpao",
+      "model": "cobblemon:chienpao.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "cyberpunk"
+      ],
+      "model": "cobblemon:chienpao.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_cyberpunk.png"
+    },
+    {
+      "aspects": [
+        "cyberpunk",
+        "shiny"
+      ],
+      "model": "cobblemon:chienpao.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny_cyberpunk.png"
+    },
+    {
+      "aspects": [
+        "christmas"
+      ],
+      "model": "cobblemon:chienpao_cm.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_cm.png"
+    },
+    {
+      "aspects": [
+        "christmas",
+        "shiny"
+      ],
+      "model": "cobblemon:chienpao_cm.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny_cm.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_chienpao",
+      "model": "cobblemon:atlas_msd18_chienpao.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('christmas') && !q.has_aspect('cyberpunk') && !q.has_aspect('golden') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_emissive.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('christmas') && !q.has_aspect('cyberpunk') && !q.has_aspect('golden') && !q.has_aspect('plushie2')"
+    }
+  ]
+}

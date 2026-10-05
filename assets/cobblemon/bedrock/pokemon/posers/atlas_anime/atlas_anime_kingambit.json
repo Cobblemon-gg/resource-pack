@@ -1,0 +1,46 @@
+{
+  "portraitScale": 2.04,
+  "portraitTranslation": [
+    -0.44,
+    2.48,
+    0
+  ],
+  "profileScale": 0.41,
+  "profileTranslation": [
+    0.02,
+    1.14,
+    0
+  ],
+  "rootBone": "kingambit",
+  "animations": {},
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_anime_kingambit_kingambit', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_kingambit_kingambit', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_anime_kingambit_kingambit', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_anime_kingambit_kingambit', 'blink')"
+      ]
+    }
+  }
+}

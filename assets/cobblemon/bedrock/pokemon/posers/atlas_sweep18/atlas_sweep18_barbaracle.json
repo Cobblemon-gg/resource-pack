@@ -1,0 +1,49 @@
+{
+  "portraitScale": 0.9,
+  "portraitTranslation": [-0.13,1.6,0],
+  "profileScale": 0.5,
+  "profileTranslation": [-0.04,1,0],
+  "rootBone": "barbaracle",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_barbaracle', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_barbaracle', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink2')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink3')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink4')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink5')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK","SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.biped_walk(0.66, 0.6, 'leg_left', 'leg_right')",
+        "q.bedrock('atlas_sweep18_barbaracle', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink2')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink3')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink4')",
+        "q.bedrock_quirk('atlas_sweep18_barbaracle', 'blink5')"
+      ]
+    }
+  }
+}

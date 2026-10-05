@@ -1,0 +1,69 @@
+{
+  "portraitScale": 2.00,
+  "portraitTranslation": [-0.19, 2.80, 0],
+  "profileScale": 0.35,
+  "profileTranslation": [0.00, 1.30, 0],
+  "rootBone": "cofagrigus",
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_sweep18_cofagrigus', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_sweep18_cofagrigus', 'cry')"
+  },
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_cofagrigus', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_cofagrigus', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'sleep')"
+      ]
+	},
+    "hover": {
+      "poseName": "hover",
+      "poseTypes": ["FLOAT", "HOVER", "NONE"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_cofagrigus', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseName": "fly",
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_cofagrigus', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_cofagrigus', 'blink')"
+      ]
+    }
+  }
+ }

@@ -1,0 +1,103 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [
+    -0.57,
+    3.13,
+    0
+  ],
+  "profileScale": 0.5,
+  "profileTranslation": [
+    0,
+    1.1,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_legacy_moltres', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_legacy_moltres', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_moltres', 'battle_idle')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_moltres', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "FLOAT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_moltres', 'ground_idle')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_moltres', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_moltres', 'ground_walk')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_moltres', 'blink')"
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_moltres', 'air_idle')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_moltres', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_legacy_moltres', 'air_fly')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_legacy_moltres', 'blink')",
+        "q.bedrock_quirk('atlas_legacy_moltres', 'air_fly_quirk')",
+        "q.bedrock_quirk('atlas_legacy_moltres', 'air_fly_quirk2')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_legacy_moltres', 'sleep')",
+        "q.bedrock('atlas_legacy_moltres', 'fire_layer')"
+      ]
+    }
+  }
+}

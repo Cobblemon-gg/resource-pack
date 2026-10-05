@@ -1,0 +1,61 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [ -0.32, 1.9, 0],
+  "profileScale": 0.53,
+  "profileTranslation": [ 0, 0.99, 0],
+  "rootBone": "malamar",
+    "animations": {
+    "cry": "q.bedrock_stateful('malamar', 'cry')",
+	  "recoil": "q.bedrock_stateful('malamar', 'recoil')",
+	  "status": "q.bedrock_primary('malamar', 'status', q.curve('symmetrical_wide'))",
+	  "physical": "q.bedrock_primary('malamar', 'physical', q.curve('symmetrical_wide'))",
+	  "special": "q.bedrock_primary('malamar', 'special', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('malamar', 'ground_idle')"
+      ],
+	  "namedAnimations": {
+			"cry": "q.bedrock_primary('malamar', 'battle_cry', q.curve('symmetrical_wide'))"
+          },
+      "quirks": [
+        "q.bedrock_quirk('malamar', 'blink')",
+        "q.bedrock_quirk('malamar', 'blink')"
+      ]
+    },"standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('malamar', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('malamar', 'blink')",
+        "q.bedrock_quirk('malamar', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK","SWIM"
+      ],
+      "animations": [
+        "q.bedrock('malamar', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('malamar', 'blink')",
+        "q.bedrock_quirk('malamar', 'blink')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "head": "head_ai",
+  "portraitScale": 2,
+  "portraitTranslation": [
+    0,
+    0.4,
+    0
+  ],
+  "profileScale": 0.75,
+  "profileTranslation": [
+    0,
+    0.65,
+    0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_autumn_zangoose_zangoose', 'cry')"
+  },
+  "poses": {
+    "battle-idle": {
+      "poseName": "battle-idle",
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "bedrock(atlas_autumn_zangoose_zangoose, battle_idle)"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": [
+            "bedrock(atlas_autumn_zangoose_zangoose, blink)"
+          ]
+        }
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "transformTicks": 10,
+      "poseTypes": [
+        "STAND",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "look",
+        "bedrock(atlas_autumn_zangoose_zangoose, ground_idle)"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": [
+            "bedrock(atlas_autumn_zangoose_zangoose, blink)"
+          ]
+        }
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "look",
+        "bedrock(atlas_autumn_zangoose_zangoose, ground_walk)"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": [
+            "bedrock(atlas_autumn_zangoose_zangoose, blink)"
+          ]
+        }
+      ]
+    },
+    "sleeping": {
+      "poseName": "sleeping",
+      "transformTicks": 10,
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "bedrock(atlas_autumn_zangoose_zangoose, sleep)"
+      ]
+    }
+  },
+  "rootBone": "zangoose"
+}

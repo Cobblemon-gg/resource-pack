@@ -1,0 +1,41 @@
+{
+  "species": "cobblemon:suicune",
+  "order": 1,
+  "variations": [
+    {
+      "poser": "cobblemon:suicune",
+      "model": "cobblemon:suicune.geo",
+      "texture": "cobblemon:textures/pokemon/02_generation/suicune/suicune.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/02_generation/suicune/suicune_shiny.png"
+    },
+    {
+      "poser": "cobblemon:atlas_msd18_suicune",
+      "model": "cobblemon:atlas_msd18_suicune.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0245_suicune/suicune.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+      "aspects": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0245_suicune/suicune_shiny.png",
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    }
+  ]
+}

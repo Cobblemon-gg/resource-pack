@@ -1,0 +1,168 @@
+{
+    "portraitScale": 1.88,
+    "portraitTranslation": [
+        -0.5,
+        1.2,
+        0
+    ],
+    "profileScale": 0.6,
+    "profileTranslation": [
+        0,
+        0.85,
+        0
+    ],
+    "rootBone": "staraptor_mega",
+    "firstPersonCameraOffset": {
+        "seat_1": [
+            0,
+            0.45,
+            0
+        ]
+    },
+    "thirdPersonCameraOffset": {
+        "seat_1": [
+            0,
+            0.3,
+            0
+        ],
+        "seat_1_reverse": [
+            0,
+            0.3,
+            0
+        ]
+    },
+    "thirdPersonCameraOffsetNoViewBobbing": {
+        "seat_1": [
+            0,
+            0.3,
+            0
+        ],
+        "seat_1_reverse": [
+            0,
+            0.3,
+            0
+        ]
+    },
+    "animations": {
+        "cry": "q.bedrock_stateful('staraptor_mega', 'cry')",
+        "recoil": "q.bedrock_stateful('staraptor_mega', 'recoil')"
+    },
+    "poses": {
+        "battle-standing": {
+            "poseTypes": [
+                "STAND"
+            ],
+            "isBattle": true,
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'battle_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "battle-flying": {
+            "poseTypes": [
+                "HOVER"
+            ],
+            "isBattle": true,
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'air_battle_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "standing": {
+            "poseTypes": [
+                "STAND",
+                "FLOAT",
+                "NONE",
+                "PORTRAIT",
+                "PROFILE"
+            ],
+            "isBattle": false,
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'ground_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "walking": {
+            "poseTypes": [
+                "WALK",
+                "SWIM"
+            ],
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'ground_walk')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "hover": {
+            "poseTypes": [
+                "HOVER"
+            ],
+            "animations": [
+                "q.pitch_tilt('body')",
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'air_idle')"
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "fly": {
+            "poseTypes": [
+                "FLY"
+            ],
+            "condition": "!q.is_gliding",
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'air_fly')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('staraptor_mega', 'ride_air_fly')"
+                }
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "glide": {
+            "poseTypes": [
+                "FLY"
+            ],
+            "condition": "q.is_gliding",
+            "animations": [
+                "q.look('head')",
+                "q.bedrock('staraptor_mega', 'air_glide')",
+                "q.bedrock('staraptor_mega', 'ride_dive')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('staraptor_mega', 'ride_air_glide')"
+                }
+            ],
+            "quirks": [
+                "q.bedrock_quirk('staraptor_mega', 'blink')"
+            ]
+        },
+        "sleep": {
+            "poseTypes": [
+                "SLEEP"
+            ],
+            "namedAnimations": {
+                "cry": "q.bedrock_stateful('dummy', 'cry')"
+            },
+            "condition": "!q.is_flying",
+            "animations": [
+                "q.bedrock('staraptor_mega', 'sleep')"
+            ]
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "portraitScale": 1.81,
+  "portraitTranslation": [ -0.65, 2.63, 0 ],
+  "profileScale": 0.47,
+  "profileTranslation": [ 0, 1.1, 0 ],
+  "animations": {
+    "cry": "q.bedrock_stateful('moltres', 'cry')",
+    "recoil": "q.bedrock_stateful('moltres', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('moltres_galar', 'ground_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('moltres_galar', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('moltres_galar', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('moltres_galar', 'air_idle')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('moltres_galar', 'air_fly')"
+      ]
+    }
+  }
+}

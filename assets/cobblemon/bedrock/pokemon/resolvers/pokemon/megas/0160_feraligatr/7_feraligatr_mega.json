@@ -1,0 +1,53 @@
+{
+  "species": "cobblemon:feraligatr",
+  "order": 7,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:feraligatr_mega",
+      "model": "cobblemon:feraligatr_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0160_feraligatr/feraligatr_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0160_feraligatr/feraligatr_mega_shiny.png"
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_feraligatr_mega",
+      "model": "cobblemon:atlas_msd18_feraligatr_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('summer')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega_shiny.png",
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('summer')"
+    }
+  ]
+}

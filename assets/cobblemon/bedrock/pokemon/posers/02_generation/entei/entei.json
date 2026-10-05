@@ -1,0 +1,47 @@
+{
+  "portraitScale": 1.75,
+  "portraitTranslation": [ -1.29, 2.25, 0.0],
+  "profileScale": 0.6,
+  "profileTranslation": [0, 0.9, 0.0],
+  "animations": { 
+    "faint": "q.bedrock('entei', 'faint')",
+    "cry": "q.bedrock_stateful('entei', 'cry')",
+    "recoil": "q.bedrock_stateful('entei', 'recoil')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('entei', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('entei', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('entei', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('entei', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('entei', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('entei', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('entei', 'sleep')"]
+    }
+  }
+}

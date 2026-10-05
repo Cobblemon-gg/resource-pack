@@ -1,0 +1,23 @@
+{
+  "portraitScale": 1.41,
+  "portraitTranslation": [-0.04, -0.22, 0],
+  "profileScale": 0.66,
+  "profileTranslation": [0, 0.69, 0],
+  "rootBone": "munna",
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "HOVER", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('munna', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('munna', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLY"],
+      "animations": [
+        "q.bedrock('munna', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('munna', 'blink')"]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:baxcalibur",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:baxcalibur",
+      "model": "cobblemon:baxcalibur.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/baxcalibur/baxcalibur.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/baxcalibur/baxcalibur_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_baxcalibur",
+      "model": "cobblemon:atlas_msd18_baxcalibur.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0998_baxcalibur/baxcalibur.png",
+      "layers": [],
+      "condition": "!q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2') && !q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0998_baxcalibur/baxcalibur_shiny.png",
+      "layers": [],
+      "condition": "!q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2') && !q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0998_baxcalibur/baxcalibur_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('medieval') && !q.has_aspect('medieval-aura1') && !q.has_aspect('medieval-aura2') && !q.has_aspect('mega')"
+    }
+  ]
+}

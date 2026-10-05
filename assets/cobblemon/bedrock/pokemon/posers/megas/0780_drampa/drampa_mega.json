@@ -1,0 +1,25 @@
+{
+    "portraitScale": 0.8,
+    "portraitTranslation": [-0.8, 3.4, 0],
+    "profileScale": 0.3,
+    "profileTranslation": [0, 1.4, 0],
+    "rootBone": "drampa_mega",
+    "animations": {
+      "cry": "q.bedrock_stateful('drampa_mega', 'cry')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.bedrock('drampa_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('drampa_mega', 'blink')"]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('drampa_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('drampa_mega', 'blink')"]
+    }
+    }
+   }

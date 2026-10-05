@@ -1,0 +1,26 @@
+{
+  "portraitScale": 0.3,
+  "portraitTranslation": [0, 3, 0],
+  "profileScale": 0.15,
+  "profileTranslation": [0, 1.5, 0],
+  "rootBone": "bone33",
+  "animations": {
+    "lightofruin": "q.bedrock_primary('floette_ange', 'lightofruin', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "HOVER", "FLOAT", "NONE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')","q.bedrock('floette_ange', 'ground_idle')"
+      ]
+    },
+    "show": {
+      "poseTypes": ["PROFILE", "PORTRAIT"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')","q.bedrock('floette_ange', 'show')"
+      ]
+    }
+  }
+}

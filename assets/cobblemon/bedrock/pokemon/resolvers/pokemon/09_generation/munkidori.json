@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:munkidori",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:munkidori",
+      "model": "cobblemon:munkidori.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/munkidori/munkidori.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/munkidori/munkidori_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_munkidori",
+      "model": "cobblemon:atlas_msd18_munkidori.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1015_munkidori/munkidori.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1015_munkidori/munkidori_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

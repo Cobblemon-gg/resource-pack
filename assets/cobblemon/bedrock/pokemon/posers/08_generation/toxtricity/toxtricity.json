@@ -1,0 +1,55 @@
+{
+    "portraitScale": 1.68,
+    "portraitTranslation": [ -0.3, 2.4, -2 ],
+    "profileScale": 0.45,
+    "profileTranslation": [ -0, 1.1, 0 ],
+    "rootBone": "toxtricity",   
+    "animations": {
+      "cry": "q.bedrock_stateful('toxtricity_a', 'cry')",
+      "physical": "q.bedrock_primary('toxtricity_a', 'physical')",
+      "special": "q.bedrock_primary('toxtricity_a', 'special')",
+      "status": "q.bedrock_primary('toxtricity_a', 'status')",
+      "recoil": "q.bedrock_stateful('toxtricity_a', 'recoil')"
+    },
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('toxtricity_a', 'ground_idle')"
+       ]
+      },
+      "battle": {
+        "poseName": "battle_idle",
+        "transformTicks": 10,
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('toxtricity_a', 'ground_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('toxtricity_a', 'blink')"
+       ]
+      },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.bedrock('toxtricity_a', 'ground_walk')"
+       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('toxtricity_a', 'ground_idle')"
+        ]
+      }
+    }
+  }

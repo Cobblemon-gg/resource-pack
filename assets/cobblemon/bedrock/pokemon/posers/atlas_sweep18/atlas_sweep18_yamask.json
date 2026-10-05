@@ -1,0 +1,51 @@
+{
+  "portraitScale": 2.50,
+  "portraitTranslation": [-0.15, -0.78, 0],
+  "profileScale": 0.70,
+  "profileTranslation": [0.00, 0.70, 0],
+  "rootBone": "yamask",
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_sweep18_yamask', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_sweep18_yamask', 'cry')"
+  },
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+		"q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_yamask', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_yamask', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+		"q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_yamask', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_yamask', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_yamask', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_sweep18_yamask', 'sleep')"
+      ]
+	}
+  }
+ }

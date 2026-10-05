@@ -1,0 +1,45 @@
+{
+  "portraitScale": 2.29,
+  "portraitTranslation": [-0.23, 2.66, 0],
+  "profileScale": 0.46,
+  "profileTranslation": [0, 1.04, 0],
+  "rootBone": "lucario",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_lucario', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_lucario', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lucario', 'blink')", "q.bedrock_quirk('atlas_sweep18_lucario', 'battle_quirk')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_lucario', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lucario', 'blink')", "q.bedrock_quirk('atlas_sweep18_lucario', q.array('idle_quirk','idle_quirk2'))"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_lucario', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lucario', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('atlas_sweep18_lucario', 'sleep')"],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_lucario', 'sleep_quirk')"],
+      "namedAnimations": {"cry": "q.bedrock_stateful('dummy', 'cry')"}
+    }
+  }
+}

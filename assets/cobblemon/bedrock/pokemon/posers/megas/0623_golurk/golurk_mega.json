@@ -1,0 +1,242 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [
+        -0.32,
+        6,
+        0
+    ],
+    "profileScale": 0.18,
+    "profileTranslation": [
+        0.0,
+        1.45,
+        0.0
+    ],
+    "rootBone": "golurk_mega",
+    "firstPersonCameraOffset": {
+        "seat_1": [
+            0,
+            0.45,
+            0
+        ],
+        "seat_2": [
+            0,
+            0.45,
+            0
+        ],
+        "seat_3": [
+            0,
+            0.45,
+            0
+        ]
+    },
+    "thirdPersonCameraOffset": {
+        "seat_1": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_1_reverse": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_2": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_2_reverse": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_3": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_3_reverse": [
+            0,
+            0.4,
+            0.5
+        ]
+    },
+    "thirdPersonCameraOffsetNoViewBobbing": {
+        "seat_1": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_1_reverse": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_2": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_2_reverse": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_3": [
+            0,
+            0.4,
+            0.5
+        ],
+        "seat_3_reverse": [
+            0,
+            0.4,
+            0.5
+        ]
+    },
+    "animations": {
+        "faint": "q.bedrock_primary('golurk_mega', 'faint', q.curve('one'))",
+        "highhorsepower": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "stompingtantrum": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "heavyslam": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "earthquake": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "bulldoze": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "rocktomb": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "bodyslam": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "rockslide": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "bodypress": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "smackdown": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "heatcrash": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "hardpress": "q.bedrock_primary('golurk_mega', 'physical2', q.curve('symmetrical_wide'))",
+        "physical": "q.bedrock_primary('golurk_mega', 'physical', q.curve('symmetrical_wide'))",
+        "special": "q.bedrock_primary('golurk_mega', 'special', q.curve('symmetrical_wide'))",
+        "status": "q.bedrock_primary('golurk_mega', 'status', q.curve('symmetrical_wide'))",
+        "cry": "q.bedrock_stateful('golurk_mega', 'cry')",
+        "recoil": "q.bedrock_stateful('golurk_mega', 'recoil')"
+    },
+    "poses": {
+        "battle-standing": {
+            "poseTypes": [
+                "STAND"
+            ],
+            "isBattle": true,
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'battle_idle')"
+            ],
+            "namedAnimations": {
+                "cry": "q.bedrock_primary('golurk_mega', 'battle_cry', q.curve('symmetrical_wide'))"
+            }
+        },
+        "standing": {
+            "poseTypes": [
+                "STAND",
+                "NONE",
+                "PORTRAIT",
+                "PROFILE"
+            ],
+            "isBattle": false,
+            "condition": "q.has_entity ? !q.in_air : 1.0",
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'ground_idle')"
+            ]
+        },
+        "in-air": {
+            "poseTypes": [
+                "STAND",
+                "WALK",
+                "NONE"
+            ],
+            "isBattle": false,
+            "condition": "q.has_entity ? q.in_air && q.is_ridden : 0.0",
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'ride_jump')"
+            ],
+            "transformTicks": 2,
+            "transformToTicks": 2
+        },
+        "walk": {
+            "poseName": "walk",
+            "poseTypes": [
+                "WALK"
+            ],
+            "isBattle": false,
+            "condition": "q.has_entity ? !q.in_air && !q.is_sprinting : 1.0",
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'ground_walk')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('golurk_mega', 'ride_ground_run')"
+                }
+            ],
+            "transformTicks": 5,
+            "transformToTicks": 5
+        },
+        "run": {
+            "poseName": "run",
+            "poseTypes": [
+                "WALK"
+            ],
+            "isBattle": false,
+            "condition": "q.has_entity ? !q.in_air && q.is_sprinting : 0.0",
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'ground_run')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('golurk_mega', 'ride_ground_run')"
+                }
+            ],
+            "transformTicks": 5,
+            "transformToTicks": 5
+        },
+        "hover": {
+            "poseTypes": [
+                "HOVER"
+            ],
+            "isBattle": false,
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'air_idle')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('golurk_mega', 'ride_air_idle')"
+                }
+            ],
+            "transformTicks": 5,
+            "transformToTicks": 5
+        },
+        "fly": {
+            "poseTypes": [
+                "FLY"
+            ],
+            "isBattle": false,
+            "animations": [
+                "q.look('head', 1, 1, 0, 0, 45, -45)",
+                "q.bedrock('golurk_mega', 'air_fly')",
+                {
+                    "condition": "q.is_ridden",
+                    "animation": "q.bedrock('golurk_mega', 'ride_air_fly')"
+                }
+            ],
+            "transformTicks": 5,
+            "transformToTicks": 5,
+            "quirks": [
+                "q.bedrock_quirk('golurk_mega', q.array('quirk_turbulence1', 'quirk_turbulence2'), 40, 80, 1)"
+            ]
+        },
+        "sleep": {
+            "poseTypes": [
+                "SLEEP"
+            ],
+            "namedAnimations": {
+                "cry": "q.bedrock_stateful('dummy', 'cry')"
+            },
+            "animations": [
+                "q.bedrock('golurk_mega', 'sleep')"
+            ]
+        }
+    }
+}

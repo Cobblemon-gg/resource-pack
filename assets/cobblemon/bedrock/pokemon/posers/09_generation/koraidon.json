@@ -1,0 +1,34 @@
+{
+  "portraitScale": 2.23,
+  "portraitTranslation": [ -0.74, 3.8, 0 ],
+  "profileScale": 0.40,
+  "profileTranslation": [ 0, 1.16, 0 ],
+  "animations": {
+    "cry": "q.bedrock_stateful('koraidon', 'cry')"
+  },
+  "poses": { 
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ground_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "FLOAT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('koraidon', 'ground_idle')"
+      ]
+    }
+  }
+}

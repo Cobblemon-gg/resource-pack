@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:ferrothorn",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_ferrothorn",
+      "model": "cobblemon:atlas_sweep18_ferrothorn.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0598_ferrothorn/ferrothorn.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0598_ferrothorn/ferrothorn_shiny.png",
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0598_ferrothorn/ferrothorn_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    }
+  ]
+}

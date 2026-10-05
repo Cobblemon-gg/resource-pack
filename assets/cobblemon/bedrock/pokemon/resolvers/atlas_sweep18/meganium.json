@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:meganium",
+  "order": 121,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:meganium",
+      "model": "cobblemon:atlas_sweep18_meganium.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0154_meganium/meganium.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "spectrum",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('mega') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0154_meganium/meganium_shiny.png",
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('mega') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0154_meganium/meganium_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('mega') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    }
+  ]
+}

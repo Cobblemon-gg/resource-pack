@@ -1,0 +1,43 @@
+{
+  "portraitScale": 1.86,
+  "portraitTranslation": [ -0.26, -0.52, 0],
+  "profileScale": 0.52,
+  "profileTranslation": [ 0, 0.95, 0],
+  "rootBone": "dedenne",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_dedenne', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_dedenne', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_dedenne', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_dedenne', 'ground_idle')",
+        "q.biped_walk(1, 1, 'foot_left', 'foot_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_dedenne', 'blink')"
+      ]
+    }
+  }
+}

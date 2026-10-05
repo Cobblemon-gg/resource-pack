@@ -1,0 +1,84 @@
+{
+  "species": "cobblemon:golem",
+  "order": 110,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_golem",
+      "model": "cobblemon:atlas_sweep18_golem.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "alolan"
+      ],
+      "poser": "cobblemon:atlas_sweep18_golem_alolan",
+      "model": "cobblemon:atlas_sweep18_golem_alolan.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem_alolan.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem_alolan_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0076_golem/golem_alolan_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "head": "head",
+  "portraitScale": 1.7,
+  "portraitTranslation": [0, -0.5, 0],
+  "profileScale": 0.9,
+  "profileTranslation": [0, 0.5, 0],
+  "cry":  "bedrock(wurmple, cry)",
+
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "transformTicks": 10,
+      "isBattle": true,
+      "animations": [
+        "bedrock(wurmple, battle_idle)"
+      ]
+    },
+    "standing": {
+      "posename": "standing",
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "bedrock(wurmple, ground_idle)"
+      ],
+
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(wurmple, blink)"]
+        }
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "transformTicks": 10,
+      "poseTypes": [ "WALK" ],
+      "animations": [ 
+        "bedrock(wurmple, ground_walk)"
+      ],
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(wurmple, blink)"]
+        }
+      ]
+    }
+  }
+}

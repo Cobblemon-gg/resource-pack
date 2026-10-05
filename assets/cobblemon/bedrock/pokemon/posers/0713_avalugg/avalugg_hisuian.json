@@ -1,0 +1,93 @@
+{
+    "head": "head",
+    "portraitScale": 0.8,
+    "portraitTranslation": [-1, 1.4, 0],
+    "profileScale": .3,
+    "profileTranslation": [0.2, 1.2, 0],
+    "faint": "bedrock(avalugg, faint)",
+    "cry":  "bedrock(avalugg, cry)",
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": ["look", "bedrock(avalugg, ground_idle)"]
+      ,
+      "quirks": [
+        {
+          "name": "blink",
+          "animations": ["bedrock(avalugg, blink)"]
+        }
+      ]
+    },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": ["bedrock(avalugg, ground_walk)"],
+        "quirks": [
+          {
+            "name": "blink",
+            "animations": ["bedrock(avalugg, blink)"]
+          }
+        ]
+      },
+    "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "bedrock(avalugg, sleep)"
+        ]
+       },
+   "swimming": {
+     "poseName": "swimming",
+     "transformTicks": 10,
+     "poseTypes": [
+       "SWIM"
+     ],
+     "animations": [
+       "bedrock(avalugg, water_swim)"
+     ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(avalugg, blink)"
+         ]
+       }
+     ]
+   },
+   "floating": {
+     "poseName": "floating",
+     "transformTicks": 10,
+     "poseTypes": [
+       "FLOAT"
+     ],
+     "animations": [
+       "bedrock(avalugg, water_idle)"
+     ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(avalugg, blink)"
+         ]
+       }
+     ]
+   },
+   "battle-idle": {
+     "poseName": "battle-idle",
+     "transformTicks": 10,
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": ["bedrock(avalugg, battle_idle)"],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": ["bedrock(avalugg, blink)"]
+       }
+     ]
+   }
+    }
+  }

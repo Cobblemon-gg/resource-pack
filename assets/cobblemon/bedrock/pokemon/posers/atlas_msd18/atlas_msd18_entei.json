@@ -1,0 +1,71 @@
+{
+  "portraitScale": 1.75,
+  "portraitTranslation": [
+    -1.29,
+    2.25,
+    0.0
+  ],
+  "profileScale": 0.6,
+  "profileTranslation": [
+    0,
+    0.9,
+    0.0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_msd18_entei', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_msd18_entei', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_msd18_entei', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_entei', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "FLOAT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_msd18_entei', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_entei', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_msd18_entei', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_entei', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_entei', 'sleep')"
+      ]
+    }
+  }
+}

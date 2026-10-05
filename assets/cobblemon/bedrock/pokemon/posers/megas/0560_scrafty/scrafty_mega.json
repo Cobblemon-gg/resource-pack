@@ -1,0 +1,35 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-0.1 , 0.8, 0],
+    "profileScale": 0.7,
+    "profileTranslation": [0, 0.75, 0],
+    "rootBone": "scrafty_mega",
+  "animations": {
+    "cry": "q.bedrock_stateful('scrafty_mega', 'cry')"
+  },
+    "poses": {
+       "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('scrafty_mega', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('scrafty_mega', 'blink')"]
+    },
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('scrafty_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('scrafty_mega', 'blink')"]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.look('head')", "q.bedrock('scrafty_mega', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('scrafty_mega', 'blink')"]
+    }
+    }
+   }

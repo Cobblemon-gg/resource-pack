@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:growlithe",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_growlithe",
+      "model": "cobblemon:atlas_sweep18_growlithe.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0058_growlithe/growlithe.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('hisuian')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0058_growlithe/growlithe_shiny.png",
+      "condition": "!q.has_aspect('hisuian')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0058_growlithe/growlithe_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('hisuian')"
+    }
+  ]
+}

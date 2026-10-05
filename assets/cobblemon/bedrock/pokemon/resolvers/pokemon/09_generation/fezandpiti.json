@@ -1,0 +1,39 @@
+{
+  "species": "cobblemon:fezandipiti",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:fezandipiti",
+      "model": "cobblemon:fezandipiti.geo",
+      "texture": "cobblemon:textures/pokemon/09_generation/fezandipiti/fezandipiti.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/09_generation/fezandipiti/fezandipiti_shiny.png"
+    },
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_msd18_fezandipiti",
+      "model": "cobblemon:atlas_msd18_fezandipiti.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti_shiny.png",
+      "condition": "!q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura')"
+    }
+  ]
+}

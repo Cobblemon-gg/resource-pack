@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:eelektross",
+  "order": 107,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_eelektross",
+      "model": "cobblemon:atlas_sweep18_eelektross.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0604_eelektross/eelektross.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "glow",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0604_eelektross/eelektross_shiny.png",
+      "condition": "!q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0604_eelektross/eelektross_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('mega')"
+    }
+  ]
+}

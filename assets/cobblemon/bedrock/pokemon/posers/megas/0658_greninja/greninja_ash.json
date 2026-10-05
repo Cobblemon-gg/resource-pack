@@ -1,0 +1,55 @@
+{
+  "portraitScale": 2.0,
+  "portraitTranslation": [-0.5, 3.0, 0],
+  "profileScale": 0.5,
+  "profileTranslation": [0.0, 1.0, 0.0],
+  "rootBone": "greninja_ash",
+  "animations": {
+    "cry": "q.bedrock_stateful('greninja_ash', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninja_ash', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('greninja_ash', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninja_ash', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('greninja_ash', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninja_ash', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninja_ash', 'water_idle')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninja_ash', 'water_swim')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('greninja_ash', 'sleep')"]
+    }
+  }
+}

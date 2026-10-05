@@ -1,0 +1,71 @@
+{
+  "portraitScale": 1.8,
+  "portraitTranslation": [
+    -0.3,
+    -0.85,
+    0.0
+  ],
+  "profileScale": 1.0,
+  "profileTranslation": [
+    0,
+    0.2,
+    0.0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_autumn_terapagos_terapagos', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_autumn_terapagos_terapagos', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_terapagos_terapagos', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "FLOAT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_autumn_terapagos_terapagos', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_terapagos_terapagos', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_autumn_terapagos_terapagos', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_terapagos_terapagos', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_autumn_terapagos_terapagos', 'sleep')"
+      ]
+    }
+  },
+  "rootBone": "terapagos"
+}

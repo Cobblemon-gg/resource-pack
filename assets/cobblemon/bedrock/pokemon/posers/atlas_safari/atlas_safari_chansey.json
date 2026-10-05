@@ -1,0 +1,106 @@
+{
+  "portraitScale": 1.5,
+  "portraitTranslation": [
+    -0.35,
+    0.3,
+    0
+  ],
+  "profileScale": 0.8,
+  "profileTranslation": [
+    0,
+    0.55,
+    0
+  ],
+  "rootBone": "chansey",
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_safari_chansey_chansey', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_safari_chansey_chansey', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_safari_chansey_chansey', 'recoil')",
+    "physical": "q.bedrock_primary('atlas_safari_chansey_chansey', 'physical', q.curve('symmetrical'))",
+    "special": "q.bedrock_primary('atlas_safari_chansey_chansey', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('atlas_safari_chansey_chansey', 'status', q.curve('symmetrical'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 0, 0)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.look('egg_torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('atlas_safari_chansey_chansey', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'blink')",
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'idle_quirk')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 0, 0)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.look('egg_torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('atlas_safari_chansey_chansey', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('atlas_safari_chansey_chansey', 'battle_cry', q.curve('symmetrical'))"
+      },
+      "quirks": [
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'blink')",
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'idle_quirk')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 0, 0)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.look('egg_torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('atlas_safari_chansey_chansey', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'blink')"
+      ]
+    },
+    "run": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 0, 0)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.look('egg_torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('atlas_safari_chansey_chansey', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_safari_chansey_chansey', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_safari_chansey_chansey', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

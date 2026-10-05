@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:kingler",
+  "order": 101,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_kingler",
+      "model": "cobblemon:atlas_sweep18_kingler.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0099_kingler/kingler.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0099_kingler/kingler_shiny.png",
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0099_kingler/kingler_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+    }
+  ]
+}

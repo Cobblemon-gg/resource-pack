@@ -1,0 +1,116 @@
+{
+  "species": "cobblemon:zoroark",
+  "order": 114,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:zoroark",
+      "model": "cobblemon:atlas_hotfix18_zoroark.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        },
+        {
+          "name": "emissive2",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_shiny.png",
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "hisuian"
+      ],
+      "poser": "cobblemon:zoroark_hisuian",
+      "model": "cobblemon:atlas_hotfix18_zoroark_hisuian.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "emissive2",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_emissive2.png",
+          "emissive": true,
+          "translucent": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "hisuian"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_shiny_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "emissive2",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_shiny_emissive2.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes",
+        "hisuian"
+      ],
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_hotfix18/0571_zoroark/zoroark_hisuian_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('halloween') && !q.has_aspect('nature') && !q.has_aspect('nature-aura1') && !q.has_aspect('nature-aura2') && !q.has_aspect('superhero')"
+    }
+  ]
+}

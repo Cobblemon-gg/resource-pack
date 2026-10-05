@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:zapdos",
+  "order": 22,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_zapdos_base18",
+      "model": "cobblemon:atlas_zapdos_base18.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_zapdos_base18/zapdos.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('autumn') && !q.has_aspect('autumn-aura1') && !q.has_aspect('autumn-aura2') && !q.has_aspect('galarian') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_zapdos_base18/zapdos_shiny.png",
+      "condition": "!q.has_aspect('autumn') && !q.has_aspect('autumn-aura1') && !q.has_aspect('autumn-aura2') && !q.has_aspect('galarian') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_zapdos_base18/zapdos_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('autumn') && !q.has_aspect('autumn-aura1') && !q.has_aspect('autumn-aura2') && !q.has_aspect('galarian') && !q.has_aspect('plushie')"
+    }
+  ]
+}

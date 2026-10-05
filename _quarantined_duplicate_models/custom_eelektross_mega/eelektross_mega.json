@@ -1,0 +1,40 @@
+{
+    "portraitScale": 1.2,
+    "portraitTranslation": [-1.3, 1.5, 0],
+    "profileScale": 0.28,
+    "profileTranslation": [0, 1.3, 0],
+    "rootBone": "eelektross_mega",
+  "animations": {
+    "cry": "q.bedrock_stateful('eelektross_mega', 'cry')"
+  },
+    "poses": {
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('eelektross_mega', 'ground_idle')"
+        ]
+      },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('eelektross_mega', 'ground_walk')"]
+    },
+    "surface_idle": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.bedrock('eelektross_mega', 'ground_idle')"
+      ]
+    },
+    "surface_swim": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": [
+        "q.bedrock('eelektross_mega', 'ground_walk')"
+      ]
+    }
+    }
+   }

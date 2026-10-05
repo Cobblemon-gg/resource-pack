@@ -1,0 +1,44 @@
+{
+  "portraitScale": 1.25,
+  "portraitTranslation": [ -0.5, 2.5, 0 ],
+  "profileScale": 0.5,
+  "profileTranslation": [ 0.05, 1.25, 0 ],
+  "animations": { 
+    "cry": "q.bedrock_stateful('ursaluna', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('ursaluna_bloodmoon', 'battle_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('ursaluna_bloodmoon', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('ursaluna_bloodmoon', 'ground_idle')",
+        "q.biped_walk(1, 0.4, 'leg_left_rotate', 'leg_right_rotate')",
+        "q.bimanual_swing(1, 0.4, 'shoulder_left', 'shoulder_right')"
+      ]
+    }
+  }
+}

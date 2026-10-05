@@ -1,0 +1,84 @@
+{
+  "species": "cobblemon:persian",
+  "order": 114,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:persian",
+      "model": "cobblemon:atlas_sweep18_persian.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian_shiny.png",
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alolan"
+      ],
+      "poser": "cobblemon:persian_alolan",
+      "model": "cobblemon:atlas_sweep18_persian_alolan.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian_alolan.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian_alolan_shiny.png",
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0053_persian/persian_alolan_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+    }
+  ]
+}

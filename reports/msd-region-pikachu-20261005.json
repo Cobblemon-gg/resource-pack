@@ -1,0 +1,42 @@
+{
+  "source_jar": "mega_showdown-fabric-1.2.0+1.8.1+1.21.1-release.jar",
+  "source_sha256": "d724243bdfdd12c266ddf5f5fa0df36c68a759258f015469ed1c405f3ba261a7",
+  "assets": {
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_cosplay.geo.json": "9f197f82c1e8cfd258bf104857f4591111a137e803c50d8910891b8d33d549f0",
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_belle.geo.json": "950e72884b84a07343b915e2d3bdadbcdef8590bcdcb7e0c9589c24896faa60c",
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_libre.geo.json": "836959d53598a6fdb7a0a0fdabbab72b51ab289a043d375a3c26973093894d34",
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_phd.geo.json": "dd0f90dadccaab95ca5e69cb3aca2bf823fe5088dc10a1d660c2bddba4d5c6d0",
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_popstar.geo.json": "b9e9cb0740e1d9f17198427c6737c229e087c0fff156eb6e9a597a3929a9ff29",
+    "assets/cobblemon/bedrock/pokemon/models/0025_pikachu/pikachu_rockstar.geo.json": "94dd515fdbd0109ecadc780d69fc158cad55aeddbcbe75ee1bd1b42513afa3a5",
+    "assets/cobblemon/bedrock/pokemon/posers/0025_pikachu/old_pikachu_poser.json": "5a59237034340dd6e7fc7966cf780e692e5d5f043f1e8e56b77be6ca6287eac6",
+    "assets/cobblemon/bedrock/pokemon/animations/0025_pikachu/oldpikachu.animation.json": "baf0519063400e2dac06c0c283864b2b035226159f174f5202be6f3e0cf491bc"
+  },
+  "cause": "Atlas filters the main mega_showdown pack non-Gigantamax Pokemon assets, but the optional regionbiasmsd pack still references six filtered Pikachu costume models and old_pikachu_poser.",
+  "validation": {
+    "pack_build": "passed; baseline-plus-overlay hash reconstruction verified",
+    "targeted_profiles": [
+      "Modrinth Cobblemon.gg",
+      "CurseForge Cobblemon GG (2)"
+    ],
+    "pack_orders": [
+      "baseline above mods",
+      "baseline below mods"
+    ],
+    "references_resolved": 42,
+    "animation_calls_resolved": 15,
+    "upstream_assets_verified": 8,
+    "whole_client_audit": "Blocked on both profiles: compiled poser inventory does not match installed Cobblemon 1.8.1 jar. Not bypassed.",
+    "in_game": "Not tested; enable both region packs, reload, check hotbar/party icons, normal and shiny regional cosplay variants and Gigantamax Pikachu."
+  },
+  "release": {
+    "dist/resource-pack.zip": {
+      "bytes": 19150758,
+      "sha256": "b7c7b1cabaa47d2f85b4e2b85082942b5abec4b6709e7dc3b98cd35d9e251aba"
+    },
+    "dist/resource-pack-full.zip": {
+      "bytes": 74174714,
+      "sha256": "988b64a45e6675c871434fccfccd6797e52ccf2d68ecb8e45fcb415f3c383c66"
+    }
+  },
+  "published": false
+}

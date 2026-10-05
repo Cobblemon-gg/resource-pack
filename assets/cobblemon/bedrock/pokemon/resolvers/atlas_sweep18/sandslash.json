@@ -1,0 +1,92 @@
+{
+  "species": "cobblemon:sandslash",
+  "order": 104,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:sandslash",
+      "model": "cobblemon:atlas_sweep18_sandslash.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash_shiny.png",
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alolan"
+      ],
+      "poser": "cobblemon:atlas_sweep18_sandslash_alolan",
+      "model": "cobblemon:atlas_sweep18_sandslash_alolan.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash_alolan.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash_alolan_shiny.png",
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0028_sandslash/sandslash_alolan_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('anniversary') && !q.has_aspect('anniversary-aura1') && !q.has_aspect('anniversary-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "species": "cobblemon:exeggutor",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:exeggutor",
+      "model": "cobblemon:atlas_sweep18_exeggutor.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor_shiny.png",
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alolan"
+      ],
+      "poser": "cobblemon:atlas_sweep18_exeggutor_alolan",
+      "model": "cobblemon:atlas_sweep18_exeggutor_alolan.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor_alolan.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny",
+        "alolan"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor_alolan_shiny.png",
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alolan",
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0103_exeggutor/exeggutor_alolan_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

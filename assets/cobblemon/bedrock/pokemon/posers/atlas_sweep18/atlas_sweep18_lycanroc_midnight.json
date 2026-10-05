@@ -1,0 +1,37 @@
+{
+  "portraitScale": 2.23,
+  "portraitTranslation": [ -0.80, 0.76, 0],
+  "profileScale": 0.65,
+  "profileTranslation": [ -0.04, 0.79, 0],
+  "rootBone": "lycanroc_midnight",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_lycanroc_midnight', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_lycanroc_midnight', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_lycanroc_midnight', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ]
+    }
+  }
+}

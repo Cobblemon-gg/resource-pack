@@ -1,0 +1,41 @@
+{
+  "species": "cobblemon:entei",
+  "order": 1,
+  "variations": [
+    {
+      "poser": "cobblemon:entei",
+      "model": "cobblemon:entei.geo",
+      "texture": "cobblemon:textures/pokemon/02_generation/entei/entei.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/02_generation/entei/entei_shiny.png"
+    },
+    {
+      "poser": "cobblemon:atlas_msd18_entei",
+      "model": "cobblemon:atlas_msd18_entei.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0244_entei/entei.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+      "aspects": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0244_entei/entei_shiny.png",
+      "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    }
+  ]
+}

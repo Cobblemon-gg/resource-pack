@@ -1,0 +1,74 @@
+{
+  "portraitScale": 1.5,
+  "portraitTranslation": [-1.0, 1.5, 0],
+  "profileScale": 0.5,
+  "profileTranslation": [0, 1.0, 0],
+  "rootBone": "rampardos",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0.5],
+    "seat_1_reverse": [0, 0.35, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0.5],
+    "seat_1_reverse": [0, 0.35, 0.5]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_sweep18_rampardos', 'faint')",
+    "cry": "q.bedrock_stateful('atlas_sweep18_rampardos', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_rampardos', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_rampardos', 'blink')",
+        "q.bedrock_quirk('atlas_sweep18_rampardos', 'quirk_battle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_rampardos', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_rampardos', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "condition": "!q.is_sprinting && !q.is_air && q.has_entity",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_rampardos', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_rampardos', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting && q.is_ridden && q.has_entity",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_sweep18_rampardos', 'ground_run')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_rampardos', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_sweep18_rampardos', 'sleep')"
+      ]
+    }
+  }
+}

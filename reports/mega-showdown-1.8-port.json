@@ -1,0 +1,2621 @@
+{
+  "upstream": "ced283c48914785b2ae0faf55e2edef1881e1dbd",
+  "updates": [
+    {
+      "species": "cobblemon:blastoise",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0009_blastoise/1_blastoise_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0009_blastoise/1_blastoise_mega.json",
+      "protected_aspects": [
+        "easter",
+        "movie",
+        "movie-aura1",
+        "movie-aura2",
+        "plushie",
+        "summer",
+        "superhero"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_blastoise_mega",
+          "model": "cobblemon:atlas_msd18_blastoise_mega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_emissive.png",
+              "emissive": true
+            },
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_shiny.png",
+          "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+        },
+        {
+          "aspects": [
+            "cosmetic_item-black_glasses",
+            "mega"
+          ],
+          "layers": [
+            {
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_triangleglasses.png"
+            }
+          ],
+          "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+        },
+        {
+          "aspects": [
+            "cosmetic_item-wise_glasses",
+            "mega"
+          ],
+          "layers": [
+            {
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_circleglasses.png"
+            }
+          ],
+          "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+        },
+        {
+          "aspects": [
+            "alpha_eyes",
+            "mega"
+          ],
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_alpha.png",
+              "emissive": true
+            }
+          ],
+          "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:raikou",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/raikou.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0243_raikou/0_raikou_base.json",
+      "protected_aspects": [
+        "golden",
+        "greek-2026",
+        "greek-2026-aura1",
+        "greek-2026-aura2",
+        "lunar-new-year",
+        "plushie",
+        "plushie2"
+      ],
+      "new_variations": [
+        {
+          "poser": "cobblemon:atlas_msd18_raikou",
+          "model": "cobblemon:atlas_msd18_raikou.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0243_raikou/raikou.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+          "aspects": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0243_raikou/raikou_shiny.png",
+          "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:entei",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/entei.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0244_entei/0_entei_base.json",
+      "protected_aspects": [
+        "circus",
+        "circus-aura1",
+        "circus-aura2",
+        "golden",
+        "plushie",
+        "plushie2"
+      ],
+      "new_variations": [
+        {
+          "poser": "cobblemon:atlas_msd18_entei",
+          "model": "cobblemon:atlas_msd18_entei.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0244_entei/entei.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+          "aspects": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0244_entei/entei_shiny.png",
+          "condition": "!q.has_aspect('circus') && !q.has_aspect('circus-aura1') && !q.has_aspect('circus-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:suicune",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/suicune.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0245_suicune/0_suicune_base.json",
+      "protected_aspects": [
+        "easter-2026",
+        "easter-2026-aura1",
+        "easter-2026-aura2",
+        "golden",
+        "plushie",
+        "plushie2"
+      ],
+      "new_variations": [
+        {
+          "poser": "cobblemon:atlas_msd18_suicune",
+          "model": "cobblemon:atlas_msd18_suicune.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0245_suicune/suicune.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+          "aspects": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0245_suicune/suicune_shiny.png",
+          "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('golden') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:heatran",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/04_generation/heatran.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0485_heatran/0_heatran_base.json",
+      "protected_aspects": [
+        "mega",
+        "summer-2026",
+        "summer-2026-aura1",
+        "summer-2026-aura2"
+      ],
+      "new_variations": [
+        {
+          "poser": "cobblemon:atlas_msd18_heatran",
+          "model": "cobblemon:atlas_msd18_heatran.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0485_heatran/heatran.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            },
+            {
+              "name": "glow",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('mega') && !q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')",
+          "aspects": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0485_heatran/heatran_shiny.png",
+          "condition": "!q.has_aspect('mega') && !q.has_aspect('summer-2026') && !q.has_aspect('summer-2026-aura1') && !q.has_aspect('summer-2026-aura2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:cobalion",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/cobalion.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0638_cobalion/0_cobalion_base.json",
+      "protected_aspects": [
+        "monochrome",
+        "monochrome-aura1",
+        "monochrome-aura2",
+        "plushie"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_cobalion",
+          "model": "cobblemon:atlas_msd18_cobalion.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0638_cobalion/cobalion.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2') && !q.has_aspect('plushie')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0638_cobalion/cobalion_shiny.png",
+          "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2') && !q.has_aspect('plushie')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:terrakion",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/terrakion.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0639_terrakion/0_terrakion_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_terrakion",
+          "model": "cobblemon:atlas_msd18_terrakion.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0639_terrakion/terrakion.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0639_terrakion/terrakion_shiny.png"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:virizion",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/virizion.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0640_virizion/0_virizion_base.json",
+      "protected_aspects": [
+        "plushie",
+        "st-patricks",
+        "st-patricks-aura1",
+        "st-patricks-aura2"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_virizion",
+          "model": "cobblemon:atlas_msd18_virizion.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0640_virizion/virizion.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('plushie') && !q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0640_virizion/virizion_shiny.png",
+          "condition": "!q.has_aspect('plushie') && !q.has_aspect('st-patricks') && !q.has_aspect('st-patricks-aura1') && !q.has_aspect('st-patricks-aura2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:wochien",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/wochien.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1001_wochien/0_wochien_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_wochien",
+          "model": "cobblemon:atlas_msd18_wochien.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1001_wochien/wochien.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1001_wochien/wochien_shiny.png"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:chienpao",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/chienpao.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1002_chienpao/0_chienpao_base.json",
+      "protected_aspects": [
+        "christmas",
+        "cyberpunk",
+        "golden",
+        "plushie2"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_chienpao",
+          "model": "cobblemon:atlas_msd18_chienpao.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_emissive.png",
+              "emissive": true
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('christmas') && !q.has_aspect('cyberpunk') && !q.has_aspect('golden') && !q.has_aspect('plushie2')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_shiny.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/1002_chienpao/chienpao_emissive.png",
+              "emissive": true
+            }
+          ],
+          "condition": "!q.has_aspect('christmas') && !q.has_aspect('cyberpunk') && !q.has_aspect('golden') && !q.has_aspect('plushie2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:tinglu",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/tinglu.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1003_tinglu/0_tinglu_base.json",
+      "protected_aspects": [
+        "karma",
+        "karma-aura1",
+        "karma-aura2"
+      ],
+      "new_variations": [
+        {
+          "poser": "cobblemon:atlas_msd18_tinglu",
+          "model": "cobblemon:atlas_msd18_tinglu.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1003_tinglu/tinglu.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2')",
+          "aspects": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1003_tinglu/tinglu_shiny.png",
+          "condition": "!q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:okidogi",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/okidogi.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1014_okidogi/0_okidogi_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_okidogi",
+          "model": "cobblemon:atlas_msd18_okidogi.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1014_okidogi/okidogi.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1014_okidogi/okidogi_shiny.png"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:munkidori",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/munkidori.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1015_munkidori/0_munkidori_base.json",
+      "protected_aspects": [
+        "plushie"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_munkidori",
+          "model": "cobblemon:atlas_msd18_munkidori.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1015_munkidori/munkidori.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('plushie')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1015_munkidori/munkidori_shiny.png",
+          "condition": "!q.has_aspect('plushie')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:fezandipiti",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/fezandpiti.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/1016_ferandipiti/0_fezandipiti_base.json",
+      "protected_aspects": [
+        "masquerade",
+        "masquerade-aura"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_fezandipiti",
+          "model": "cobblemon:atlas_msd18_fezandipiti.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti_shiny.png",
+          "condition": "!q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:feraligatr",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0160_feraligatr/7_feraligatr_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0160_feraligatr/1_feraligatr_mega.json",
+      "protected_aspects": [
+        "golden",
+        "karma",
+        "karma-aura1",
+        "karma-aura2",
+        "plushie2",
+        "summer"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_feraligatr_mega",
+          "model": "cobblemon:atlas_msd18_feraligatr_mega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            },
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "emissive",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('golden') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('summer')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega_shiny.png",
+          "condition": "!q.has_aspect('golden') && !q.has_aspect('karma') && !q.has_aspect('karma-aura1') && !q.has_aspect('karma-aura2') && !q.has_aspect('plushie2') && !q.has_aspect('summer')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:golurk",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0623_golurk/7_golurk_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0623_golurk/1_golurk_mega.json",
+      "protected_aspects": [
+        "greek-2026",
+        "greek-2026-aura1",
+        "greek-2026-aura2",
+        "halloween"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_golurk_mega",
+          "model": "cobblemon:atlas_msd18_golurk_mega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega.png",
+          "layers": [
+            {
+              "name": "color",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_emissive.png",
+              "emissive": true
+            },
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            },
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('halloween')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny.png",
+          "layers": [
+            {
+              "name": "color",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny_emissive.png",
+              "emissive": true
+            }
+          ],
+          "condition": "!q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('halloween')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:delphox",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0655_delphox/1_delphox_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0655_delphox/2_delphox_mega.json",
+      "protected_aspects": [
+        "cosmetic_item-silk_scarf",
+        "skel",
+        "valentines"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_delphoxmega",
+          "model": "cobblemon:atlas_msd18_delphoxmega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0655_delphox/delphox_mega.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+              "translucent": true
+            },
+            {
+              "name": "",
+              "enabled": false
+            },
+            {
+              "name": "glow",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0655_delphox/delphox_mega_shiny.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+              "translucent": true
+            }
+          ],
+          "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+        },
+        {
+          "aspects": [
+            "alpha_eyes",
+            "mega"
+          ],
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+              "emissive": true
+            }
+          ],
+          "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:drampa",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0780_drampa/7_drampa_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0780_drampa/2_drampa_mega.json",
+      "protected_aspects": [
+        "lunar-new-year"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_drampamega",
+          "model": "cobblemon:atlas_msd18_drampamega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0780_drampa/drampa_mega.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('lunar-new-year')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0780_drampa/drampa_mega_shiny.png",
+          "condition": "!q.has_aspect('lunar-new-year')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:kangaskhan",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/0115_kangaskhan/0_kangaskhan_base.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0115_kangaskhan/1_kangaskhan_mega.json",
+      "protected_aspects": [
+        "carnival",
+        "easter-2026",
+        "easter-2026-aura1",
+        "easter-2026-aura2",
+        "superhero"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_kangaskhan_mega",
+          "model": "cobblemon:atlas_msd18_kangaskhan_mega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0115_kangaskhan/megakangaskhan.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            },
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('carnival') && !q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('superhero')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0115_kangaskhan/megakangaskhan_shiny.png",
+          "condition": "!q.has_aspect('carnival') && !q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('superhero')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:garbodor",
+      "form": [
+        "gmax"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/0569_garbodor/1_garbodor_gmax.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0569_garbodor/1_garbodor_gmax.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [
+            "gmax"
+          ],
+          "poser": "cobblemon:atlas_msd18_gmaxgarbodor",
+          "model": "cobblemon:atlas_msd18_gmax_garbodor.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0569_garbodor/gmax_garbodor.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "gmax",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0569_garbodor/gmax_garbodor_shiny.png"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:rolycoly",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/rolycoly.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0837_rolycoly/0_rolycoly_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_rolycoly",
+          "model": "cobblemon:atlas_msd18_rolycoly.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_emissive.png",
+              "translucent": true
+            },
+            {
+              "name": "glow",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_shiny.png"
+        },
+        {
+          "aspects": [
+            "alpha_eyes"
+          ],
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_alpha.png",
+              "emissive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:carkol",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/carkol.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0838_carkol/0_carkol_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_carkol",
+          "model": "cobblemon:atlas_msd18_carkol.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0838_carkol/carkol.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0838_carkol/carkol_emissive.png",
+              "translucent": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0838_carkol/carkol_shiny.png"
+        },
+        {
+          "aspects": [
+            "alpha_eyes"
+          ],
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0838_carkol/carkol_alpha.png",
+              "emissive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:coalossal",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/coalossal.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0839_coalossal/0_coalossal_base.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_coalossal",
+          "model": "cobblemon:atlas_msd18_coalossal.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0839_coalossal/coalossal.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0839_coalossal/coalossal_emissive.png",
+              "translucent": true
+            },
+            {
+              "name": "glow",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0839_coalossal/coalossal_shiny.png"
+        },
+        {
+          "aspects": [
+            "alpha_eyes"
+          ],
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "texture": "cobblemon:textures/pokemon/atlas_msd18/0839_coalossal/coalossal_alpha.png",
+              "emissive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:hoopa",
+      "form": [],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/100_hoopa_confined.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0720_hoopa/0_hoopa_base.json",
+      "protected_aspects": [
+        "molten",
+        "spectrum",
+        "spectrum-aura1",
+        "spectrum-aura2",
+        "unbound"
+      ],
+      "new_variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:atlas_msd18_hoopa_confined",
+          "model": "cobblemon:atlas_msd18_hoopa_confined.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "spectrum",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2') && !q.has_aspect('unbound')"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa_shiny.png",
+          "layers": [],
+          "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2') && !q.has_aspect('unbound')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:hoopa",
+      "form": [
+        "unbound"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/101_hoopa_unbound.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0720_hoopa/1_hoopa_unbound.json",
+      "protected_aspects": [
+        "molten",
+        "spectrum",
+        "spectrum-aura1",
+        "spectrum-aura2"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "unbound"
+          ],
+          "poser": "cobblemon:atlas_msd18_hoopa_unbound",
+          "model": "cobblemon:atlas_msd18_hoopa_unbound.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa_unbound.png",
+          "layers": [
+            {
+              "name": "aura",
+              "enabled": false
+            },
+            {
+              "name": "spectrum",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+        },
+        {
+          "aspects": [
+            "shiny",
+            "unbound"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0720_hoopa/hoopa_unbound_shiny.png",
+          "layers": [],
+          "condition": "!q.has_aspect('molten') && !q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:skarmory",
+      "form": [
+        "mega"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0227_skarmory/7_skarmory_mega.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0227_skarmory/1_skarmory_mega.json",
+      "protected_aspects": [
+        "monochrome",
+        "monochrome-aura1",
+        "monochrome-aura2"
+      ],
+      "new_variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:atlas_msd18_skarmory",
+          "model": "cobblemon:atlas_msd18_skarmory_mega.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            },
+            {
+              "name": "aura",
+              "enabled": false
+            }
+          ],
+          "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega_shiny.png",
+          "condition": "!q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+        }
+      ]
+    },
+    {
+      "species": "cobblemon:flapple",
+      "form": [
+        "gmax"
+      ],
+      "resolver": "assets/cobblemon/bedrock/pokemon/resolvers/0841_flapple/1_flapple_gmax.json",
+      "source": "/Users/daniel/IdeaProjects/Cobblemon/CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0841_flapple/1_flapple_gmax.json",
+      "protected_aspects": [],
+      "new_variations": [
+        {
+          "aspects": [
+            "gmax"
+          ],
+          "poser": "cobblemon:atlas_msd18_appletun_gmax",
+          "model": "cobblemon:atlas_msd18_appletun_gmax.geo",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0842_appletun/appletun_gmax.png",
+          "layers": [
+            {
+              "name": "alpha_eyes",
+              "enabled": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "gmax",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0842_appletun/appletun_gmax_shiny.png"
+        }
+      ]
+    }
+  ],
+  "files": {
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_blastoise_mega.animation.json": {
+      "sha256": "53c47df815cdf852d89da3598e458584db89759cb7262b1ef4c9c256aee8a6cd",
+      "upstream": "bedrock/pokemon/animations/0009_blastoise/blastoise_mega.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_dummy.animation.json": {
+      "sha256": "9cdec94987d74d19332d0509c3a653a7c2f327e8960f7c65bda284ec59f82ad0",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/animations/special/dummy.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_blastoise_mega.json": {
+      "sha256": "8e080c8bbdb15884f39642b7e6ab2cf5ae425771c0207e5e0b18eb1834659d7f",
+      "upstream": "bedrock/pokemon/posers/0009_blastoise/blastoise_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_blastoise_mega.geo.json": {
+      "sha256": "bf1ca4d0218e38487cac0898f5e7f4cb104dab5cdb59c7ef7b6e73cbda174485",
+      "upstream": "bedrock/pokemon/models/0009_blastoise/blastoise_mega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega.png": {
+      "sha256": "c8c503ee9bfbe01e116676f9c1a066e79edbb3ac84e1166285ca432d9994c295",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_emissive.png": {
+      "sha256": "ec24a2a4dcd97a7bc9d3cb0fcd63a0afccad30a481cc2fe28f215888f494b379",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega_emissive.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_shiny.png": {
+      "sha256": "f4bed1353f18049a6fd94ce80ead5536aeab89cc1370fdc66655122adf44b44c",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega_shiny.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_triangleglasses.png": {
+      "sha256": "1e65fc92dc881f4c9651fc7426cf8d90f9e07fbaef579766428667a6cc8b61cd",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega_triangleglasses.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_circleglasses.png": {
+      "sha256": "0fade1c5953797a85b0724746b04710cd51aaf26c812fb710dcac40008a8676d",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega_circleglasses.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_alpha.png": {
+      "sha256": "73b9c1a221d7d2a1c08cb6ad55caff9272a188f23636ff6becae9c535ffaafdd",
+      "upstream": "textures/pokemon/0009_blastoise/blastoise_mega_alpha.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0009_blastoise/1_blastoise_mega.json": {
+      "sha256": "2823f886145279ed62f5240c61fd67fad068ca6f70402e9022985889b46f27b0",
+      "upstream": "bedrock/pokemon/resolvers/0009_blastoise/1_blastoise_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_raikou.animation.json": {
+      "sha256": "106e9ebee744cf24a202dc476ffab3b012d6b6eea84d332735899d05054641a4",
+      "upstream": "bedrock/pokemon/animations/0243_raikou/raikou.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_raikou.json": {
+      "sha256": "29ac57348a13f285b50906103aebbbe6d39fa2e982a372c36775286893a5c8fd",
+      "upstream": "bedrock/pokemon/posers/0243_raikou/raikou.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_raikou.geo.json": {
+      "sha256": "4ceb96d1be4dfe93bf0e108a09b77b99310ae052e10bea5709ff29b49f8ed8ba",
+      "upstream": "bedrock/pokemon/models/0243_raikou/raikou.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0243_raikou/raikou.png": {
+      "sha256": "e486a91b29e62ad42eb87060f605788733efc1d98e92ee2d0a75528a49d39bfa",
+      "upstream": "textures/pokemon/0243_raikou/raikou.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0243_raikou/raikou_shiny.png": {
+      "sha256": "a167cb282d64b92959019df7ff44cf43e3d0dbedd137621e541b7ae0e29a7fe4",
+      "upstream": "textures/pokemon/0243_raikou/raikou_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/raikou.json": {
+      "sha256": "ae155b86aa16c4c1e58275f9c10e1794bd473fe1a8928d4ef035f2eb31e75461",
+      "upstream": "bedrock/pokemon/resolvers/0243_raikou/0_raikou_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_entei.animation.json": {
+      "sha256": "f17b3c46be1f90b72afca5c44d8f83e6cb7d6cf455350f65f2c3ce5e82aa2838",
+      "upstream": "bedrock/pokemon/animations/0244_entei/entei.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_entei.json": {
+      "sha256": "0a96add65548edbfff655b77521f62cbe5224985baeb40481417cc7f1760d761",
+      "upstream": "bedrock/pokemon/posers/0244_entei/entei.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_entei.geo.json": {
+      "sha256": "fabb225ec7b35521cdfee78ecdbe229c7c9e9d7d0aaa55d3698c3e505b630cca",
+      "upstream": "bedrock/pokemon/models/0244_entei/entei.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0244_entei/entei.png": {
+      "sha256": "2d1d4adade27dfcffcc254df6a28afb2abb04d83cb2cae5b8b0c1f18116601de",
+      "upstream": "textures/pokemon/0244_entei/entei.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0244_entei/entei_shiny.png": {
+      "sha256": "a3b7eeff9f9ab2ab3aa9cd5d32988dd554c3060e348e919bf9acbbd2e849e4d7",
+      "upstream": "textures/pokemon/0244_entei/entei_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/entei.json": {
+      "sha256": "7c06542d39b8484e91091f54c3f297b1b38f91851e4986f3eaca157654ed0ae8",
+      "upstream": "bedrock/pokemon/resolvers/0244_entei/0_entei_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_suicune.animation.json": {
+      "sha256": "c7442a935b09bf61a92fc4a9cf7edd432c874c1c5021e786a7e66387a688035e",
+      "upstream": "bedrock/pokemon/animations/0245_suicune/suicune.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_suicune.json": {
+      "sha256": "307970af13ecd1e5c59e34455c36401bb566bc7c6e3c4a0361b90d44082f062f",
+      "upstream": "bedrock/pokemon/posers/0245_suicune/suicune.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_suicune.geo.json": {
+      "sha256": "9f60d317fe699237cbd9e9331754cf90460090011aadf2fdaa1589291b5ca927",
+      "upstream": "bedrock/pokemon/models/0245_suicune/suicune.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0245_suicune/suicune.png": {
+      "sha256": "9bba77609e392ceefcd69111a8d07b1eaa00ca98cd7c20dc75029414c4488d32",
+      "upstream": "textures/pokemon/0245_suicune/suicune.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0245_suicune/suicune_shiny.png": {
+      "sha256": "7175b65f1897bdb5d48b52fe08d249431158f689a2bff71a030f278696408c12",
+      "upstream": "textures/pokemon/0245_suicune/suicune_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/suicune.json": {
+      "sha256": "7e4ff7e33e193b161079623716ba2d8870ce3f5d7c7f55d80c3636796e026dcb",
+      "upstream": "bedrock/pokemon/resolvers/0245_suicune/0_suicune_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_heatran.animation.json": {
+      "sha256": "1eab3ac766c006b6cfa7bd383ab46aa64374663a440b44356fc008c33fce4253",
+      "upstream": "bedrock/pokemon/animations/0485_heatran/heatran.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_heatran.json": {
+      "sha256": "ea2a28a7c252147a78764cb4e7e76949323761aae4fe8c7927ef91cb230168cd",
+      "upstream": "bedrock/pokemon/posers/0485_heatran/heatran.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_heatran.geo.json": {
+      "sha256": "6bdc0b834aa517f5ccf391c45ff48edf02045972c0d9999e580b2da878e07f86",
+      "upstream": "bedrock/pokemon/models/0485_heatran/heatran.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0485_heatran/heatran.png": {
+      "sha256": "40da43acfa641971771406a31ef8e9e3f15e491eeb1b33c94e8fe99edfd827f7",
+      "upstream": "textures/pokemon/0485_heatran/heatran.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0485_heatran/heatran_shiny.png": {
+      "sha256": "ca674f2042afba615802814475cf6d106f04a5bd8ce3f1a70da8ea0ecc1af3a2",
+      "upstream": "textures/pokemon/0485_heatran/heatran_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/04_generation/heatran.json": {
+      "sha256": "e69f9c3d6c0138fc78b3437386f1b04860fe80d94f6fa37c53423d50d8c71d39",
+      "upstream": "bedrock/pokemon/resolvers/0485_heatran/0_heatran_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_cobalion.animation.json": {
+      "sha256": "045e8c59e0bd6ba745450cf522c9e37f497dad6d4023ace446d2fc9d0ff0bbe3",
+      "upstream": "bedrock/pokemon/animations/0638_cobalion/cobalion.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_cobalion.json": {
+      "sha256": "303486484b1076456742539243ebdb1534683bb33fb22393d78688ab4fcad7ce",
+      "upstream": "bedrock/pokemon/posers/0638_cobalion/cobalion.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_cobalion.geo.json": {
+      "sha256": "57064dff01060c6b0658d09d443f3d2078c9dd01e11c6c2994031cc402185a96",
+      "upstream": "bedrock/pokemon/models/0638_cobalion/cobalion.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0638_cobalion/cobalion.png": {
+      "sha256": "15d71b3f0a065afb1604407607d89479400f043b39ad091d694654ebcabb493e",
+      "upstream": "textures/pokemon/0638_cobalion/cobalion.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0638_cobalion/cobalion_shiny.png": {
+      "sha256": "f8dea1d93e9d936b6c6c64a2979c42203359ac4a1cbf287bbde5d7e030f5d575",
+      "upstream": "textures/pokemon/0638_cobalion/cobalion_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/cobalion.json": {
+      "sha256": "df30a41a7564a5c9432ea9c9a812bbcada3492e03dc35c2bcb39f2cba2d1ca4b",
+      "upstream": "bedrock/pokemon/resolvers/0638_cobalion/0_cobalion_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_terrakion.animation.json": {
+      "sha256": "7dc3541d029b51678a684dbcaa90273b0c0cf3ec0e7105bb5ab68f44be08058e",
+      "upstream": "bedrock/pokemon/animations/0639_terrakion/terrakion.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_terrakion.json": {
+      "sha256": "d18c53977afd6afcb240e4b48cec5e7dd17e4a5122fcee3ecb9295a4f534c1c7",
+      "upstream": "bedrock/pokemon/posers/0639_terrakion/terrakion.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_terrakion.geo.json": {
+      "sha256": "a25231d429b1b368cde0c26b1f4338c15c81aa21b902f31d14a9fd2ad1508a1b",
+      "upstream": "bedrock/pokemon/models/0639_terrakion/terrakion.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0639_terrakion/terrakion.png": {
+      "sha256": "83a9ef82dcffe2fcce9a90e14dabee2783c07ddac7d74240c74af230e21afd02",
+      "upstream": "textures/pokemon/0639_terrakion/terrakion.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0639_terrakion/terrakion_shiny.png": {
+      "sha256": "3799b94ad570db71ab05e93365854bfde822c6609d5a49a1ca523b1c25114a8a",
+      "upstream": "textures/pokemon/0639_terrakion/terrakion_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/terrakion.json": {
+      "sha256": "baf96c9aaabc78d6d53bb087a7e677884bfb07294eb5f76bdbe098058dfdebcf",
+      "upstream": "bedrock/pokemon/resolvers/0639_terrakion/0_terrakion_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_virizion.animation.json": {
+      "sha256": "9e8b24abf89400ea54fa9be5bd0fb90d2e3199b78c12f0ed23f7f6929aed229b",
+      "upstream": "bedrock/pokemon/animations/0640_virizion/virizion.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_virizion.json": {
+      "sha256": "9d71707eeadb57fef4c3e5906c9200f5f74880615eba97ff63a5eea889905c36",
+      "upstream": "bedrock/pokemon/posers/0640_virizion/virizion.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_virizion.geo.json": {
+      "sha256": "8c427364f4144cdb533dd0fc2b95682cc3877862dd830f51a848ea8c3500800f",
+      "upstream": "bedrock/pokemon/models/0640_virizion/virizion.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0640_virizion/virizion.png": {
+      "sha256": "eb89b786a6ae0c78b76003139d8904f43d6e3a524d6830a5d2dfcf7dc0cd9f42",
+      "upstream": "textures/pokemon/0640_virizion/virizion.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0640_virizion/virizion_shiny.png": {
+      "sha256": "0aa5112dcee087808feb38aa730abf939c32c5d9a75590604a94219eed26ddc5",
+      "upstream": "textures/pokemon/0640_virizion/virizion_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/virizion.json": {
+      "sha256": "33f0042452318b1b4defc7f08d2e0299193c41537c296f5bbbb39bcbbd974426",
+      "upstream": "bedrock/pokemon/resolvers/0640_virizion/0_virizion_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_wochien.animation.json": {
+      "sha256": "8a794fab588547aacf89a29f10e3b02a0c2c872043db9fa9720342806b03e452",
+      "upstream": "bedrock/pokemon/animations/1001_wochien/wochien.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_wochien.json": {
+      "sha256": "f9057c474cee7ec41b65a0d187ef6ff359eeff73bc5e634b2f51694c7c494934",
+      "upstream": "bedrock/pokemon/posers/1001_wochien/wochien.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_wochien.geo.json": {
+      "sha256": "04e54d0b7d2e65b92487165008ae4be59400e1a84cf4aeb816251344c5e07f18",
+      "upstream": "bedrock/pokemon/models/1001_wochien/wochien.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1001_wochien/wochien.png": {
+      "sha256": "5e28bdde3c956f75af1af9904896f66d282a4078f7d54675b7d68736453b4833",
+      "upstream": "textures/pokemon/1001_wochien/wochien.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1001_wochien/wochien_shiny.png": {
+      "sha256": "d0f4d9a9c3117f9cadff8d408d79a7143ff64330c00a3efe9a55f9467cf05ff5",
+      "upstream": "textures/pokemon/1001_wochien/wochien_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/wochien.json": {
+      "sha256": "ae8c7a9b60d2ca2381cf36e073720707d6d30f4e817247a6791e86b04157e4a5",
+      "upstream": "bedrock/pokemon/resolvers/1001_wochien/0_wochien_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_chienpao.animation.json": {
+      "sha256": "e7f6e5a9df7b830d1ed4ff97359194caa512d0671abe69a2a781a9a473b5423b",
+      "upstream": "bedrock/pokemon/animations/1002_chienpao/chienpao.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_chienpao.json": {
+      "sha256": "13ad73811fe31ea62d86fc7b771ec3c277612dc4f8cfdf70dab5584dec0217d1",
+      "upstream": "bedrock/pokemon/posers/1002_chienpao/chienpao.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_chienpao.geo.json": {
+      "sha256": "79ae69fda9641ae81cc1de0fd3eca41ecd855500b18e74631bae305149a84822",
+      "upstream": "bedrock/pokemon/models/1002_chienpao/chienpao.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1002_chienpao/chienpao.png": {
+      "sha256": "e6c61f8585e6bedb910aa68016413a5b0fde9154f5a014056d4274aec9ca2ef3",
+      "upstream": "textures/pokemon/1002_chienpao/chienpao.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1002_chienpao/chienpao_emissive.png": {
+      "sha256": "0360761c017fed2c01dab937604510d7e59cd303ff7c1794517be82da1f1bb1f",
+      "upstream": "textures/pokemon/1002_chienpao/chienpao_emissive.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1002_chienpao/chienpao_shiny.png": {
+      "sha256": "c46a22023653b27e4655673aa4c367f6d1246fb084a207e5b73beefd449f342c",
+      "upstream": "textures/pokemon/1002_chienpao/chienpao_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/chienpao.json": {
+      "sha256": "8e78a9a03581435e7303396dc74b76f61e6ee50c615a64cfeed90c2273135b76",
+      "upstream": "bedrock/pokemon/resolvers/1002_chienpao/0_chienpao_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_tinglu.animation.json": {
+      "sha256": "8be162ef3302a261ea66d6edd7f5ca2f609ffb5f48166458485776440da4bb7b",
+      "upstream": "bedrock/pokemon/animations/1003_tinglu/tinglu.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_tinglu.json": {
+      "sha256": "a3519128507dee65ffce2b8267216c3ccb92cb62020e90055601e422376393f9",
+      "upstream": "bedrock/pokemon/posers/1003_tinglu/tinglu.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_tinglu.geo.json": {
+      "sha256": "68686ae3ab4c77067c348103081b7e5d627bd21f84082d42070436f50a09409f",
+      "upstream": "bedrock/pokemon/models/1003_tinglu/tinglu.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1003_tinglu/tinglu.png": {
+      "sha256": "2037544b832daac97cbacfdae1083fa4015618e8c86717a07a7eb95c4f3e6bd4",
+      "upstream": "textures/pokemon/1003_tinglu/tinglu.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1003_tinglu/tinglu_shiny.png": {
+      "sha256": "33e6d45cd27b73d96f7503dd9d4f0e27b85942d9c76221185ac927a81bb5c509",
+      "upstream": "textures/pokemon/1003_tinglu/tinglu_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/tinglu.json": {
+      "sha256": "3ccc32f1c120bcf6a8fadd968b871020ab9345c3072fe22e0d6419465b1d72b7",
+      "upstream": "bedrock/pokemon/resolvers/1003_tinglu/0_tinglu_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_pokemans_okidogi.animation.json": {
+      "sha256": "8f43b95a3f4e76ff934bfb8f9789b593e4c677e4508013d670365189e5cce1e3",
+      "upstream": "bedrock/pokemon/animations/1014_okidogi/pokemans_okidogi.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_okidogi.json": {
+      "sha256": "c7c2f7aa51a4da56de811dc8ac7535abffe178e9641e5c5df321096b375107e3",
+      "upstream": "bedrock/pokemon/posers/1014_okidogi/okidogi.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_okidogi.geo.json": {
+      "sha256": "86b18857089862d4b9503efba3e1266077151ea0b898cd9882d3c1ef75a27fd8",
+      "upstream": "bedrock/pokemon/models/1014_okidogi/okidogi.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1014_okidogi/okidogi.png": {
+      "sha256": "98c8a0fca0a9ef5c112e42c7be608bb744a7cddb33e467f178d6a4c8cc57b5dd",
+      "upstream": "textures/pokemon/1014_okidogi/okidogi.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1014_okidogi/okidogi_shiny.png": {
+      "sha256": "71203b03818ce167ca95f9faefbdb6aa242b463c32ca0a43ed30be8b6dd658a3",
+      "upstream": "textures/pokemon/1014_okidogi/okidogi_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/okidogi.json": {
+      "sha256": "5d7a01eab7347b4dfec629b341b58e437243c0a2623777dc63e588700b8d7c7c",
+      "upstream": "bedrock/pokemon/resolvers/1014_okidogi/0_okidogi_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_pokemans_munkidori.animation.json": {
+      "sha256": "1f035b38cdc214f80167daa5adc96c1c501c4a8b039fe52910b6c1aa1ff100cb",
+      "upstream": "bedrock/pokemon/animations/1015_munkidori/pokemans_munkidori.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_munkidori.json": {
+      "sha256": "d0fcf0ff105e4fb23bcd842376c2248e88fe6c735702278e974fa5b6142e112f",
+      "upstream": "bedrock/pokemon/posers/1015_munkidori/munkidori.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_munkidori.geo.json": {
+      "sha256": "a759523c2b3fb2e7d80cb4798d2a8ad1fa8b8c9562c631a5d892a2d9f76e8c72",
+      "upstream": "bedrock/pokemon/models/1015_munkidori/munkidori.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1015_munkidori/munkidori.png": {
+      "sha256": "4c27b547b7bbea8df990bf481b7ea5934f35383f689af9433fe7d0a8979117a2",
+      "upstream": "textures/pokemon/1015_munkidori/munkidori.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1015_munkidori/munkidori_shiny.png": {
+      "sha256": "730c2baac4c6174b70eab947ae98f62d25f519feca81b6b0f831db42bb19c1cb",
+      "upstream": "textures/pokemon/1015_munkidori/munkidori_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/munkidori.json": {
+      "sha256": "b3dded4fa749f22fa5bcdde017e32ebc074226ee80f8c15deafda20353bed5a2",
+      "upstream": "bedrock/pokemon/resolvers/1015_munkidori/0_munkidori_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_pokemans_fezandipiti.animation.json": {
+      "sha256": "017a771efb8501445f8d5d9ef62df048f65fdb348c9246e1ca5555fd1c11886c",
+      "upstream": "bedrock/pokemon/animations/1016_ferandipiti/pokemans_fezandipiti.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_fezandipiti.json": {
+      "sha256": "3e03a11a98691d15be852abf7b07581a5fe7007ba0453e0ddbe7ba0520fcb947",
+      "upstream": "bedrock/pokemon/posers/1016_ferandipiti/fezandipiti.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_fezandipiti.geo.json": {
+      "sha256": "6efda17888f3e3d78cb1d034c7d27bc632b27397844e2c28dfa961103f0564d1",
+      "upstream": "bedrock/pokemon/models/1016_ferandipiti/fezandipiti.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti.png": {
+      "sha256": "6fce55a3ae21104e818ea34e909df0ecd34eab2d5542ebe18f16e54d9d173d8e",
+      "upstream": "textures/pokemon/1016_fezandipiti/fezandipiti.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/1016_fezandipiti/fezandipiti_shiny.png": {
+      "sha256": "17edc02c6b6c8e571d7c88131d75ca7e210f11587719477f228386225faf9b4b",
+      "upstream": "textures/pokemon/1016_fezandipiti/fezandipiti_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/fezandpiti.json": {
+      "sha256": "a21347450a8a9169df01e199811c112547341c6c2fafe9a2ecb70bc3b994b574",
+      "upstream": "bedrock/pokemon/resolvers/1016_ferandipiti/0_fezandipiti_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_feraligatr_mega.animation.json": {
+      "sha256": "332b87ef075e6579e82407ed49f40f28299c0d0e72ba5b7adde777cfcd445346",
+      "upstream": "bedrock/pokemon/animations/0160_feraligatr/feraligatr_mega.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_feraligatr_mega.json": {
+      "sha256": "8e1de4b1a65a97a30e4f9e57bf82d7859899fcf8320a937041cfb5cc77eb0960",
+      "upstream": "bedrock/pokemon/posers/0160_feraligatr/feraligatr_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_feraligatr_mega.geo.json": {
+      "sha256": "db7e55c1bb8f2017c58137334f9ae6d788b5f5ed68b68f300e65f518e3d808fc",
+      "upstream": "bedrock/pokemon/models/0160_feraligatr/feraligatr_mega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega.png": {
+      "sha256": "5c26380fb3f282ecf6e6556a259dd8fc40f8c9215f197c418a8386634355e567",
+      "upstream": "textures/pokemon/0160_feraligatr/feraligatr_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0160_feraligatr/feraligatr_mega_shiny.png": {
+      "sha256": "85eea895decaf312a283f648957b8b0fe1eca50160786e8418a86cfaccd4440d",
+      "upstream": "textures/pokemon/0160_feraligatr/feraligatr_mega_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0160_feraligatr/7_feraligatr_mega.json": {
+      "sha256": "b07000454840aab5606bdfa8928e3a8c02a0ceec327bec44a69998ca77d7512a",
+      "upstream": "bedrock/pokemon/resolvers/0160_feraligatr/1_feraligatr_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_golurk_mega.animation.json": {
+      "sha256": "77f8798c2859ca334060035904d92ed8a415975536c33ca77784fe9e6dcaceff",
+      "upstream": "bedrock/pokemon/animations/0623_golurk/golurk_mega.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_golurk_mega.json": {
+      "sha256": "f2c5a3fb08d8ba54c8f7ec9a99aacf833b272a0737ad38ebb7895ad559899c0e",
+      "upstream": "bedrock/pokemon/posers/0623_golurk/golurk_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_golurk_mega.geo.json": {
+      "sha256": "1f09cf67a77c27002e25bccf92b7f853513f40ef9d76162adb8da77a6b9e68c5",
+      "upstream": "bedrock/pokemon/models/0623_golurk/golurk_mega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0623_golurk/golurk_mega.png": {
+      "sha256": "80dea41cbd7ca4e9dd46dccf5d64f71e2242f3ad223674092c1ce8a2469268e4",
+      "upstream": "textures/pokemon/0623_golurk/golurk_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_emissive.png": {
+      "sha256": "68bd79303b3ce9054f16f8e9ecb0df6dc6bef5c3927002b858be22650ec28c53",
+      "upstream": "textures/pokemon/0623_golurk/golurk_mega_emissive.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny.png": {
+      "sha256": "f39c04abedfe37a64c6abcffacd3b451e3fb88970941a27a55557f8524feff9f",
+      "upstream": "textures/pokemon/0623_golurk/golurk_mega_shiny.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0623_golurk/golurk_mega_shiny_emissive.png": {
+      "sha256": "43242ebef5f70d8683f0afeeda909f0e7a3ec2ae78ea2b034843cf8751b0bdb2",
+      "upstream": "textures/pokemon/0623_golurk/golurk_mega_shiny_emissive.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0623_golurk/7_golurk_mega.json": {
+      "sha256": "773ee3385e5282f76a7a1f4a04566ae31cc4b927ffc4ea797662cbcd9776e620",
+      "upstream": "bedrock/pokemon/resolvers/0623_golurk/1_golurk_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_delphoxmega.animation.json": {
+      "sha256": "f36b4620fb286bbceb85340ebb0c1be7d752eede75c2c751ae0fdd62e8e3ddd9",
+      "upstream": "bedrock/pokemon/animations/0655_delphox/delphoxmega.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_delphoxmega.json": {
+      "sha256": "68da77804fd739aae3d5aa0b87114af21cb404f7ac83663269c9637de39d7b77",
+      "upstream": "bedrock/pokemon/posers/0655_delphox/delphoxmega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_delphoxmega.geo.json": {
+      "sha256": "b5fbc4b082aaab6212fdf8ff7bd9a1444ce99bea0990e39cb7dbecae73b2c3f6",
+      "upstream": "bedrock/pokemon/models/0655_delphox/delphoxmega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0655_delphox/delphox_mega.png": {
+      "sha256": "1b98948a2a5b1b526d112e973e186f18b195e6a1f591345be5833f838e846661",
+      "upstream": "textures/pokemon/0655_delphox/delphox_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/blank.png": {
+      "sha256": "42b601bc0d93dfca6e350b46d113bf8e7ff9e40a87a0c57ab9b3c9c219062423",
+      "upstream": "textures/pokemon/blank.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0655_delphox/delphox_mega_shiny.png": {
+      "sha256": "5a4741c45002b79dc9e8d8baececd5ad266868e3f5d1b71b3d994946d8d1ca2b",
+      "upstream": "textures/pokemon/0655_delphox/delphox_mega_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0655_delphox/1_delphox_mega.json": {
+      "sha256": "b68b0ca74b1efd2d4b2e69f9757780b2290e24a2ec92e58bae6eb71af4997d3d",
+      "upstream": "bedrock/pokemon/resolvers/0655_delphox/2_delphox_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_drampamega.animation.json": {
+      "sha256": "64dbd5950b336946b5217b1d32c586d0ebb334560c0cf07206685753b376b608",
+      "upstream": "bedrock/pokemon/animations/0780_drampa/drampamega.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_drampamega.json": {
+      "sha256": "cc3f36e1efa18b4e3c107697cc116cf67ee999196b1e62aee81c8c83ff5aff87",
+      "upstream": "bedrock/pokemon/posers/0780_drampa/drampamega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_drampamega.geo.json": {
+      "sha256": "ffbfde6dab967aa513cfc042570fcfdbce884a7b0bdf37a44e622f18412ce73f",
+      "upstream": "bedrock/pokemon/models/0780_drampa/drampamega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0780_drampa/drampa_mega.png": {
+      "sha256": "e336437b277aaec109ca96765caae1d2a4089ac9bffa6207480eeda929ec07f9",
+      "upstream": "textures/pokemon/0780_drampa/drampa_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0780_drampa/drampa_mega_shiny.png": {
+      "sha256": "43242f7e1d12ce8ecb00f0c6db31fac6b5feb040b43c51614773cfa308fcc163",
+      "upstream": "textures/pokemon/0780_drampa/drampa_mega_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0780_drampa/7_drampa_mega.json": {
+      "sha256": "d3cde2bc15848f9bebc49db4083526ced374d7af61cf0034d1bf3a953eb8252c",
+      "upstream": "bedrock/pokemon/resolvers/0780_drampa/2_drampa_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_megakangaskhan.animation.json": {
+      "sha256": "f446e83db61677d42ea6c113cdfbf81689cc118b8bc1c117c775d95f981e9a37",
+      "upstream": "bedrock/pokemon/animations/0115_kangaskhan/megakangaskhan.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_kangaskhan_mega.json": {
+      "sha256": "b46316657bf2d9756779b3a437b03ae1a4e9bc52b3a4dfc1e2c322ca8957ffaf",
+      "upstream": "bedrock/pokemon/posers/0115_kangaskhan/kangaskhan_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_kangaskhan_mega.geo.json": {
+      "sha256": "1e8cc31a0a99c401e2a5fcde4ab7fe7afd292de64c12562135a2a3efba22675c",
+      "upstream": "bedrock/pokemon/models/0115_kangaskhan/kangaskhan_mega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0115_kangaskhan/megakangaskhan.png": {
+      "sha256": "6b123044416d442f584c3d8ef142c9373902b4ef41d95c48271c4fc4841a20dc",
+      "upstream": "textures/pokemon/0115_kangaskhan/megakangaskhan.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0115_kangaskhan/megakangaskhan_shiny.png": {
+      "sha256": "8d691ad8081f37faee847f3330f6f86eb3bae7307187a7f87623b84e12cb58c7",
+      "upstream": "textures/pokemon/0115_kangaskhan/megakangaskhan_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0115_kangaskhan/0_kangaskhan_base.json": {
+      "sha256": "73935f86801d940edaf12803106290c28323e3200b18a2ba26f8542afe331f59",
+      "upstream": "bedrock/pokemon/resolvers/0115_kangaskhan/1_kangaskhan_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_gmaxgarbodor.animation.json": {
+      "sha256": "e60fdf0c7d20af6c081f94e45b955c986947ed29838458009d94a26e308d5afe",
+      "upstream": "bedrock/pokemon/animations/0569_garbodor/gmaxgarbodor.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_gmaxgarbodor.json": {
+      "sha256": "e3ea795c3ae38f19ba9878cfd9f34b6ff9053fc065aebb686375feeb7c9769ef",
+      "upstream": "bedrock/pokemon/posers/0569_garbodor/gmaxgarbodor.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_gmax_garbodor.geo.json": {
+      "sha256": "c79eb6a76460027a8a9c9b19ecc4d3fe94ec77b3c2cfa2366a4ff6dbfab103a7",
+      "upstream": "bedrock/pokemon/models/0569_garbodor/gmax_garbodor.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0569_garbodor/gmax_garbodor.png": {
+      "sha256": "89f923abc8307484ad24b3058fed25774abe49cacce2de79b2c5c51cf966e9a9",
+      "upstream": "textures/pokemon/0569_garbodor/gmax_garbodor.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0569_garbodor/gmax_garbodor_shiny.png": {
+      "sha256": "f9174315d6bbb428e31b724d822047916bae1aaf21431a71507a2526e0ee3f5e",
+      "upstream": "textures/pokemon/0569_garbodor/gmax_garbodor_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0569_garbodor/1_garbodor_gmax.json": {
+      "sha256": "9a5ea97cc86cb1b2c568237d878a7d1ebb97c7e871fd6e831d7462d72506f5f6",
+      "upstream": "bedrock/pokemon/resolvers/0569_garbodor/1_garbodor_gmax.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_rolycoly.animation.json": {
+      "sha256": "3cf8c9752423f53a82a5c0583bdbcbced67bafd69b4b524d467c0433e26223b8",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/animations/0837_rolycoly/rolycoly.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_rolycoly.json": {
+      "sha256": "a25db1885def1011f890922ffa4903e0d78a7a1a71b3a9a18e896fc168bfd133",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/posers/0837_rolycoly/rolycoly.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_rolycoly.geo.json": {
+      "sha256": "c4b1d394edfb2ac28fb0347c211528de0f562f53d65e61526ad51c001a2d55b9",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/models/0837_rolycoly/rolycoly.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly.png": {
+      "sha256": "f0a8f139ed3074fb7df89c6f57f3eb8ef89f5bc267b67ba40406572d308c689d",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0837_rolycoly/rolycoly.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_emissive.png": {
+      "sha256": "e5d2c91eafb4249d0671cc6e07f68d905a2035b81784f569abc6043fa095f386",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0837_rolycoly/rolycoly_emissive.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_shiny.png": {
+      "sha256": "314227a6755bb2091d2a1e0ea15f14fc44d0cc3b353b3474a61970674dc8ea34",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0837_rolycoly/rolycoly_shiny.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_alpha.png": {
+      "sha256": "f2471f62496aeb1a8da4596813c3c3ad49233dcdb4a863b6ea28647b8ad2b98f",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0837_rolycoly/rolycoly_alpha.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/rolycoly.json": {
+      "sha256": "ee6ab319a46992ea8f38d426bb626ecfa4750da248ac5e79e5d8fc68d1fa5347",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0837_rolycoly/0_rolycoly_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_carkol.animation.json": {
+      "sha256": "759fe1f0086a9ecdd1a66640fdda8fc2b0ea4593ecc9ee34db08526bf88d6620",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/animations/0838_carkol/carkol.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_carkol.json": {
+      "sha256": "91a688f343f1bc07f2f90f26d85c0c3e78712162dd0b0b4266f9cdba8e456cbd",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/posers/0838_carkol/carkol.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_carkol.geo.json": {
+      "sha256": "21be00c5b227582aca25aa7b470d25cbd20c1bb1645cf713d602d2dbb75aacb1",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/models/0838_carkol/carkol.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol.png": {
+      "sha256": "2772f66bb88439d3a5f4af015ae8bfb6eef63cb459ab6767c90c08f1d6f9142f",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0838_carkol/carkol.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol_emissive.png": {
+      "sha256": "7c65eedfe7901a5f09833c9e2581630e8897e4d86b6bd60723a5923e9cb43f52",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0838_carkol/carkol_emissive.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol_shiny.png": {
+      "sha256": "45f521f9611f74b54d9388fe8d6de5011e15455e8719c2679c4908661be1f28a",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0838_carkol/carkol_shiny.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol_alpha.png": {
+      "sha256": "0cb25161706df7c39153a0b2aeec8c24ae0074cf94fb9e134df810121cc126e8",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0838_carkol/carkol_alpha.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/carkol.json": {
+      "sha256": "4360d26c047aedc6d2bb8374a439c7eea3320c7769cf0a95dd8700328b825557",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0838_carkol/0_carkol_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_coalossal.animation.json": {
+      "sha256": "65f7d945647ad3d20a593e8fc579c50d8b17e35b3227f82679fb4d60681adfed",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/animations/0839_coalossal/coalossal.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_coalossal.json": {
+      "sha256": "2f3eb7f1a9fa2ef4e597128e38e753cd81adfdce8569892705bf1313adac80f7",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/posers/0839_coalossal/coalossal.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_coalossal.geo.json": {
+      "sha256": "8939c3a68f1a9f26fba4c0aa57b472584780758cce17f7bd8823ec2654d97608",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/models/0839_coalossal/coalossal.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal.png": {
+      "sha256": "4d2b0b580ef6ad5efc3e772080d00fcdf5ad86e2d1285b4602d265755856007f",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0839_coalossal/coalossal.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal_emissive.png": {
+      "sha256": "7ef382785f69b92c38c3f5018a11395c36015b98b4bb38552954754d6cad0358",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0839_coalossal/coalossal_emissive.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal_shiny.png": {
+      "sha256": "a7ed9256d21db57118787c2a6c42ebbccc217940343a1f41814a4180795da4e7",
+      "upstream": "../cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0839_coalossal/coalossal_shiny.png",
+      "reason": "MSD removed obsolete texture override; use current1.8 core bytes for isolated standard model"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal_alpha.png": {
+      "sha256": "7478ea5f3625de3872ab7efb2c293b049fc7db4dc68bd49f29ee6cbdd3f2448a",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/textures/pokemon/0839_coalossal/coalossal_alpha.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/coalossal.json": {
+      "sha256": "219077868fbd4e53091ccf0d07e338a07ee0d9ba023aa028e81746f2c3180490",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/resolvers/0839_coalossal/0_coalossal_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_hoopa_confined.animation.json": {
+      "sha256": "1b6de0c6ac92ff26b700777e8c69c1d3c9ddf94375a5fa6e813fcef2f4221f7f",
+      "upstream": "bedrock/pokemon/animations/0720_hoopa/hoopa_confined.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_hoopa_confined.json": {
+      "sha256": "0ab486e4d8bc6f5befbf7eab1000b6b5edd31bf8903c0d3413a7f65cd982357e",
+      "upstream": "bedrock/pokemon/posers/0720_hoopa/hoopa_confined.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_hoopa_confined.geo.json": {
+      "sha256": "eec0f3ce0539986777998992d7f5b3c2754b6a68fb12a912fcef3376be28d6a6",
+      "upstream": "bedrock/pokemon/models/0720_hoopa/hoopa_confined.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0720_hoopa/hoopa.png": {
+      "sha256": "b476a9a70a3670db1e7761d9c10a308bc2cb24bd66e2b78453db37e8666f0257",
+      "upstream": "textures/pokemon/0720_hoopa/hoopa.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0720_hoopa/hoopa_shiny.png": {
+      "sha256": "2b69cdae0ef02c4970053895beaf7323a946f3bdaa0f71a122f669f24cd889c3",
+      "upstream": "textures/pokemon/0720_hoopa/hoopa_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/100_hoopa_confined.json": {
+      "sha256": "1b55441955a9667b70ae94d10218e0b014c868b5b33a1a9d05191ea7392f620b",
+      "upstream": "bedrock/pokemon/resolvers/0720_hoopa/0_hoopa_base.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_hoopa_unbound.animation.json": {
+      "sha256": "33cbd0770c3fb7ca696282a7e9c79fd16b398896307996ca107b031269d91529",
+      "upstream": "bedrock/pokemon/animations/0720_hoopa/hoopa_unbound.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_hoopa_unbound.json": {
+      "sha256": "e30d9d3bd6468c53400e6d0231efaaef65f2f863c8c4417cf3043e59e9f926d2",
+      "upstream": "bedrock/pokemon/posers/0720_hoopa/hoopa_unbound.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_hoopa_unbound.geo.json": {
+      "sha256": "2206d978facc29660747c95be7be26771348dacbc65eb4e25c9ec1ac4c7ce366",
+      "upstream": "bedrock/pokemon/models/0720_hoopa/hoopa_unbound.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0720_hoopa/hoopa_unbound.png": {
+      "sha256": "05c6062fce1dd01e3cc2cd9c63f3f4792220f36204662ad405eafd9295362ff3",
+      "upstream": "textures/pokemon/0720_hoopa/hoopa_unbound.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0720_hoopa/hoopa_unbound_shiny.png": {
+      "sha256": "956ade52a55a0558e9f07184461b23b4833eadedb10857ef35700e684f1a5269",
+      "upstream": "textures/pokemon/0720_hoopa/hoopa_unbound_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/101_hoopa_unbound.json": {
+      "sha256": "a29931bbf35334804f50a53ce31cfd41cb94ca23963f5bc3149f9592584aa611",
+      "upstream": "bedrock/pokemon/resolvers/0720_hoopa/1_hoopa_unbound.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_skarmory.animation.json": {
+      "sha256": "7f066562b602bee01b973880349f3ee1e912f69614fc607c67af65f100f44d6f",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/animations/0227_skarmory/skarmory.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_skarmory.json": {
+      "sha256": "e0680eb80cbc41f3c3642c51da69fbff2d104e03abcc8055c8313575a5d68aa9",
+      "upstream": "/Users/daniel/IdeaProjects/Cobblemon/cobblemon/common/src/main/resources/assets/cobblemon/bedrock/pokemon/posers/0227_skarmory/skarmory.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_skarmory_mega.geo.json": {
+      "sha256": "d51dba5e48006dd1bc1e88ec01283782b4a4ca47202402ff4b16b15942fcd42f",
+      "upstream": "bedrock/pokemon/models/0227_skarmory/skarmory_mega.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega.png": {
+      "sha256": "f3b7e93a2d6de627b7ea74a349ec6c4735b83da872e8e4ed6ca21e63a71c4513",
+      "upstream": "textures/pokemon/0227_skarmory/skarmory_mega.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega_shiny.png": {
+      "sha256": "341123bee2b19d7be24faac1a3a55d27664965fc15b5eed93007fb247507d841",
+      "upstream": "textures/pokemon/0227_skarmory/skarmory_mega_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0227_skarmory/7_skarmory_mega.json": {
+      "sha256": "58c99f65fe6f39f2e471670650f088ac4a2c465a7d67cde6e15b98c762f2222f",
+      "upstream": "bedrock/pokemon/resolvers/0227_skarmory/1_skarmory_mega.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/animations/atlas_msd18/atlas_msd18_appletun_gmax.animation.json": {
+      "sha256": "079910fd7bb3805e6ffb8fbd6ea5117e09ab1013d4643d9f4726d916e27e32d5",
+      "upstream": "bedrock/pokemon/animations/0842_appletun/appletun_gmax.animation.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/posers/atlas_msd18/atlas_msd18_appletun_gmax.json": {
+      "sha256": "029bc475a4d6a297250deb264334eaa83b6b3b618dd266a96784a0559e003616",
+      "upstream": "bedrock/pokemon/posers/0842_appletun/appletun_gmax.json"
+    },
+    "assets/cobblemon/bedrock/pokemon/models/atlas_msd18/atlas_msd18_appletun_gmax.geo.json": {
+      "sha256": "ce155dd95d3e09efc4638655d45160305bb95f9c9ad4ec0499d42e0be2ddc8ed",
+      "upstream": "bedrock/pokemon/models/0842_appletun/appletun_gmax.geo.json"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0842_appletun/appletun_gmax.png": {
+      "sha256": "32daa9a57442f79fa83ed14c723c25ef7eae8ba415444a5812d8fc9e90538a32",
+      "upstream": "textures/pokemon/0842_appletun/appletun_gmax.png"
+    },
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0842_appletun/appletun_gmax_shiny.png": {
+      "sha256": "071be986082a3d52e77a623ba43e2f90f4a6fc221c46d7591ed0480706b90ea6",
+      "upstream": "textures/pokemon/0842_appletun/appletun_gmax_shiny.png"
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0841_flapple/1_flapple_gmax.json": {
+      "sha256": "e9f73e65158106149501052f3a46059dc5f19030a78bbb133951f088f218df92",
+      "upstream": "bedrock/pokemon/resolvers/0841_flapple/1_flapple_gmax.json"
+    },
+    "assets/cobblemon/sounds.json": {
+      "sha256": "4d7c734a3fb6a4f59b77a4a1361a8dbeac848cd6149ca9cb55dbeaeb64cf726c",
+      "upstream": "../CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/sounds.json"
+    },
+    "assets/cobblemon/sounds/pokemon/hoopa/hoopaunbound_cry.ogg": {
+      "sha256": "81f9e08c76bd56bbb8b0485b7a3c53abdccfe084822aca9cf719959b4e231629",
+      "upstream": "../CobblemonMegaShowdown/common/src/main/resources/assets/cobblemon/sounds/pokemon/hoopa/hoopaunbound_cry.ogg"
+    }
+  },
+  "legacy_resolvers": {
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0009_blastoise/1_blastoise_mega.json": {
+      "species": "cobblemon:blastoise",
+      "order": 1,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "model": "cobblemon:blastoise_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "model": "cobblemon:blastoise_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_shiny_mega.png"
+        },
+        {
+          "aspects": [
+            "easter",
+            "mega"
+          ],
+          "model": "cobblemon:blastoise_mega_easter.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega_easter.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "easter",
+            "mega",
+            "shiny"
+          ],
+          "model": "cobblemon:blastoise_mega_easter.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega_shiny_easter.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/raikou.json": {
+      "species": "cobblemon:raikou",
+      "order": 1,
+      "variations": [
+        {
+          "poser": "cobblemon:raikou",
+          "model": "cobblemon:raikou.geo",
+          "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou.png"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_shiny.png"
+        },
+        {
+          "aspects": [
+            "lunar-new-year"
+          ],
+          "model": "cobblemon:raikou_lur.geo",
+          "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_lur.png"
+        },
+        {
+          "aspects": [
+            "lunar-new-year",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_shiny_lur.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/entei.json": {
+      "species": "cobblemon:entei",
+      "order": 1,
+      "variations": [
+        {
+          "poser": "cobblemon:entei",
+          "model": "cobblemon:entei.geo",
+          "texture": "cobblemon:textures/pokemon/02_generation/entei/entei.png"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/02_generation/entei/entei_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/02_generation/suicune.json": {
+      "species": "cobblemon:suicune",
+      "order": 1,
+      "variations": [
+        {
+          "poser": "cobblemon:suicune",
+          "model": "cobblemon:suicune.geo",
+          "texture": "cobblemon:textures/pokemon/02_generation/suicune/suicune.png"
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/02_generation/suicune/suicune_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/04_generation/heatran.json": {
+      "species": "cobblemon:heatran",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:heatran",
+          "model": "cobblemon:heatran.geo",
+          "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_emissive.png",
+              "translucent": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_shiny.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/04_generation/heatran/heatran_shiny_emissive.png",
+              "translucent": true
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/cobalion.json": {
+      "species": "cobblemon:cobalion",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:cobalion",
+          "model": "cobblemon:cobalion.geo",
+          "texture": "cobblemon:textures/pokemon/05_generation/cobalion/cobalion.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/05_generation/cobalion/cobalion_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/terrakion.json": {
+      "species": "cobblemon:terrakion",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:terrakion",
+          "model": "cobblemon:terrakion.geo",
+          "texture": "cobblemon:textures/pokemon/05_generation/terrakion/terrakion.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/05_generation/terrakion/terrakion_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/05_generation/virizion.json": {
+      "species": "cobblemon:virizion",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:virizion",
+          "model": "cobblemon:virizion.geo",
+          "texture": "cobblemon:textures/pokemon/05_generation/virizion/virizion.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/05_generation/virizion/virizion_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/wochien.json": {
+      "species": "cobblemon:wochien",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:wochien",
+          "model": "cobblemon:wochien.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/wochien/wochien.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/wochien/wochien_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/chienpao.json": {
+      "species": "cobblemon:chienpao",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:chienpao",
+          "model": "cobblemon:chienpao.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_emissive.png",
+              "emissive": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_emissive.png",
+              "emissive": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "cyberpunk"
+          ],
+          "model": "cobblemon:chienpao.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_cyberpunk.png"
+        },
+        {
+          "aspects": [
+            "cyberpunk",
+            "shiny"
+          ],
+          "model": "cobblemon:chienpao.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny_cyberpunk.png"
+        },
+        {
+          "aspects": [
+            "christmas"
+          ],
+          "model": "cobblemon:chienpao_cm.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_cm.png"
+        },
+        {
+          "aspects": [
+            "christmas",
+            "shiny"
+          ],
+          "model": "cobblemon:chienpao_cm.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/chienpao/chienpao_shiny_cm.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/tinglu.json": {
+      "species": "cobblemon:tinglu",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:tinglu",
+          "model": "cobblemon:tinglu.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/tinglu/tinglu.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/tinglu/tinglu_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/okidogi.json": {
+      "species": "cobblemon:okidogi",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:okidogi",
+          "model": "cobblemon:okidogi.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/okidogi/okidogi.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/okidogi/okidogi_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/munkidori.json": {
+      "species": "cobblemon:munkidori",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:munkidori",
+          "model": "cobblemon:munkidori.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/munkidori/munkidori.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/munkidori/munkidori_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/09_generation/fezandpiti.json": {
+      "species": "cobblemon:fezandipiti",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:fezandipiti",
+          "model": "cobblemon:fezandipiti.geo",
+          "texture": "cobblemon:textures/pokemon/09_generation/fezandipiti/fezandipiti.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/09_generation/fezandipiti/fezandipiti_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0160_feraligatr/7_feraligatr_mega.json": {
+      "species": "cobblemon:feraligatr",
+      "order": 7,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:feraligatr_mega",
+          "model": "cobblemon:feraligatr_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0160_feraligatr/feraligatr_mega.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0160_feraligatr/feraligatr_mega_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0623_golurk/7_golurk_mega.json": {
+      "species": "cobblemon:golurk",
+      "order": 7,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:golurk_mega",
+          "model": "cobblemon:golurk_mega.geo",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "layers": [
+            {
+              "name": "color",
+              "texture": {
+                "frames": [
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png",
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png",
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_emissive.png"
+                ],
+                "fps": 10,
+                "loop": true
+              },
+              "emissive": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png",
+              "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny.png"
+            ],
+            "fps": 10,
+            "loop": true
+          },
+          "layers": [
+            {
+              "name": "color",
+              "texture": {
+                "frames": [
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png",
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png",
+                  "cobblemon:textures/pokemon/megas/0623_golurk/golurk_mega_shiny_emissive.png"
+                ],
+                "fps": 10,
+                "loop": true
+              },
+              "emissive": true
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0655_delphox/1_delphox_mega.json": {
+      "species": "cobblemon:delphox",
+      "order": 1,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "model": "cobblemon:delphox_mega.geo",
+          "poser": "cobblemon:delphox_mega",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_emissive.png",
+              "emissive": true,
+              "translucent": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_emissive.png",
+              "emissive": true,
+              "translucent": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "valentines",
+            "mega"
+          ],
+          "model": "cobblemon:delphox_mega_val.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_val.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_emissive.png",
+              "emissive": true,
+              "translucent": true
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "valentines",
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_val.png",
+          "layers": [
+            {
+              "name": "glow",
+              "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_emissive.png",
+              "emissive": true,
+              "translucent": true
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0780_drampa/7_drampa_mega.json": {
+      "species": "cobblemon:drampa",
+      "order": 7,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:drampa_mega",
+          "model": "cobblemon:drampa_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_shiny.png"
+        },
+        {
+          "aspects": [
+            "lunar-new-year",
+            "mega"
+          ],
+          "model": "cobblemon:drampa_mega_lur.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_lur.png"
+        },
+        {
+          "aspects": [
+            "lunar-new-year",
+            "mega",
+            "shiny"
+          ],
+          "model": "cobblemon:drampa_mega_lur.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0780_drampa/drampa_mega_shiny_lur.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0115_kangaskhan/0_kangaskhan_base.json": {
+      "species": "cobblemon:kangaskhan",
+      "order": 0,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:kangaskhan2",
+          "model": "cobblemon:kangaskhan2.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0115_kangaskhan/kangaskhan.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0115_kangaskhan/kangaskhan_shiny.png"
+        },
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:kangaskhan_mega",
+          "model": "cobblemon:kangaskhan_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0115_kangaskhan/megakangaskhan.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "poser": "cobblemon:kangaskhan_mega",
+          "model": "cobblemon:kangaskhan_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0115_kangaskhan/megakangaskhan_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0569_garbodor/1_garbodor_gmax.json": {
+      "species": "cobblemon:garbodor",
+      "order": 1,
+      "variations": []
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/rolycoly.json": {
+      "species": "cobblemon:rolycoly",
+      "order": 1,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:rolycoly",
+          "model": "cobblemon:rolycoly.geo",
+          "texture": "cobblemon:textures/pokemon/08_generation/rolycoly/rolycoly.png",
+          "layers": [
+            {
+              "name": "glow",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/rolycoly/rolycoly_emissive.png",
+              "translucent": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/08_generation/rolycoly/rolycoly_shiny.png",
+          "layers": [
+            {
+              "name": "glow",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/rolycoly/rolycoly_emissive_shiny.png",
+              "translucent": false
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/carkol.json": {
+      "species": "cobblemon:carkol",
+      "order": 1,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:carkol",
+          "model": "cobblemon:carkol.geo",
+          "texture": "cobblemon:textures/pokemon/08_generation/carkol/carkol.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/carkol/carkol_emissive.png",
+              "translucent": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/08_generation/carkol/carkol_shiny.png",
+          "layers": [
+            {
+              "name": "emissive",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/carkol/carkol_emissive_shiny.png",
+              "translucent": false
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/08_generation/coalossal.json": {
+      "species": "cobblemon:coalossal",
+      "order": 1,
+      "variations": [
+        {
+          "aspects": [],
+          "poser": "cobblemon:coalossal",
+          "model": "cobblemon:coalossal.geo",
+          "texture": "cobblemon:textures/pokemon/08_generation/coalossal/coalossal.png",
+          "layers": [
+            {
+              "name": "glow",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/coalossal/coalossal_emissive.png",
+              "translucent": false
+            }
+          ]
+        },
+        {
+          "aspects": [
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/08_generation/coalossal/coalossal_shiny.png",
+          "layers": [
+            {
+              "name": "glow",
+              "emissive": true,
+              "texture": "cobblemon:textures/pokemon/08_generation/coalossal/coalossal_emissive.png",
+              "translucent": false
+            }
+          ]
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/100_hoopa_confined.json": {
+      "species": "cobblemon:hoopa",
+      "order": 100,
+      "variations": []
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/atlas_msd18/101_hoopa_unbound.json": {
+      "species": "cobblemon:hoopa",
+      "order": 101,
+      "variations": []
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/pokemon/megas/0227_skarmory/7_skarmory_mega.json": {
+      "species": "cobblemon:skarmory",
+      "order": 7,
+      "variations": [
+        {
+          "aspects": [
+            "mega"
+          ],
+          "poser": "cobblemon:skarmory_mega",
+          "model": "cobblemon:skarmory_mega.geo",
+          "texture": "cobblemon:textures/pokemon/megas/0227_skarmory/skarmory_mega.png",
+          "layers": []
+        },
+        {
+          "aspects": [
+            "mega",
+            "shiny"
+          ],
+          "texture": "cobblemon:textures/pokemon/megas/0227_skarmory/skarmory_mega_shiny.png"
+        }
+      ]
+    },
+    "assets/cobblemon/bedrock/pokemon/resolvers/0841_flapple/1_flapple_gmax.json": {
+      "species": "cobblemon:flapple",
+      "order": 2,
+      "variations": []
+    }
+  },
+  "venusaur_animation": {
+    "action": "retained valid animation ID; upstream directory-only rename adds no runtime change",
+    "existing": [
+      "assets/cobblemon/bedrock/pokemon/animations/megas/0003_venusaur/venusaur_mega.animation.json"
+    ]
+  },
+  "upstream_repairs": [
+    "entei: removed reference to nonexistent upstream faint animation; ordinary Cobblemon faint behavior remains",
+    "tinglu: removed reference to nonexistent upstream faint animation; ordinary Cobblemon faint behavior remains",
+    "entei: corrected unregistered sound event entei_cry to native pokemon.entei.cry",
+    "raikou: corrected unregistered sound event raikou_cry to native pokemon.raikou.cry",
+    "megakangaskhan: corrected unregistered sound event pokemon.megakangaskhan.cry to native pokemon.kangaskhan.cry"
+  ],
+  "outputs": {
+    "dist/resource-pack.zip": {
+      "bytes": 1079126,
+      "sha256": "bf3db3352ddd9382928f865345b984c564182c4820f8a5bdce136e3013d1e10f"
+    },
+    "dist/resource-pack-full.zip": {
+      "bytes": 60833066,
+      "sha256": "efb8a8a86372cc759696f2fb5a2b042cde1edd4781ff3610e2420286b82e720a"
+    }
+  },
+  "followups": [
+    {
+      "upstream": "837be205",
+      "models": 4
+    }
+  ],
+  "native_texture_replacements": [
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_shiny.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0837_rolycoly/rolycoly_emissive.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol_shiny.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0838_carkol/carkol_emissive.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal_shiny.png",
+    "assets/cobblemon/textures/pokemon/atlas_msd18/0839_coalossal/coalossal_emissive.png"
+  ],
+  "hoopa_scale": {
+    "method": "native JsonPose.transformedParts on new aliases only",
+    "confined_root": "hoopa_confined",
+    "confined_scale": 0.7,
+    "unbound_root": "hoopa_unbound",
+    "unbound_scale": 2.0,
+    "requires_species_baseScale": 1,
+    "global_species_hitboxes_changed": false
+  }
+}

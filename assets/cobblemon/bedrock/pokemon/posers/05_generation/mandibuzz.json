@@ -1,0 +1,105 @@
+{
+   "portraitScale":2,
+   "portraitTranslation":[
+      -0.9,
+      1.5,
+      0
+   ],
+   "profileScale": 0.55,
+   "profileTranslation":[
+      0,
+      1,
+      0
+   ],
+ "cry": "bedrock(mandibuzz, cry)",
+   "poses":{
+      "standing":{
+         "poseName":"standing",
+         "transformTicks":10,
+         "poseTypes":[
+            "STAND",
+            "NONE",
+            "PORTRAIT",
+            "PROFILE"
+         ],
+         "animations":[
+            "bedrock(mandibuzz, ground_idle)"
+         ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(mandibuzz, blink)"
+         ]
+       }
+     ]
+      },
+      "walking":{
+         "poseName":"walking",
+         "transformTicks":10,
+         "poseTypes":[
+            "WALK"
+         ],
+         "animations":[
+            "bedrock(mandibuzz, ground_walk)"
+         ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(mandibuzz, blink)"
+         ]
+       }
+     ]
+      },
+   "hovering": {
+     "poseName": "hovering",
+     "transformTicks": 10,
+     "poseTypes": [
+       "HOVER"
+     ],
+     "animations": [
+       "bedrock(mandibuzz, air_idle)"
+     ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(mandibuzz, blink)"
+         ]
+       }
+     ]
+   },
+   "flying": {
+     "poseName": "flying",
+     "transformTicks": 10,
+     "poseTypes": [
+       "FLY"
+     ],
+     "animations": [
+       "bedrock(mandibuzz, air_fly)"
+     ],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": [
+           "bedrock(mandibuzz, blink)"
+         ]
+       }
+     ]
+   },
+   "battle-idle": {
+     "poseName": "battle-idle",
+     "transformTicks": 10,
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": ["bedrock(mandibuzz, battle_idle)"],
+     "quirks": [
+       {
+         "name": "blink",
+         "animations": ["bedrock(mandibuzz, blink)"]
+       }
+     ]
+   }
+   }
+}

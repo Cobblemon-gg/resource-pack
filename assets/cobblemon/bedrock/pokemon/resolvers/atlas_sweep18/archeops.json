@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:archeops",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_archeops",
+      "model": "cobblemon:atlas_sweep18_archeops.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0567_archeops/archeops.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0567_archeops/archeops_shiny.png",
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0567_archeops/archeops_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('shadow') && !q.has_aspect('shadow-aura1') && !q.has_aspect('shadow-aura2')"
+    }
+  ]
+}

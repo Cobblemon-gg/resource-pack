@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.frosmoth_wing",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, -29, -3.5]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, -22, -3]
+				},
+				{
+					"name": "chest",
+					"parent": "torso",
+					"pivot": [0, -15, -3.5]
+				},
+				{
+					"name": "chest2",
+					"parent": "chest",
+					"pivot": [0, -7.5, -3]
+				},
+				{
+					"name": "wings",
+					"parent": "chest2",
+					"pivot": [0, -2.5, 3]
+				},
+				{
+					"name": "wing_left",
+					"parent": "wings",
+					"pivot": [2.5, 2, 3],
+					"rotation": [0, -25, 0],
+					"cubes": [
+						{"origin": [2.5, -12, 3], "size": [7, 20, 0], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "wing_left2",
+					"parent": "wing_left",
+					"pivot": [9.5, 3, 3],
+					"cubes": [
+						{"origin": [9.5, -16, 3], "size": [15, 26, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wing_right",
+					"parent": "wings",
+					"pivot": [-2.5, 2, 3],
+					"rotation": [0, 25, 0],
+					"cubes": [
+						{"origin": [-9.5, -12, 3], "size": [7, 20, 0], "uv": [0, 26], "mirror": true}
+					]
+				},
+				{
+					"name": "wing_right2",
+					"parent": "wing_right",
+					"pivot": [-9.5, 3, 3],
+					"cubes": [
+						{"origin": [-24.5, -16, 3], "size": [15, 26, 0], "uv": [0, 0], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

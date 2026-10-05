@@ -1,0 +1,106 @@
+{
+  "species": "cobblemon:blastoise",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "model": "cobblemon:blastoise_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "model": "cobblemon:blastoise_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_shiny_mega.png"
+    },
+    {
+      "aspects": [
+        "easter",
+        "mega"
+      ],
+      "model": "cobblemon:blastoise_mega_easter.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega_easter.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "easter",
+        "mega",
+        "shiny"
+      ],
+      "model": "cobblemon:blastoise_mega_easter.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0009_blastoise/blastoise_mega_shiny_easter.png"
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_blastoise_mega",
+      "model": "cobblemon:atlas_msd18_blastoise_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_shiny.png",
+      "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "cosmetic_item-black_glasses",
+        "mega"
+      ],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_triangleglasses.png"
+        }
+      ],
+      "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "cosmetic_item-wise_glasses",
+        "mega"
+      ],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_circleglasses.png"
+        }
+      ],
+      "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes",
+        "mega"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/0009_blastoise/blastoise_mega_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('easter') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('summer') && !q.has_aspect('superhero')"
+    }
+  ]
+}

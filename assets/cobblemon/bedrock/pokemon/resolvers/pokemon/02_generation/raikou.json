@@ -1,0 +1,55 @@
+{
+  "species": "cobblemon:raikou",
+  "order": 1,
+  "variations": [
+    {
+      "poser": "cobblemon:raikou",
+      "model": "cobblemon:raikou.geo",
+      "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou.png"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_shiny.png"
+    },
+    {
+      "aspects": [
+        "lunar-new-year"
+      ],
+      "model": "cobblemon:raikou_lur.geo",
+      "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_lur.png"
+    },
+    {
+      "aspects": [
+        "lunar-new-year",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/02_generation/raikou/raikou_shiny_lur.png"
+    },
+    {
+      "poser": "cobblemon:atlas_msd18_raikou",
+      "model": "cobblemon:atlas_msd18_raikou.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0243_raikou/raikou.png",
+      "layers": [
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')",
+      "aspects": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0243_raikou/raikou_shiny.png",
+      "condition": "!q.has_aspect('golden') && !q.has_aspect('greek-2026') && !q.has_aspect('greek-2026-aura1') && !q.has_aspect('greek-2026-aura2') && !q.has_aspect('lunar-new-year') && !q.has_aspect('plushie') && !q.has_aspect('plushie2')"
+    }
+  ]
+}

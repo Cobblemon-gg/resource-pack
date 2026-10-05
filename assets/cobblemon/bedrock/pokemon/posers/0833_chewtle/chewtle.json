@@ -1,0 +1,55 @@
+{
+   "portraitScale": 2.35,
+   "portraitTranslation": [ -0.2, -0.8, 0 ],
+    "profileScale": 0.9,
+    "profileTranslation": [0.0, 0.4, 0.0],
+    "animations": {
+      "cry": "q.bedrock_stateful('chewtle', 'cry')",
+      "physical": "q.bedrock_primary('chewtle', 'physical', q.curve('symmetrical_wide'))",
+      "special": "q.bedrock_primary('chewtle', 'special', q.curve('symmetrical_wide'))",
+      "status": "q.bedrock_primary('chewtle', 'status')",
+      "recoil": "q.bedrock_stateful('chewtle', 'recoil')"
+    },
+    "poses": {
+      "standing": {
+        "poseName": "standing",
+        "transformTicks": 10,
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "isBattle": false,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('chewtle', 'ground_idle')"
+       ]
+      },
+      "battle": {
+        "poseName": "battle_idle",
+        "transformTicks": 10,
+        "poseTypes": ["STAND"],
+        "isBattle": true,
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('chewtle', 'battle_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('chewtle', 'blink')",
+          "q.bedrock_quirk('chewtle', 'quirk')"
+       ]
+      },
+      "walking": {
+        "poseName": "walking",
+        "transformTicks": 10,
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.bedrock('chewtle', 'ground_walk')"
+       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('chewtle', 'ground_idle')"
+        ]
+      }
+    }
+  }

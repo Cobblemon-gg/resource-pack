@@ -1,0 +1,100 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.volcarona_wing",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, -29, -3.5]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, -22, -3]
+				},
+				{
+					"name": "chest",
+					"parent": "torso",
+					"pivot": [0, -15, -3.5]
+				},
+				{
+					"name": "chest2",
+					"parent": "chest",
+					"pivot": [0, -7.5, -3]
+				},
+				{
+					"name": "wings",
+					"parent": "chest2",
+					"pivot": [0, -2.5, 3]
+				},
+				{
+					"name": "wing_left",
+					"parent": "wings",
+					"pivot": [2.5, 8, 3],
+					"rotation": [7.82024, -23.92437, -19.21836],
+					"cubes": [
+						{"origin": [2.5, -3, 3], "size": [27, 17, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wing_left2",
+					"parent": "wings",
+					"pivot": [2.5, 0, 3],
+					"rotation": [0, -30, 0],
+					"cubes": [
+						{"origin": [2.5, -10, 3], "size": [27, 15, 0], "uv": [0, 34]}
+					]
+				},
+				{
+					"name": "wing_left3",
+					"parent": "wings",
+					"pivot": [2.5, -3, 3],
+					"rotation": [-9.92926, -20.29348, 26.78135],
+					"cubes": [
+						{"origin": [2.5, -14, 3], "size": [27, 17, 0], "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "wing_right",
+					"parent": "wings",
+					"pivot": [-2.5, 8, 3],
+					"rotation": [7.82024, 23.92437, 19.21836],
+					"cubes": [
+						{"origin": [-29.5, -3, 3], "size": [27, 17, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "wing_right2",
+					"parent": "wings",
+					"pivot": [-2.5, 0, 3],
+					"rotation": [0, 30, 0],
+					"cubes": [
+						{"origin": [-29.5, -10, 3], "size": [27, 15, 0], "uv": [0, 34], "mirror": true}
+					]
+				},
+				{
+					"name": "wing_right3",
+					"parent": "wings",
+					"pivot": [-2.5, -3, 3],
+					"rotation": [-9.92926, 20.29348, -26.78135],
+					"cubes": [
+						{"origin": [-29.5, -14, 3], "size": [27, 17, 0], "uv": [0, 17], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

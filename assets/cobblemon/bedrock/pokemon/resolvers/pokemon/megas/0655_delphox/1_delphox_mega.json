@@ -1,0 +1,124 @@
+{
+  "species": "cobblemon:delphox",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "model": "cobblemon:delphox_mega.geo",
+      "poser": "cobblemon:delphox_mega",
+      "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "valentines",
+        "mega"
+      ],
+      "model": "cobblemon:delphox_mega_val.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_val.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "valentines",
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_val.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/megas/0655_delphox/delphox_mega_shiny_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_delphoxmega",
+      "model": "cobblemon:atlas_msd18_delphoxmega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0655_delphox/delphox_mega.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+          "translucent": true
+        },
+        {
+          "name": "",
+          "enabled": false
+        },
+        {
+          "name": "glow",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0655_delphox/delphox_mega_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes",
+        "mega"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_msd18/blank.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('cosmetic_item-silk_scarf') && !q.has_aspect('skel') && !q.has_aspect('valentines')"
+    }
+  ]
+}

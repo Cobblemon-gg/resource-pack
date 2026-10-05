@@ -1,0 +1,38 @@
+{
+  "portraitScale": 1.9,
+  "portraitTranslation": [-0.1, 2.1, 0.0],
+  "profileScale": 0.6,
+  "profileTranslation": [-0.1, 1.1, 0.0],
+  "animations": {
+    "cry": "q.bedrock_stateful('greninjamega', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninjamega', 'ground_idle')"
+      ]
+    },
+
+    "walking": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('greninjamega', 'ground_idle')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('greninjamega', 'ground_idle')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": ["q.look('head')", "q.bedrock('greninjamega', 'ground_idle')"]
+    }
+  }
+}

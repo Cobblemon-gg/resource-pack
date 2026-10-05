@@ -1,0 +1,90 @@
+{
+  "portraitScale": 1.12,
+  "portraitTranslation": [-2.33, 2.39, 0],
+  "profileScale": 0.21,
+  "profileTranslation": [0.07, 1.49, -20],
+  "animations": {
+    "cry":"q.bedrock_stateful('kyurem', 'cry')"
+
+  },
+  "poses": {
+    "battle-standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'battle_idle')"
+      ]
+    },
+    "standing": {
+      "transformTicks": 10,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "condition": "!q.in_air" ,
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "transformTicks": 8,
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "transformTicks": 5,
+      "poseTypes": [  "HOVER", "FLOAT" ],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'ground_idle')"
+       ]
+    },
+    "in-air": {
+        "poseTypes": ["STAND", "WALK"],
+        "isBattle": false,
+        "condition": "q.in_air && q.is_ridden",
+        "animations": ["q.look('head')", "q.bedrock('kyurem', 'ride_jump')"],
+        "transformTicks": 2,
+        "transformToTicks": 2
+      },
+     "run": {
+        "poseTypes": ["STAND","WALK"],
+        "isBattle": false,
+        "condition": "!q.in_air && q.is_sprinting",
+        "animations": [
+         "q.look('head')",
+          "q.bedrock('kyurem', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('kyurem', 'ride_ground_run')"
+        }
+        ],
+        "transformTicks": 10
+      },
+    "float": {
+      "transformTicks": 5,
+      "poseTypes": ["FLOAT"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'ground_idle')"
+      ]
+    },
+    "swim": {
+      "transformTicks": 8,
+      "poseTypes": ["SWIM"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('kyurem', 'ground_walk')"
+      ]
+    }
+  }
+}

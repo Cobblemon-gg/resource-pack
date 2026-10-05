@@ -1,6 +1,3 @@
-#version 150
-#if defined(RENDERTYPE_TEXT) || defined(RENDERTYPE_TEXT_INTENSITY)
-
 struct TextData {
     vec4 color;
     vec4 topColor;
@@ -14,15 +11,78 @@ struct TextData {
     vec2 uvCenter;
     bool isShadow;
     bool doTextureLookup;
-    bool shouldScale;
 };
 
 TextData textData;
 
+#define PI 3.14159265359
+#define TAU 6.28318530718
+#define EPSILON 0.0001
+
 bool uvBoundsCheck(vec2 uv, vec2 uvMin, vec2 uvMax) {
-    if(isnan(uv.x) || isnan(uv.y)) return true;
-    const float error = 0.0001;
-    return uv.x < textData.uvMin.x + error || uv.y < textData.uvMin.y + error || uv.x > textData.uvMax.x - error || uv.y > textData.uvMax.y - error;
+    return uv.x < textData.uvMin.x + EPSILON || uv.y < textData.uvMin.y + EPSILON || uv.x > textData.uvMax.x - EPSILON || uv.y > textData.uvMax.y - EPSILON;
+}
+
+vec3 hsvToRgb(vec3 c) {
+    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+}
+
+vec3 rgbToHsv(vec3 c)
+{
+    vec4 K = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+    vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
+    vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
+
+    float d = q.x - min(q.w, q.y);
+    float e = 1.0e-10;
+    return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+}
+
+vec4 rgba(int r, int g, int b, int a) {
+    return vec4(r / 255.0, g / 255.0, b / 255.0, a / 255.0);
+}
+
+vec3 rgb(int r, int g, int b) {
+    return vec3(r / 255.0, g / 255.0, b / 255.0);
+}
+
+vec3 hsv(int h, int s, int v) {
+    vec3 c = vec3(h / 255.0, s / 255.0, v / 255.0);
+    return hsvToRgb(c);
+}
+
+uint colorId(vec3 col) {
+    uint r = uint(round(col.r * 255.0));
+    uint g = uint(round(col.g * 255.0));
+    uint b = uint(round(col.b * 255.0));
+    return (r << 16) | (g << 8) | (b);
+}
+
+float random(vec2 seed) {
+    return fract(sin(dot(seed, vec2(12.9898,78.233))) * 43758.5453);
+}
+
+float random(float seed) {
+    return fract(sin(seed)  * 43758.5453);
+}
+
+float noise(float n) {
+    float i = floor(n);
+    float f = fract(n);
+    return mix(random(i), random(i + 1.0), smoothstep(0.0, 1.0, f));
+}
+
+float noise(vec2 p){
+	vec2 ip = floor(p);
+	vec2 u = fract(p);
+	u = u*u*(3.0-2.0*u);
+
+	float res = mix(
+		mix(random(ip),random(ip+vec2(1.0,0.0)),u.x),
+		mix(random(ip+vec2(0.0,1.0)),random(ip+vec2(1.0,1.0)),u.x),u.y);
+	return res*res;
 }
 
 vec3 textSdf() {
@@ -63,47 +123,28 @@ void override_text_color(vec3 color) {
 }
 
 void override_shadow_color(vec4 color) {
-    if(textData.isShadow) {
-        textData.color = color;
-        textData.topColor.rgb = color.rgb;
-        textData.topColor.a *= color.a;
-        textData.backColor.rgb = color.rgb;
-        textData.backColor.a *= color.a;
-    }
+    if(textData.isShadow) textData.color = color;
 }
 
 void override_shadow_color(vec3 color) {
-    override_shadow_color(vec4(color, 1.0));
+    if(textData.isShadow) textData.color.rgb = color;
 }
 
 void remove_text_shadow() {
     if(textData.isShadow) textData.color.a = 0.0;
 }
 
-void apply_vertical_shadow() {
-    if(textData.isShadow) {
-        textData.uv.x += 1.0 / 256.0;
-        textData.shouldScale = true;
-    }
-}
-
-void apply_waving_movement(float speed, float frequency) {
-    textData.uv.y += sin(textData.characterPosition.x * 0.1 * frequency - GameTime * 7500.0 * speed) / 256.0;
-    textData.shouldScale = true;
-}
-
 void apply_waving_movement(float speed) {
-    apply_waving_movement(speed, 1.0);
+    textData.uv.y += sin(textData.characterPosition.x * 0.1 - GameTime * 7500.0 * speed) / 256.0;
 }
 
 void apply_waving_movement() {
-    apply_waving_movement(1.0, 1.0);
+    apply_waving_movement(1.0);
 }
 
 void apply_shaking_movement() {
     float noiseX = noise(textData.characterPosition.x + textData.characterPosition.y + GameTime * 32000.0) - 0.5;
     float noiseY = noise(textData.characterPosition.x - textData.characterPosition.y + GameTime * 32000.0) - 0.5;
-    textData.shouldScale = true;
 
     textData.uv += vec2(noiseX, noiseY) / 256.0;
 }
@@ -112,7 +153,6 @@ void apply_iterating_movement(float speed, float space) {
     float x = mod(textData.characterPosition.x * 0.4 - GameTime * 18000.0 * speed, (5.0 * space) * TAU);
     if(x > TAU) x = TAU;
     textData.uv.y += (-cos(x) * 0.5 + 0.5) / 256.0;
-    textData.shouldScale = true;
 }
 
 void apply_iterating_movement() {
@@ -123,7 +163,6 @@ void apply_flipping_movement(float speed, float space) {
     float t = mod((textData.characterPosition.x * 0.4 - GameTime  * 18000.0 * speed) / TAU, 5.0 * space);
     textData.uv.x = textData.uvCenter.x + (textData.uv.x - textData.uvCenter.x) / (cos(TAU * min(t, 1.0)));
     textData.uv.y = textData.uvCenter.y + (textData.uv.y - textData.uvCenter.y) / (1.0 + 0.1 * sin(TAU * min(t, 1.0)));
-    textData.shouldScale = true;
 }
 
 void apply_flipping_movement() {
@@ -135,17 +174,15 @@ void apply_skewing_movement(float speed) {
 
     textData.uv.x = mix(textData.uv.x, textData.uv.x + sin(TAU * t * 0.5) / 256.0, 1.0 - textData.localPosition.y);
     textData.uv.y = mix(textData.uv.y, textData.uvMax.y, -(0.3 + 0.5 * cos(TAU * t)));
-    textData.shouldScale = true;
 }
 
-void apply_skewing_movement() { 
+void apply_skewing_movement() {
     apply_skewing_movement(1.0);
 }
 
 void apply_growing_movement(float speed) {
     vec2 offset = vec2(0.0, 5.0 / 256.0);
     textData.uv = (textData.uv - textData.uvCenter - offset) * (sin(GameTime * 12800.0 * speed) * 0.15 + 0.85) + textData.uvCenter + offset;
-    textData.shouldScale = true;
 }
 
 void apply_growing_movement() {
@@ -153,53 +190,44 @@ void apply_growing_movement() {
 }
 
 void apply_outline(vec3 color) {
-    textData.shouldScale = true;
-
     if(textData.isShadow) {
         color *= 0.25;
         textData.color.rgb = color;
-    } 
+    }
 
+    // Sample all 8 neighbors unconditionally (no bounds check needed).
+    // texCoord0 is always valid, and MC's font atlas has sufficient padding
+    // between characters to prevent cross-character bleed at ±1 texel.
     vec2 texelSize = 1.0 / vec2(256.0);
-    bool outline = false;
 
     for(int x = -1; x <= 1; x++) {
         for(int y = -1; y <= 1; y++) {
             if(x == 0 && y == 0) continue;
 
-            vec2 uv = textData.uv + vec2(x, y) * texelSize;
-            if(uvBoundsCheck(uv, textData.uvMin, textData.uvMax)) continue;
-
-            vec4 s = texture(Sampler0, uv);
+            vec4 s = texture(Sampler0, textData.uv + vec2(x, y) * texelSize);
             if(s.a >= 0.1) { textData.backColor = vec4(color, 1.0); return; }
         }
     }
 }
 
 void apply_thin_outline(vec3 color) {
-    textData.shouldScale = true;
-
     if(textData.isShadow) {
         color *= 0.25;
         textData.color.rgb = color;
-    } 
-    
-    vec2 texelSize = 0.5 / vec2(256.0);
-    bool outline = false;
+    }
+
+    vec2 texelSize = 1.0 / vec2(256.0);
 
     for(int x = -1; x <= 1; x++) {
         for(int y = -1; y <= 1; y++) {
             if(x == 0 && y == 0) continue;
+            if(x != 0 && y != 0) continue; // cardinal directions only
 
-            vec2 uv = textData.uv + vec2(x, y) * texelSize;
-            if(uvBoundsCheck(uv, textData.uvMin, textData.uvMax)) continue;
-
-            vec4 s = texture(Sampler0, uv);
+            vec4 s = texture(Sampler0, textData.uv + vec2(x, y) * texelSize);
             if(s.a >= 0.1) { textData.backColor = vec4(color, 1.0); return; }
         }
     }
 }
-
 
 void apply_gradient(vec3 color1, vec3 color2) {
     textData.color.rgb = mix(color1, color2, (textData.uv.y - textData.uvMin.y) / (textData.uvMax.y - textData.uvMin.y));
@@ -207,15 +235,14 @@ void apply_gradient(vec3 color1, vec3 color2) {
 }
 
 void apply_rainbow() {
-    textData.color.rgb = hsvToRgb(vec3(0.005 * (textData.position.x + textData.position.y) - GameTime * 300.0, 0.7, 1.0));
+    textData.color.rgb = hsvToRgb(vec3(0.005 * (textData.position.x + textData.position.y) - GameTime * 300.0, 0.8, 1.0));
     if(textData.isShadow) textData.color.rgb *= 0.25;
 }
 
 void apply_shimmer(float speed, float intensity) {
     if(textData.isShadow) return;
     float f = textData.localPosition.x + textData.localPosition.y - GameTime * 6400.0 * speed;
-    
-    if(mod(f, 5) < 0.75) textData.topColor = vec4(1.0, 1.0, 1.0, intensity);
+    if(mod(f, 5) < 0.75) textData.color.rgb = mix(textData.color.rgb, vec3(1.0), intensity);
 }
 
 void apply_shimmer(){
@@ -223,7 +250,6 @@ void apply_shimmer(){
 }
 
 void apply_chromatic_abberation() {
-    textData.shouldScale = true;
     float noiseX = noise(GameTime * 12000.0) - 0.5;
     float noiseY = noise(GameTime * 12000.0 + 19732.134) - 0.5;
     vec2 offset = vec2(0.5 / 256, 0.0) + vec2(0.5, 1.0) * vec2(noiseX, noiseY) / 256;
@@ -242,19 +268,9 @@ void apply_chromatic_abberation() {
     textData.backColor.rgb *= textData.color.rgb;
 }
 
-void apply_metalic(vec3 lightColor, vec3 darkColor) {
-    int y = int(floor((textData.uv.y - textData.uvMin.y) * 256.0));
-    
-    if(y > 3) textData.color.rgb = darkColor;
-    if(y == 3) textData.color.rgb = lightColor + 0.25;
-    if(y < 3) textData.color.rgb = lightColor;
-
-    if(textData.isShadow) textData.color.rgb *= 0.25;
-}
-
 void apply_metalic(vec3 color) {
     int y = int(floor((textData.uv.y - textData.uvMin.y) * 256.0));
-    
+
     if(y > 3) textData.color.rgb = color * 0.7;
     if(y == 3) textData.color.rgb = color + 0.25;
     if(y < 3) textData.color.rgb = color;
@@ -263,7 +279,6 @@ void apply_metalic(vec3 color) {
 }
 
 void apply_fire() {
-    textData.shouldScale = true;
     if(textData.isShadow) return;
 
     float h = fract(textData.uv.y * 256.0);
@@ -415,172 +430,12 @@ void apply_non_binary_pride() {
     if(textData.isShadow) textData.color.rgb *= 0.25;
 }
 
-#define TEXT_EFFECT(r, g, b) return true; case ((uint(r/4) << 16) | (uint(g/4) << 8) | (uint(b/4))):
+#ifdef TEXT_EFFECTS_FSH
 
-bool applyTextEffects() { 
-    uint vertexColorId = colorId(floor(round(textData.color.rgb * 255.0) / 4.0) / 255.0); 
-    if(textData.isShadow) { vertexColorId = colorId(textData.color.rgb);} 
-    switch(vertexColorId >> 8) { 
-        case 0xFFFFFFFFu:
+    #define TEXT_EFFECT(r, g, b) return 0; case ((uint(r/4) << 16) | (uint(g/4) << 8) | uint(b/4)):
 
-    #moj_import<text_effects_config.glsl>
-    
-        return true; 
-    } 
-    return false;
-}
+#else
 
-#define SPHEYA_PACK_9
-
-#ifdef FSH
-in vec4 vctfx_screenPos;
-flat in float vctfx_applyTextEffect;
-flat in float vctfx_isShadow;
-flat in float vctfx_changedScale;
-
-in vec3 vctfx_ipos1;
-in vec3 vctfx_ipos2;
-in vec3 vctfx_ipos3;
-in vec3 vctfx_ipos4;
-
-in vec3 vctfx_uvpos1;
-in vec3 vctfx_uvpos2;
-in vec3 vctfx_uvpos3;
-in vec3 vctfx_uvpos4;
-
-bool applySpheyaPack9() {
-    if(vctfx_applyTextEffect < 0.5) return false;
-
-    textData.isShadow = vctfx_isShadow > 0.5;
-    textData.backColor = vec4(0.0);
-    textData.topColor = vec4(0.0);
-    textData.doTextureLookup = true;
-    textData.color = baseColor;
-    
-    vec2 ip1 = vctfx_ipos1.xy / vctfx_ipos1.z;
-    vec2 ip2 = vctfx_ipos2.xy / vctfx_ipos2.z;
-    vec2 ip3 = vctfx_ipos3.xy / vctfx_ipos3.z;
-    vec2 ip4 = vctfx_ipos4.xy / vctfx_ipos4.z;
-    vec2 innerMin = min(ip1.xy,min(ip2.xy,min(ip3.xy,ip4.xy)));
-    vec2 innerMax = max(ip1.xy,max(ip2.xy,max(ip3.xy,ip4.xy)));
-    vec2 innerSize = innerMax - innerMin;
-    
-    vec2 uvp1 = vctfx_uvpos1.xy / vctfx_uvpos1.z;
-    vec2 uvp2 = vctfx_uvpos2.xy / vctfx_uvpos2.z;
-    vec2 uvp3 = vctfx_uvpos3.xy / vctfx_uvpos3.z;
-    vec2 uvp4 = vctfx_uvpos4.xy / vctfx_uvpos4.z;
-    vec2 uvMin = min(uvp1.xy,min(uvp2.xy,min(uvp3.xy, uvp4.xy)));
-    vec2 uvMax = max(uvp1.xy,max(uvp2.xy,max(uvp3.xy, uvp4.xy)));
-    vec2 uvSize = uvMax - uvMin;
-    textData.uvMin = uvMin;
-    textData.uvMax = uvMax;
-    textData.uvCenter = uvMin + 0.25 * uvSize;
-    textData.localPosition = ((vctfx_screenPos.xy - innerMin) / innerSize);
-    textData.localPosition.y = 1.0 - textData.localPosition.y;
-    textData.uv = textData.localPosition * uvSize + uvMin;
-    if(vctfx_changedScale < 0.5) {
-        textData.uv = texCoord0;
-    }
-    textData.position = vctfx_screenPos.xy * uvSize * 256.0 / innerSize;
-    textData.characterPosition = 0.5 * (innerMin + innerMax) * uvSize * 256.0 / innerSize;
-    if(textData.isShadow) { 
-        textData.characterPosition += vec2(-1.0, 1.0);
-        textData.position += vec2(-1.0, 1.0);
-    }
-    applyTextEffects();
-    if(uvBoundsCheck(textData.uv, uvMin, uvMax)) textData.doTextureLookup = false;
-    
-    vec4 textureSample = texture(Sampler0, textData.uv);
-
-#ifdef RENDERTYPE_TEXT_INTENSITY
-    textureSample = textureSample.rrrr;
-    textureSample = vec4(0.0);
-#endif
-
-    if(!textData.doTextureLookup) textureSample = vec4(0.0);
-    textData.topColor.a *= textureSample.a;
-
-    fragColor = mix(vec4(textData.backColor.rgb, textData.backColor.a * textData.color.a), textureSample * textData.color, textureSample.a);
-    fragColor.rgb = mix(fragColor.rgb, textData.topColor.rgb, textData.topColor.a);
-    fragColor *= lightColor * ColorModulator;
-
-    if (fragColor.a < 0.1) {
-        discard;
-    }
-
-    fragColor = linear_fog(fragColor, vertexDistance, FogStart, FogEnd, FogColor);
-    return true;
-}
-#endif
-
-#ifdef VSH
-out vec4 vctfx_screenPos;
-flat out float vctfx_applyTextEffect;
-flat out float vctfx_isShadow;
-flat out float vctfx_changedScale;
-
-out vec3 vctfx_ipos1;
-out vec3 vctfx_ipos2;
-out vec3 vctfx_ipos3;
-out vec3 vctfx_ipos4;
-
-out vec3 vctfx_uvpos1;
-out vec3 vctfx_uvpos2;
-out vec3 vctfx_uvpos3;
-out vec3 vctfx_uvpos4;
-
-bool applySpheyaPack9() {
-    gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
-
-    vctfx_isShadow = fract(Position.z) < 0.01 ? 1.0 : 0.0;
-    vctfx_applyTextEffect = 1.0;
-    vctfx_changedScale = 0.0;
-
-    textData.isShadow = vctfx_isShadow > 0.5;
-    textData.color = Color;
-    textData.shouldScale = false;
-
-    if(!applyTextEffects()) {
-        vctfx_isShadow = 0.0;
-        if(Position.z == 0.0 && textData.isShadow) {
-            textData.isShadow = false;
-            if(applyTextEffects()) {
-                vctfx_isShadow = 0.0;
-            }else {
-                vctfx_applyTextEffect = 0.0;
-                return false;
-            }
-        }else{
-            vctfx_applyTextEffect = 0.0;
-            return false;
-        }
-    }
-
-    vec2 corner = vec2[](vec2(-1.0, +1.0), vec2(-1.0, -1.0), vec2(+1.0, -1.0), vec2(+1.0, +1.0))[gl_VertexID % 4];
-
-    if(textureSize(Sampler0, 0) != ivec2(256, 256)) {
-        vctfx_applyTextEffect = 0.0;
-        return false;
-    }
-
-    vctfx_uvpos1 = vctfx_uvpos2 = vctfx_uvpos3 = vctfx_uvpos4 = vctfx_ipos1 = vctfx_ipos2 = vctfx_ipos3 = vctfx_ipos4 = vec3(0.0);
-    switch (gl_VertexID % 4) {
-        case 0: vctfx_ipos1 = vec3(gl_Position.xy, 1.0); vctfx_uvpos1 = vec3(UV0.xy, 1.0); break;
-        case 1: vctfx_ipos2 = vec3(gl_Position.xy, 1.0); vctfx_uvpos2 = vec3(UV0.xy, 1.0); break;
-        case 2: vctfx_ipos3 = vec3(gl_Position.xy, 1.0); vctfx_uvpos3 = vec3(UV0.xy, 1.0); break;
-        case 3: vctfx_ipos4 = vec3(gl_Position.xy, 1.0); vctfx_uvpos4 = vec3(UV0.xy, 1.0); break;
-    } 
-    if(textData.shouldScale) {
-        gl_Position.xy += corner * 0.2;
-        vctfx_changedScale = 1.0;
-    }
-
-    vctfx_screenPos = gl_Position;
-    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
-    vertexColor = baseColor * lightColor;
-    texCoord0 = UV0;
-    return true;
-}
-#endif
+    #define TEXT_EFFECT(r, g, b) return true; case ((uint(r/4) << 16) | (uint(g/4) << 8) | uint(b/4)):
 
 #endif

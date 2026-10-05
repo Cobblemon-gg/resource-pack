@@ -1,0 +1,177 @@
+{
+  "portraitScale": 2.2,
+  "portraitTranslation": [
+    -0.6,
+    0.15,
+    0
+  ],
+  "profileScale": 0.9,
+  "profileTranslation": [
+    0,
+    0.4,
+    0
+  ],
+  "rootBone": "pidgeot",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_compat18_legacy_pidgeot', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_compat18_legacy_pidgeot', 'ground_idle_PLACEHOLDER')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_legacy_pidgeot', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_compat18_legacy_pidgeot', 'ground_idle_PLACEHOLDER')",
+        "q.biped_walk(0.66, 0.6, 'leg_left', 'leg_right')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_legacy_pidgeot', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_compat18_legacy_pidgeot', 'air_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_open_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_legacy_pidgeot', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_compat18_legacy_pidgeot', 'air_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_open_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_legacy_pidgeot', 'blink')"
+      ]
+    },
+    "glide": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('atlas_compat18_legacy_pidgeot', 'air_fly')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_open_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": false
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_compat18_legacy_pidgeot', 'blink')"
+      ]
+    }
+  }
+}

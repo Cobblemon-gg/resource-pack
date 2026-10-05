@@ -1,0 +1,56 @@
+{
+  "head": "head",
+  "portraitScale": 2,
+  "portraitTranslation": [-0.8, 3.15, 0],
+  "profileScale": 0.5,
+  "profileTranslation": [0, 1.1, 0],
+  "animations": {
+    "cry": "bedrock('ironcrown', 'cry')",
+    "recoil": "q.bedrock_stateful('ironcrown', 'recoil')",
+    "status": "q.bedrock_stateful('ironcrown', 'cry', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('ironcrown', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('ironcrown', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('ironcrown', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('ironcrown', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('ironcrown', 'ground_walk')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.bedrock('ironcrown', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.bedrock('ironcrown', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('ironcrown', 'sleep')"]
+    }
+  }
+}

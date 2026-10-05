@@ -1,0 +1,89 @@
+{
+  "portraitScale": 1.78,
+  "portraitTranslation": [
+    -0.3,
+    2.73,
+    0
+  ],
+  "profileScale": 0.48,
+  "profileTranslation": [
+    0.01,
+    1.11,
+    0
+  ],
+  "rootBone": "lucario",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_msd18_lucario', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_msd18_lucario_mega', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_lucario_mega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_lucario', 'blink', 2, 5, 1)",
+        "q.bedrock_quirk('atlas_msd18_lucario', 'battle_quirk', 8, 16, 1)"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_lucario', 'ground_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('atlas_msd18_lucario_mega', 'item_hold')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_lucario', 'blink', 2, 5, 1)",
+        "q.bedrock_quirk('atlas_msd18_lucario', q.array('idle_quirk','idle_quirk2'))"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('atlas_msd18_lucario', 'ground_walk')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('atlas_msd18_lucario_mega', 'item_hold')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_lucario', 'blink', 2, 5, 1)"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_lucario', 'sleep')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_lucario', 'sleep_quirk')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('atlas_msd18_lucario', 'cry')"
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "portraitScale": 1,
+  "portraitTranslation": [
+    -0.45,
+    3,
+    0
+  ],
+  "profileScale": 0.36,
+  "profileTranslation": [
+    0,
+    1.2,
+    0
+  ],
+  "rootBone": "corviknight",
+  "firstPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.45,
+      0
+    ],
+    "seat_2": [
+      0,
+      0.45,
+      0
+    ]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [
+      0,
+      1,
+      1.5
+    ],
+    "seat_1_reverse": [
+      0,
+      1,
+      0.5
+    ],
+    "seat_2": [
+      0,
+      1,
+      1.5
+    ],
+    "seat_2_reverse": [
+      0,
+      1,
+      0.5
+    ]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [
+      0,
+      1,
+      1.5
+    ],
+    "seat_1_reverse": [
+      0,
+      1,
+      0.5
+    ],
+    "seat_2": [
+      0,
+      1,
+      1.5
+    ],
+    "seat_2_reverse": [
+      0,
+      1,
+      0.5
+    ]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_autumn_corviknight_corviknight', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'ground_idle')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "battle_standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'battle_idle')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'air_idle')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY",
+        "SWIM"
+      ],
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'air_fly')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'wangs')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "glide": {
+      "poseTypes": [
+        "FLY",
+        "SWIM"
+      ],
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'air_glide')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_dive')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'wangs')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "ride-jump": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "condition": "q.in_air",
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_jump')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'ground_walk')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "sprinting": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1)",
+        "q.look('beard', -1, -1)",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'ground_run')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_corviknight_corviknight', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_corviknight_corviknight', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'sleep')",
+        "q.bedrock('atlas_autumn_corviknight_corviknight', 'folded_wangs')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

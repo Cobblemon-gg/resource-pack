@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:snorlax",
+  "order": 111,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_snorlax",
+      "model": "cobblemon:atlas_sweep18_snorlax.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0143_snorlax/snorlax.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('christmas') && !q.has_aspect('golden') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('plushie2') && !q.has_aspect('summer') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0143_snorlax/snorlax_shiny.png",
+      "condition": "!q.has_aspect('christmas') && !q.has_aspect('golden') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('plushie2') && !q.has_aspect('summer') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0143_snorlax/snorlax_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('christmas') && !q.has_aspect('golden') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie') && !q.has_aspect('plushie2') && !q.has_aspect('summer') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    }
+  ]
+}

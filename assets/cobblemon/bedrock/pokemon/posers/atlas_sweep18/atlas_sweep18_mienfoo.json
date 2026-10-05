@@ -1,0 +1,43 @@
+{
+  "portraitScale": 1.87,
+  "portraitTranslation": [-0.08, 0.59, 0],
+  "profileScale": 0.73,
+  "profileTranslation": [0.0, 0.69, 0],
+  "rootBone": "mienfoo",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_mienfoo', 'cry')"
+  },
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+		"q.look('head')",
+        "q.bedrock('atlas_sweep18_mienfoo', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_mienfoo', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+		"q.look('head')",
+        "q.bedrock('atlas_sweep18_mienfoo', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_mienfoo', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('atlas_sweep18_mienfoo', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_mienfoo', 'blink')"
+      ]
+    }
+  }
+ }

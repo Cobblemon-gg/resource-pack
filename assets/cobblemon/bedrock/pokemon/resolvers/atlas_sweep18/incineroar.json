@@ -1,0 +1,57 @@
+{
+  "species": "cobblemon:incineroar",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_incineroar",
+      "model": "cobblemon:atlas_sweep18_incineroar.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0727_incineroar/incineroar.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0727_incineroar/incineroar_emissive.png",
+          "translucent": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('lunar-new-year') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0727_incineroar/incineroar_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0727_incineroar/incineroar_emissive_shiny.png",
+          "translucent": true
+        }
+      ],
+      "condition": "!q.has_aspect('lunar-new-year') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0727_incineroar/incineroar_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('lunar-new-year') && !q.has_aspect('wild-west') && !q.has_aspect('wild-west-aura1') && !q.has_aspect('wild-west-aura2')"
+    }
+  ]
+}

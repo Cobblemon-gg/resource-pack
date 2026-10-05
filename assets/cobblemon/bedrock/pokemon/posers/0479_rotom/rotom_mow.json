@@ -1,0 +1,35 @@
+{
+  "head": "head",
+  "portraitScale": 1.9,
+  "portraitTranslation": [0, -1.15, 0],
+  "profileScale": 0.9,
+  "profileTranslation": [0, 0.4, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('rotom_mow', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.bedrock('rotom_mow', 'battle_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('rotom_mow', 'cry', 7, 15, 1)",
+        "q.bedrock_quirk('rotom_mow', 'blink', 2, 5, 1)"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "HOVER", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.bedrock('rotom_mow', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('rotom_mow', 'cry', 7, 15, 1)",
+        "q.bedrock_quirk('rotom_mow', 'blink', 2, 5, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLY"],
+      "animations": ["bedrock(rotom_mow, ground_walk)"],
+      "quirks": ["q.bedrock_quirk('rotom_mow', 'blink', 2, 5, 1)"]
+    }
+  }
+}

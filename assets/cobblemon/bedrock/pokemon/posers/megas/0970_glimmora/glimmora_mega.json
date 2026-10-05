@@ -1,0 +1,43 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-0.6, 1.8, 0],
+    "profileScale": 0.37,
+    "profileTranslation": [0, 1.2, 0],
+    "rootBone": "glimmora_mega",
+    "animations": {
+      "faint": "q.bedrock_primary('glimmora_mega', 'faint')",
+      "cry": "q.bedrock_stateful('glimmora_mega', 'cry')"
+    },
+    "poses": {
+       "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('glimmora_mega', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('glimmora_mega', 'blink')"]
+    },
+      "standing": {
+        "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('glimmora_mega', 'ground_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('glimmora_mega', 'blink')"]
+      },
+      "walking": {
+        "poseTypes": ["WALK"],
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('glimmora_mega', 'ground_walk')"
+        ],
+      "quirks": ["q.bedrock_quirk('glimmora_mega', 'blink')"]
+      },
+      "sleep": {
+        "poseTypes": ["SLEEP"],
+        "animations": ["q.bedrock('glimmora_mega', 'sleep')"],
+      "quirks": ["q.bedrock_quirk('glimmora_mega', 'blink')"]
+      }
+    }
+   }

@@ -1,0 +1,62 @@
+{
+  "portraitScale": 1.07,
+  "portraitTranslation": [-0.41,0.55,0],
+  "profileScale": 0.39,
+  "profileTranslation": [-0.08,0.9,-6],
+  "rootBone": "ferrothorn",
+  "animations": {
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_ferrothorn', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_ferrothorn', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_ferrothorn', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_ferrothorn', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_ferrothorn', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_sweep18_ferrothorn', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_sweep18_ferrothorn', 'sleep')"
+      ]
+    }
+  }
+}

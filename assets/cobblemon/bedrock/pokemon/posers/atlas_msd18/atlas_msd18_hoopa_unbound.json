@@ -1,0 +1,90 @@
+{
+  "head": "looky",
+  "portraitScale": 0.8,
+  "portraitTranslation": [
+    -0.2,
+    2.58,
+    0.0
+  ],
+  "profileScale": 0.28,
+  "profileTranslation": [
+    -0.18,
+    1.45,
+    0.0
+  ],
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_msd18_hoopa_unbound', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "transformTicks": 10,
+      "animations": [
+        "q.bedrock('atlas_msd18_hoopa_unbound', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_hoopa_unbound', 'blink', 2, 7, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "__root",
+          "scale": [
+            2.0,
+            2.0,
+            2.0
+          ]
+        }
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "FLY"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_hoopa_unbound', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_hoopa_unbound', 'blink', 2, 7, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "__root",
+          "scale": [
+            2.0,
+            2.0,
+            2.0
+          ]
+        }
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "FLOAT",
+        "HOVER"
+      ],
+      "animations": [
+        "q.bedrock('atlas_msd18_hoopa_unbound', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_msd18_hoopa_unbound', 'blink', 2, 7, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "__root",
+          "scale": [
+            2.0,
+            2.0,
+            2.0
+          ]
+        }
+      ]
+    }
+  }
+}

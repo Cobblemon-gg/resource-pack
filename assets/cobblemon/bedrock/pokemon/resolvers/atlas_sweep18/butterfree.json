@@ -1,0 +1,83 @@
+{
+  "species": "cobblemon:butterfree",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:butterfree",
+      "model": "cobblemon:atlas_sweep18_butterfree_male.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0012_butterfree/butterfree.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0012_butterfree/butterfree_shiny.png",
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0012_butterfree/butterfree_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:atlas_sweep18_butterfree_female.geo",
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "valencian"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0012_butterfree/butterfree_valencian.png",
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "valencian",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0012_butterfree/butterfree_valencian_shiny.png",
+      "condition": "!q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

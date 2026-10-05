@@ -1,0 +1,111 @@
+{
+  "portraitScale": 1.3,
+  "portraitTranslation": [-1.2, 2.5, 0],
+  "profileScale": 0.4,
+  "profileTranslation": [-0.2, 1.1, 0],
+  "rootBone": "scolipede_mega",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.5, 0.5],
+    "seat_1_reverse": [0, 0.5, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.5, 0.5],
+    "seat_1_reverse": [0, 0.5, 0.5]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('scolipede_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('scolipede_mega', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head_ai', 1, 1, 30, -5, 25, -25)",
+        "q.bedrock('scolipede_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scolipede_mega', 'blink')",
+        "q.bedrock_quirk('scolipede_mega', q.array('idle_quirk', 'idle_quirk2'))"
+      ],
+      "transformTicks": 10
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head_ai', 1, 1, 30, -5, 25, -25)",
+        "q.bedrock('scolipede_mega', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('scolipede_mega', 'cry_idle')"
+      },
+      "quirks": ["q.bedrock_quirk('scolipede_mega', 'blink')"]
+    },
+    "in-air": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden",
+      "animations": ["q.look('head_ai')", "q.bedrock('scolipede_mega', 'ride_jump')"],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('scolipede_mega', 'sleep_wild')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "battle-sleep": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('scolipede_mega', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head_ai', 1, 1, 30, -5, 25, -25)",
+        "q.bedrock('scolipede_mega', 'ground_walk')"
+      ],
+      "conditionalAnimations": [
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('scolipede_mega', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scolipede_mega', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "run": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head_ai', 1, 1, 30, -5, 25, -25)",
+        "q.bedrock('scolipede_mega', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('scolipede_mega', 'blink')"
+      ],
+      "transformTicks": 10
+    }
+  }
+}

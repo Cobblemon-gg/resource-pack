@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:beedrill",
+  "order": 103,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:beedrill",
+      "model": "cobblemon:atlas_sweep18_beedrill.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0015_beedrill/beedrill.png",
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0015_beedrill/beedrill_shiny.png",
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0015_beedrill/beedrill_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('mega') && !q.has_aspect('movie') && !q.has_aspect('movie-aura1') && !q.has_aspect('movie-aura2') && !q.has_aspect('plushie')"
+    }
+  ]
+}

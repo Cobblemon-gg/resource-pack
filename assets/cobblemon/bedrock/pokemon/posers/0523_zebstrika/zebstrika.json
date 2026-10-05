@@ -1,0 +1,29 @@
+{
+  "portraitScale": 2.04,
+  "portraitTranslation": [-0.97, 1.29, 0],
+  "profileScale": 0.62,
+  "profileTranslation": [0.02, 0.84, 0],
+  "rootBone": "zebstrika",
+  "animations": {
+    "cry": "q.bedrock_stateful('zebstrika', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('zebstrika', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('zebstrika', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('zebstrika', 'ground_idle')",
+        "q.quadruped_walk(0.66, 0.6, 'leg_front_left', 'leg_front_right', 'leg_back_left', 'leg_back_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('zebstrika', 'blink')"]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.iron_moth_wing",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, -10.75, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, -39.75, -3.5]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, -32.75, -3]
+				},
+				{
+					"name": "chest",
+					"parent": "torso",
+					"pivot": [0, -25.75, -3.5]
+				},
+				{
+					"name": "chest2",
+					"parent": "chest",
+					"pivot": [0, -18.25, -3]
+				},
+				{
+					"name": "wings",
+					"parent": "chest2",
+					"pivot": [0, -13.25, 3]
+				},
+				{
+					"name": "wing_left",
+					"parent": "wings",
+					"pivot": [4.5, -10.75, 3],
+					"rotation": [0, -25, 0],
+					"cubes": [
+						{"origin": [6.5, -16.25, 3], "size": [18, 12, 0], "uv": [0, 0]},
+						{"origin": [2.5, -3.25, 3], "size": [18, 12, 0], "pivot": [11.5, 2.75, 3], "rotation": [0, 0, -45], "uv": [0, 0]},
+						{"origin": [2.5, -29.25, 3], "size": [18, 12, 0], "pivot": [11.5, -23.25, 3], "rotation": [0, 0, 45], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wing_right",
+					"parent": "wings",
+					"pivot": [-4.5, -10.75, 3],
+					"rotation": [0, 25, 0],
+					"cubes": [
+						{"origin": [-24.5, -16.25, 3], "size": [18, 12, 0], "uv": [0, 0], "mirror": true},
+						{"origin": [-20.5, -3.25, 3], "size": [18, 12, 0], "pivot": [-11.5, 2.75, 3], "rotation": [0, 0, 45], "uv": [0, 0], "mirror": true},
+						{"origin": [-20.5, -29.25, 3], "size": [18, 12, 0], "pivot": [-11.5, -23.25, 3], "rotation": [0, 0, -45], "uv": [0, 0], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

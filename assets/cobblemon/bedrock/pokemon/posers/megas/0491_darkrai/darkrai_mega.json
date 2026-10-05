@@ -1,0 +1,49 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-2, 5.5, 0],
+    "profileScale": 0.2,
+    "profileTranslation": [-0.1, 1.6, 0],
+    "rootBone": "darkrai_mega",
+  "animations": {
+    "physical": "q.bedrock_primary('darkrai_mega', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('darkrai_mega', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('darkrai_mega', 'status', q.curve('symmetrical_wide'))",
+    "recoil": "q.bedrock_stateful('darkrai_mega', 'recoil')"
+  },
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+        "q.bedrock('darkrai_mega', 'battle_idle')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+        "q.bedrock('darkrai_mega', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('darkrai_mega', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('darkrai_mega', 'ground_idle')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('darkrai_mega', 'ground_walk')"
+      ]
+    }
+  }
+}

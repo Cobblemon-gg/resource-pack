@@ -1,0 +1,78 @@
+{
+  "portraitScale": 1.10,
+  "portraitTranslation": [-1.0, 5.0, 0.0],
+  "profileScale": 0.25,
+  "profileTranslation": [0.03, 1.35, 0.0],
+  "animations": {
+    "cry": "q.bedrock_stateful('lugia_shadow', 'cry')",
+    "recoil": "q.bedrock_stateful('lugia_shadow', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lugia_shadow', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lugia_shadow', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('lugia_shadow', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lugia_shadow', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('lugia_shadow', 'blink')", "q.bedrock_quirk('zapdos', 'air_fly_quirk')", "q.bedrock_quirk('zapdos', 'air_fly_quirk2')"]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lugia_shadow', 'blink')"]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('lugia_shadow', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('lugia_shadow', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('lugia_shadow', 'sleep')"]
+    }
+  }
+}

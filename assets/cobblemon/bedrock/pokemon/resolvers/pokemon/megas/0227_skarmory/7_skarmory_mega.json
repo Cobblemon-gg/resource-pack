@@ -1,0 +1,49 @@
+{
+  "species": "cobblemon:skarmory",
+  "order": 7,
+  "variations": [
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:skarmory_mega",
+      "model": "cobblemon:skarmory_mega.geo",
+      "texture": "cobblemon:textures/pokemon/megas/0227_skarmory/skarmory_mega.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/megas/0227_skarmory/skarmory_mega_shiny.png"
+    },
+    {
+      "aspects": [
+        "mega"
+      ],
+      "poser": "cobblemon:atlas_msd18_skarmory",
+      "model": "cobblemon:atlas_msd18_skarmory_mega.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+    },
+    {
+      "aspects": [
+        "mega",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_msd18/0227_skarmory/skarmory_mega_shiny.png",
+      "condition": "!q.has_aspect('anime') && !q.has_aspect('anime-aura1') && !q.has_aspect('anime-aura2') && !q.has_aspect('monochrome') && !q.has_aspect('monochrome-aura1') && !q.has_aspect('monochrome-aura2')"
+    }
+  ]
+}

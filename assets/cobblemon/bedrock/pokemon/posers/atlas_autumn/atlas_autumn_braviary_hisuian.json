@@ -1,0 +1,161 @@
+{
+  "portraitScale": 1.95,
+  "portraitTranslation": [
+    -1.06,
+    1.78,
+    0
+  ],
+  "profileScale": 0.52,
+  "profileTranslation": [
+    0.05,
+    1.05,
+    0
+  ],
+  "rootBone": "braviary",
+  "firstPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.45,
+      0
+    ]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [
+      0,
+      0.35,
+      0
+    ],
+    "seat_1_reverse": [
+      0,
+      0.35,
+      0
+    ]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [
+      0,
+      0.35,
+      0
+    ],
+    "seat_1_reverse": [
+      0,
+      0.35,
+      0
+    ]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_autumn_braviary_hisuian_braviary_hisuian', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_autumn_braviary_hisuian_braviary_hisuian', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.look('neck', 1, 1, 3, -20, 10, -10)",
+        "q.look('neck2', 1, 1, 1, -35, 15, -15)",
+        "q.look('head_ai', 1, 1, 50, 0, 25, -25)",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'ground_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_braviary_hisuian_braviary_hisuian', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('neck', 1, 1, 3, -20, 10, -10)",
+        "q.look('neck2', 1, 1, 1, -35, 15, -15)",
+        "q.look('head_ai', 1, 1, 50, -10, 25, -25)",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'ground_walk')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'ride_ground_walk')"
+        }
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_braviary_hisuian_braviary_hisuian', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": [
+        "HOVER"
+      ],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('neck', 1, 1, 3, -20, 10, -10)",
+        "q.look('neck2', 1, 1, 1, -35, 15, -15)",
+        "q.look('head_ai', 1, 1, 50, -10, 25, -25)",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'air_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_braviary_hisuian_braviary_hisuian', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('neck', 1, 1, 3, -20, 10, -10)",
+        "q.look('neck2', 1, 1, 1, -35, 15, -15)",
+        "q.look('head_ai', 1, 1, 50, -10, 25, -25)",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'air_fly')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'ride_air_fly')"
+        }
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_braviary_hisuian_braviary_hisuian', 'blink')"
+      ]
+    },
+    "glide": {
+      "poseTypes": [
+        "FLY"
+      ],
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('neck', 1, 1, 3, -20, 10, -10)",
+        "q.look('neck2', 1, 1, 1, -35, 15, -15)",
+        "q.look('head_ai', 1, 1, 50, -10, 25, -25)",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'air_glide')",
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'ride_air_dive')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('atlas_autumn_braviary_hisuian_braviary', 'ride_air_glide')"
+        }
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('atlas_autumn_braviary_hisuian_braviary_hisuian', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('atlas_autumn_braviary_hisuian_braviary_hisuian', 'sleep')"
+      ],
+      "transformTicks": 10
+    }
+  }
+}

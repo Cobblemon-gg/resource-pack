@@ -1,0 +1,39 @@
+{
+  "portraitScale": 1.19,
+  "portraitTranslation": [-0.86, 2, 0],
+  "profileScale": 0.38,
+  "profileTranslation": [-0.05, 1.07, 0],
+  "rootBone": "zarude",
+  "animations": {
+    "cry": "q.bedrock_stateful('atlas_sweep18_zarude', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_zarude', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_zarude', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('atlas_sweep18_zarude', 'ground_idle')",
+        "q.biped_walk(0.56, 0.5, 'leg_left', 'leg_right')",
+        "q.bimanual_swing(0.36, 0.3, 'arm_left', 'arm_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('atlas_sweep18_zarude', 'blink')"]
+    }
+  }
+}

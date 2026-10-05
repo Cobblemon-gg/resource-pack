@@ -1,0 +1,88 @@
+{
+  "portraitScale": 0.8,
+  "portraitTranslation": [
+    -0.23,
+    0.5,
+    0
+  ],
+  "profileScale": 0.6,
+  "profileTranslation": [
+    0,
+    0.8,
+    0
+  ],
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_shadow_irontreads_irontreads', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_shadow_irontreads_irontreads', 'cry')",
+    "recoil": "q.bedrock_stateful('atlas_shadow_irontreads_irontreads', 'recoil')",
+    "physical": "q.bedrock_primary('atlas_shadow_irontreads_irontreads', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('atlas_shadow_irontreads_irontreads', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('atlas_shadow_irontreads_irontreads', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_irontreads_irontreads', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_irontreads_irontreads', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_irontreads_irontreads', 'blink')"
+      ]
+    },
+    "float": {
+      "poseTypes": [
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'ground_walk')"
+      ]
+    },
+    "swim": {
+      "poseTypes": [
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_shadow_irontreads_irontreads', 'sleep')"
+      ]
+    }
+  },
+  "rootBone": "irontreads"
+}

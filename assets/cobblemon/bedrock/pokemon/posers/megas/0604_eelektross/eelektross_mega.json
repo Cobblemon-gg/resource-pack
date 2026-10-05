@@ -1,0 +1,27 @@
+{
+  "portraitScale": 1.26,
+  "portraitTranslation": [-1.34, -0.2, 1.26],
+  "profileScale": 0.5,
+  "profileTranslation": [-0.4, 0.65, 0.0],
+  "rootBone": "eelektross_mega",
+  "animations": {
+    "cry": "q.bedrock_stateful('eelektross_mega', 'cry')",
+    "recoil": "q.bedrock_stateful('eelektross_mega', 'recoil')",
+    "physical": "q.bedrock_stateful('eelektross_mega', 'physical')",
+    "special": "q.bedrock_stateful('eelektross_mega', 'physical')",
+    "status": "q.bedrock_stateful('eelektross_mega', 'physical')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": ["q.bedrock('eelektross_mega', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('eelektross_mega', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('eelektross_mega', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('eelektross_mega', 'blink')"]
+    }
+  }
+}

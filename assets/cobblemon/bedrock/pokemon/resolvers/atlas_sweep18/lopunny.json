@@ -1,0 +1,43 @@
+{
+  "species": "cobblemon:lopunny",
+  "order": 104,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:atlas_sweep18_lopunny",
+      "model": "cobblemon:atlas_sweep18_lopunny.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0428_lopunny/lopunny.png",
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura') && !q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0428_lopunny/lopunny_shiny.png",
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura') && !q.has_aspect('mega')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0428_lopunny/lopunny_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('easter-2026') && !q.has_aspect('easter-2026-aura1') && !q.has_aspect('easter-2026-aura2') && !q.has_aspect('masquerade') && !q.has_aspect('masquerade-aura') && !q.has_aspect('mega')"
+    }
+  ]
+}

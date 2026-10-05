@@ -1,0 +1,196 @@
+{
+  "rootBone": "dragonitemega",
+  "portraitScale": 1.28,
+  "portraitTranslation": [-0.21, 2.77, 0],
+  "profileScale": 0.33,
+  "profileTranslation": [0, 1.25, -6],
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0],
+    "seat_2": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.5, 0.5],
+    "seat_1_reverse": [0, 0.5, 0.5],
+    "seat_2": [0, 0.5, 0.5],
+    "seat_2_reverse": [0, 0.5, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.5, 0.5],
+    "seat_1_reverse": [0, 0.5, 0.5],
+    "seat_2": [0, 0.5, 0.5],
+    "seat_2_reverse": [0, 0.5, 0.5]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('dragonitemega', 'cry')"
+  },
+  "poses": {
+    "ground-jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air && q.is_ridden",
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('gyarados', 'air_fly')"
+      ]
+    },
+    "water-jump": {
+      "poseTypes": ["FLOAT", "SWIM"],
+      "condition": "q.is_ridden",
+      "isTouchingWater": false,
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'water_swim')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('dragonitemega', 'sleep')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'ground_idle')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('dragonitemega', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'ground_walk')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('dragonitemega', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'air_fly')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('dragonitemega', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "glide": {
+      "poseTypes": ["FLY"],
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'air_glide')",
+        "q.bedrock('dragonitemega', 'ride_air_dive')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('dragonitemega', 'ride_air_glide')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "float": {
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'water_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "swim": {
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'water_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "surface_idle": {
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["STAND", "FLOAT"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'surfacewater_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    },
+    "surface_swim": {
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('neck', 0.5, 1, 10, -10, 20, -20)",
+        "q.look('head', 1, 0.25, 10, -15, 5, -5)",
+        "q.bedrock('dragonitemega', 'surfacewater_swim')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('dragonitemega', 'blink')"
+      ]
+    }
+  }
+}

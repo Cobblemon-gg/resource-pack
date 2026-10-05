@@ -1,0 +1,69 @@
+{
+  "portraitScale": 2.6,
+  "portraitTranslation": [
+    -0.15,
+    2.1,
+    0.0
+  ],
+  "profileScale": 0.65,
+  "profileTranslation": [
+    0.0,
+    0.76,
+    0.0
+  ],
+  "rootBone": "gallade_mega",
+  "animations": {
+    "faint": "q.bedrock_primary('atlas_shadow_gallade_mega_gallade_mega', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('atlas_shadow_gallade_mega_gallade_mega', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND",
+        "WALK"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('Head')",
+        "q.bedrock('atlas_shadow_gallade_mega_gallade_mega', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_gallade_mega_gallade_mega', 'blink')",
+        "q.bedrock_quirk('atlas_shadow_gallade_mega_gallade_mega', 'battle_quirk')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('Head')",
+        "q.bedrock('atlas_shadow_gallade_mega_gallade_mega', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('atlas_shadow_gallade_mega_gallade_mega', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('Head')",
+        "q.bedrock('atlas_shadow_gallade_mega_gallade_mega', 'ground_walk')"
+      ]
+    },
+    "sleeping": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('atlas_shadow_gallade_mega_gallade_mega', 'sleep')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "species": "cobblemon:gliscor",
+  "order": 120,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gliscor",
+      "model": "cobblemon:atlas_sweep18_gliscor.geo",
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0472_gliscor/gliscor.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0472_gliscor/gliscor_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "alpha_eyes",
+          "enabled": false
+        },
+        {
+          "name": "aura",
+          "enabled": false
+        },
+        {
+          "name": "emissive",
+          "enabled": false
+        },
+        {
+          "name": "spectrum",
+          "enabled": false
+        }
+      ],
+      "condition": "!q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/atlas_sweep18/0472_gliscor/gliscor_shiny.png",
+      "condition": "!q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    },
+    {
+      "aspects": [
+        "alpha_eyes"
+      ],
+      "layers": [
+        {
+          "name": "alpha_eyes",
+          "texture": "cobblemon:textures/pokemon/atlas_sweep18/0472_gliscor/gliscor_alpha.png",
+          "emissive": true
+        }
+      ],
+      "condition": "!q.has_aspect('spectrum') && !q.has_aspect('spectrum-aura1') && !q.has_aspect('spectrum-aura2')"
+    }
+  ]
+}

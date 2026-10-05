@@ -1,0 +1,65 @@
+{
+    "portraitScale": 1.1,
+    "portraitTranslation": [ -0.9, 0.2, 0 ],
+    "profileScale": 0.35,
+    "profileTranslation": [ -0, 1.2, 0 ],
+    "animations": {
+      "cry": "q.bedrock_stateful('drednaw', 'cry')",
+      "physical": "q.bedrock_primary('drednaw', 'physical')",
+      "special": "q.bedrock_primary('drednaw', 'special')",
+      "status": "q.bedrock_primary('drednaw', 'status')",
+      "recoil": "q.bedrock_stateful('drednaw', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('drednaw', 'ground_idle')"
+      ],
+	  "namedAnimations": {
+			"cry": "q.bedrock_primary('drednaw', 'battle_cry', q.curve('symmetrical_wide'))"
+          },
+      "quirks": [
+        "q.bedrock_quirk('drednaw', 'blink')"
+      ]
+    },"standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+	  "q.look('head')",
+        "q.bedrock('drednaw', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('drednaw', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK","SWIM"
+      ],
+      "animations": [
+        "q.bedrock('drednaw', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('drednaw', 'blink')"
+       ]
+      },
+      "sleeping": {
+        "poseName": "sleeping",
+        "transformTicks": 10,
+        "poseTypes": ["SLEEP"],
+        "animations": [
+          "q.bedrock('drednaw', 'ground_idle')"
+        ]
+      }
+    }
+  }
